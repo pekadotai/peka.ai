@@ -1,0 +1,14 @@
+.menu-top {
+  font-weight: 100;
+  transition: font-weight 0.5s;
+}
+
+.menu-top:hover {
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.menu-active {
+  font-weight: 900;
+  border-bottom: 3px solid #ff1493;
+}
