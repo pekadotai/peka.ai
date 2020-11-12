@@ -25,7 +25,6 @@ function App() {
           />
           <Route exact path="/faqs" component={FAQs} />
         </Switch>
-        <Footer />
       </Router>
     </AksaraProvider>
   );
