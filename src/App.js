@@ -13,7 +13,7 @@ function App() {
     <AksaraProvider>
       <GlobalStyles />
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/risk_management" component={RiskManagement} />
