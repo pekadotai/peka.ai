@@ -15,6 +15,13 @@ import Wanita from "../assets/icons/wanita.png";
 import BeratBadan from "../assets/icons/beratbadan.png";
 import Makan from "../assets/icons/makan.png";
 import Olahraga from "../assets/icons/olahraga.png";
+import { Chrono } from "react-chrono";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import SwipeableViews from "react-swipeable-views";
+import Carousel from "nuka-carousel";
+
 // Little helpers ...
 const url = (name, wrap = false) =>
   `${
@@ -47,13 +54,75 @@ export default class Dashboard extends React.Component {
   }
 
   render() {
+    const items = [
+      {
+        title: "Stadium 0",
+        cardTitle: "Stadium 0",
+        cardDetailedText:
+          "Kanker tidak berkembang lebih jauh dari tempat tumbuhnya di duktus atau lobulus, dan belum menyebar ke jaringan di sekitarnya. Kondisi ini disebut in situ.",
+      },
+      {
+        title: "Stadium 1",
+        cardTitle: "Stadium 1A",
+        cardDetailedText:
+          "Tumor berukuran hingga 20 mm dan belum menyebar ke kelenjar getah bening di ketiak.",
+      },
+      {
+        title: "Stadium 1",
+        cardTitle: "Stadium 1B",
+        cardDetailedText:
+          "Kanker sudah menyebar ke kelenjar getah bening di ketiak, dengan ukuran lebih besar dari 0,2 mm namun kurang dari 2 mm. Sedangkan pada payudara terdapat tumor dengan ukuran tidak lebih dari 20 mm atau bisa tidak nampak tumor.",
+      },
+      {
+        title: "Stadium 2",
+        cardTitle: "Stadium 2A",
+        cardDetailedText:
+          "Kanker sudah menyebar ke kelenjar getah bening di ketiak dengan ukuran 2 mm atau lebih, dengan tumor di payudara tidak lebih dari 20 mm atau tidak tampak tumor di payudara. Ukuran tumor lebih besar dari 20 mm, namun tidak lebih besar dari 50 mm, tetapi belum menyebar ke kelenjar getah bening di ketiak.",
+      },
+      {
+        title: "Stadium 2",
+        cardTitle: "Stadium 2B",
+        cardDetailedText:
+          " Ukuran tumor lebih besar dari 20 mm, namun tidak lebih besar dari 50 mm, dan sudah menyebar ke 1 hingga 3 kelenjar getah bening di ketiak. Ukuran tumor lebih besar dari 50 mm, namun tidak menyebar ke kelenjar getah bening.",
+      },
+      {
+        title: "Stadium 3",
+        cardTitle: "Stadium 3A",
+        cardDetailedText:
+          "Kanker sudah menyebar ke 4 hingga 9 kelenjar getah bening di ketiak atau kelenjar getah bening di dalam payudara, dengan ukuran tumor di payudara hingga 50 mm. Bisa juga tidak ada tumor di payudara. Ukuran tumor lebih besar dari 50 mm, dan sudah menyebar ke 1 hingga 3 kelenjar getah bening di ketiak.",
+      },
+      {
+        title: "Stadium 3",
+        cardTitle: "Stadium 3B",
+        cardDetailedText: "Tumor sudah menyebar ke kulit dinding payudara.",
+      },
+      {
+        title: "Stadium 3",
+        cardTitle: "Stadium 3C",
+        cardDetailedText:
+          "Ukuran tumor bisa bervariasi, dan telah menyebar hingga ke 10 kelenjar getah bening atau lebih di ketiak, atau sudah menyebar ke kelenjar getah bening di dalam payudara dan leher.",
+      },
+      {
+        title: "Stadium 4",
+        cardTitle: "Stadium 4",
+        cardDetailedText:
+          "Pada stadium ini, ukuran tumor bisa bervariasi, dan telah menyebar jauh ke organ lain, seperti tulang, paru-paru, hati, atau otak.",
+      },
+    ];
+    const settings = {
+      dots: true,
+      // infinite: true,
+      // speed: 500,
+      // slidesToShow: 1,
+      // slidesToScroll: 1,
+    };
     return (
       <div>
         <div
           style={{
             display: "flex",
             justifyContent: "center",
-            padding: "20px",
+            // padding: "20px",
             backgroundColor: "rgba(255,255,255,0.1)",
           }}
         >
@@ -125,8 +194,10 @@ export default class Dashboard extends React.Component {
             <h1
               style={{
                 backgroundColor: "rgba(255,255,255,0.3)",
-                padding: "50px",
+                padding: "20px",
                 borderRadius: "20px",
+                width: "50%",
+                textAlign: "center",
               }}
             >
               Yuk, Peka sedari dini akan pentingnya pengetahuan tentang kanker.
@@ -146,7 +217,7 @@ export default class Dashboard extends React.Component {
           {/* Slide ke 1 */}
           <ParallaxLayer
             offset={1}
-            speed={1}
+            speed={0.1}
             style={{
               display: "flex",
               alignItems: "flex-start",
@@ -161,7 +232,7 @@ export default class Dashboard extends React.Component {
                 color: "#fff",
               }}
             >
-              Breast Cancer
+              Seputar Kanker Payudara
             </h1>
           </ParallaxLayer>
           <ParallaxLayer offset={1} speed={1} style={{ opacity: 1 }}>
@@ -177,8 +248,8 @@ export default class Dashboard extends React.Component {
                   backgroundColor: "rgba(255,255,255,0.5)",
                   padding: "20px",
                   borderRadius: "20px",
-                  width: "30%",
                 }}
+                className="desc-seputar-kanker"
               >
                 Kanker payudara adalah kondisi ketika sel kanker terbentuk di
                 jaringan payudara. Kanker bisa terbentuk di kelenjar yang
@@ -192,8 +263,8 @@ export default class Dashboard extends React.Component {
                   backgroundColor: "rgba(255,255,255,0.5)",
                   padding: "20px",
                   borderRadius: "20px",
-                  width: "30%",
                 }}
+                className="desc-seputar-kanker"
               >
                 Kanker payudara terbentuk saat sel-sel di dalam payudara tumbuh
                 tidak normal dan tidak terkendali. Sel tersebut umumnya
@@ -205,10 +276,8 @@ export default class Dashboard extends React.Component {
                   backgroundColor: "rgba(255,255,255,0.5)",
                   padding: "20px",
                   borderRadius: "20px",
-                  width: "30%",
-
-                  textAlign: "center",
                 }}
+                className="desc-seputar-kanker"
               >
                 Pada stadium yang lebih parah, sel-sel abnormal ini dapat
                 menyebar melalui kelenjar getah bening ke organ tubuh lainnya.
@@ -222,8 +291,8 @@ export default class Dashboard extends React.Component {
               display: "flex",
               alignItems: "flex-start",
               justifyContent: "center",
-              marginTop: "20%",
             }}
+            className="title-jenis-kanker"
           >
             <h1
               style={{
@@ -241,8 +310,8 @@ export default class Dashboard extends React.Component {
               style={{
                 display: "flex",
                 justifyContent: "space-around",
-                marginTop: "25%",
               }}
+              className="desc-jenis-kanker"
             >
               <div
                 style={{
@@ -332,7 +401,7 @@ export default class Dashboard extends React.Component {
           </ParallaxLayer>
           <ParallaxLayer
             offset={2}
-            speed={-0.3}
+            speed={0.3}
             style={{
               display: "flex",
               alignItems: "center",
@@ -409,7 +478,7 @@ export default class Dashboard extends React.Component {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              pointerEvents: "none",
+
               zIndex: 0,
             }}
           >
@@ -441,81 +510,85 @@ export default class Dashboard extends React.Component {
           <ParallaxLayer offset={3} speed={0.1} style={{}}>
             <div
               style={{
-                marginLeft: "3%",
-                marginTop: "10%",
-                width: "30%",
+                padding: "20px",
+                borderRadius: "20px",
+                backgroundColor: "rgba(255,255,255,1)",
+              }}
+              className="desc-mencegah"
+            >
+              <h2 style={{}}>
+                Rutin melakukan pemeriksaan payudara sendiri (SADARI)
+              </h2>
+            </div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={3} speed={0.7} style={{}}>
+            <div
+              style={{
+                padding: "20px",
+                borderRadius: "20px",
+                backgroundColor: "rgba(255,255,255,1)",
+              }}
+              className="desc-mencegah2"
+            >
+              <h2 style={{}}>
+                Rutin melakukan pemeriksaan payudara klinis (SADANIS)
+              </h2>
+            </div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={3} speed={0.3} style={{}}>
+            <div
+              style={{
                 padding: "20px",
                 borderRadius: "20px",
                 backgroundColor: "rgba(255,255,255,1)",
                 zIndex: 2,
               }}
+              className="desc-mencegah3"
             >
-              <h2 style={{}}>Menjaga berat badan tetap ideal</h2>
-              <p>
-                Berat badan erat kaitannya dengan risiko kanker payudara. Wanita
-                yang mengalami obesitas setelah masa menopause memiliki risiko
-                terkena kanker payudara 20 - 40 persen lebih tinggi dibanding
-                dengan yang mempunyai berat badan Perubahan berat badan dan
-                waktu terjadinya kenaikan berat badan ini diduga berkaitan
-                dengan keadaan hormon estrogen dan insulin di dalam tubuh.
-                Melihat risiko ini, menjaga berat badan tetap ideal adalah salah
-                satu cara mencegah kanker payudara yang dapat Anda lakukan.
-              </p>
+              <h2 style={{}}>Olahraga rutin</h2>
             </div>
-            <img style={{ marginLeft: "5%", zIndex: 0 }} src={BeratBadan} />
           </ParallaxLayer>
           <ParallaxLayer offset={3} speed={0.5} style={{}}>
             <div
               style={{
-                marginLeft: "35%",
-                marginTop: "10%",
-                width: "30%",
                 padding: "20px",
                 borderRadius: "20px",
                 backgroundColor: "rgba(255,255,255,1)",
                 zIndex: 2,
               }}
+              className="desc-mencegah4"
             >
-              <h2 style={{}}>Mengatur pola makan</h2>
-              <p>
-                Utamakan makanan Pola makan sehat dengan mengutamakan asupan
-                buah, sayuran, kacang-kacangan termasuk kacang kedelai, minyak
-                sehat, dan antioksidan yang tinggi, dapat membantu mengurangi
-                risiko kanker payudara. Wanita yang sudah terkena kanker
-                payudara pun hidupnya dapat lebih berkualitas, jika menghindari
-                makanan berlemak. Daging berlemak, sosis, krim, margarin,
-                mentega, dan minyak adalah berbagai jenis makanan yang harus
-                dihindari sebagai usaha pencegahan kanker payudara.
-              </p>
+              <h2 style={{}}>
+                Berhati-hati dalam melakukan terapi pengganti hormon pasca
+                menopause.
+              </h2>
             </div>
-            <img style={{ marginLeft: "40%", zIndex: 0 }} src={Makan} />
           </ParallaxLayer>
-          <ParallaxLayer offset={3} speed={1} style={{}}>
+          <ParallaxLayer offset={3} speed={0.2} style={{}}>
             <div
               style={{
-                marginLeft: "70%",
-                marginTop: "10%",
-                width: "30%",
                 padding: "20px",
                 borderRadius: "20px",
                 backgroundColor: "rgba(255,255,255,1)",
                 zIndex: 2,
               }}
+              className="desc-mencegah5"
             >
-              <h2 style={{}}>Olahraga</h2>
-              <p>
-                Luangkan waktu untuk kktif secara fisik dapat menurunkan risiko
-                kanker payudara. Sebaliknya, risiko kanker payudara meningkat
-                pada wanita yang sudah bertahun-tahun tidak pernah mengolah
-                fisiknya lagi. Standar untuk melakukan olahraga intensitas
-                sedang (seperti bersepeda dan jalan cepat) adalah selama 2 jam
-                30 menit per minggu.
-              </p>
+              <h2 style={{}}>Pertahankan berat badan ideal.</h2>
             </div>
-            <img
-              style={{ marginLeft: "70%", zIndex: 0, marginTop: "50px" }}
-              src={Olahraga}
-            />
+          </ParallaxLayer>
+          <ParallaxLayer offset={3} speed={0.4} style={{}}>
+            <div
+              style={{
+                padding: "20px",
+                borderRadius: "20px",
+                backgroundColor: "rgba(255,255,255,1)",
+                zIndex: 2,
+              }}
+              className="desc-mencegah6"
+            >
+              <h2 style={{}}>Hentikan konsumsi alkohol.</h2>
+            </div>
           </ParallaxLayer>
 
           {/* Slide ke 4 */}
@@ -540,177 +613,25 @@ export default class Dashboard extends React.Component {
               Stadium Kanker
             </h1>
           </ParallaxLayer>
-          <ParallaxLayer offset={4} speed={0.1} style={{}}>
+          <ParallaxLayer
+            offset={4}
+            speed={0.1}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <div
               style={{
-                marginLeft: "3%",
-                marginTop: "10%",
-                width: "30%",
+                width: "50%",
                 padding: "20px",
                 borderRadius: "20px",
                 backgroundColor: "rgba(255,255,255,1)",
                 zIndex: 2,
               }}
             >
-              <h2 style={{}}>Stadium 0</h2>
-              <p>
-                Kanker tidak berkembang lebih jauh dari tempat tumbuhnya di
-                duktus atau lobulus, dan belum menyebar ke jaringan di
-                sekitarnya. Kondisi ini disebut in situ.
-              </p>
-            </div>
-          </ParallaxLayer>
-          <ParallaxLayer offset={4} speed={0.2} style={{}}>
-            <div
-              style={{
-                marginLeft: "35%",
-                marginTop: "10%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Stadium 1a</h2>
-              <p>
-                Tumor berukuran hingga 20 mm dan belum menyebar ke kelenjar
-                getah bening di ketiak.
-              </p>
-            </div>
-            <div
-              style={{
-                marginLeft: "35%",
-                marginTop: "1%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Stadium 1b</h2>
-              <p>
-                Kanker sudah menyebar ke kelenjar getah bening di ketiak, dengan
-                ukuran lebih besar dari 0,2 mm namun kurang dari 2 mm. Sedangkan
-                pada payudara terdapat tumor dengan ukuran tidak lebih dari 20
-                mm atau bisa tidak nampak tumor.
-              </p>
-            </div>
-          </ParallaxLayer>
-          <ParallaxLayer offset={4} speed={0.3} style={{}}>
-            <div
-              style={{
-                marginLeft: "70%",
-                marginTop: "10%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Stadium 2a</h2>
-              <p>
-                Kanker sudah menyebar ke kelenjar getah bening di ketiak dengan
-                ukuran 2 mm atau lebih, dengan tumor di payudara tidak lebih
-                dari 20 mm atau tidak tampak tumor di payudara. Ukuran tumor
-                lebih besar dari 20 mm, namun tidak lebih besar dari 50 mm,
-                tetapi belum menyebar ke kelenjar getah bening di ketiak.
-              </p>
-            </div>
-            <div
-              style={{
-                marginLeft: "70%",
-                marginTop: "1%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Stadium 2a</h2>
-              <p>
-                Ukuran tumor lebih besar dari 20 mm, namun tidak lebih besar
-                dari 50 mm, dan sudah menyebar ke 1 hingga 3 kelenjar getah
-                bening di ketiak. Ukuran tumor lebih besar dari 50 mm, namun
-                tidak menyebar ke kelenjar getah bening.
-              </p>
-            </div>
-          </ParallaxLayer>
-          <ParallaxLayer offset={4} speed={0.4} style={{}}>
-            <div
-              style={{
-                marginLeft: "3%",
-                marginTop: "21%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Stadium 3a</h2>
-              <p>
-                Kanker sudah menyebar ke 4 hingga 9 kelenjar getah bening di
-                ketiak atau kelenjar getah bening di dalam payudara, dengan
-                ukuran tumor di payudara hingga 50 mm. Bisa juga tidak ada tumor
-                di payudara. Ukuran tumor lebih besar dari 50 mm, dan sudah
-                menyebar ke 1 hingga 3 kelenjar getah bening di ketiak.
-              </p>
-            </div>
-            <div
-              style={{
-                marginLeft: "3%",
-                marginTop: "1%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Stadium 3b</h2>
-              <p>Tumor sudah menyebar ke kulit dinding payudara.</p>
-            </div>
-            <div
-              style={{
-                marginLeft: "3%",
-                marginTop: "1%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Stadium 3c</h2>
-              <p>
-                Ukuran tumor bisa bervariasi, dan telah menyebar hingga ke 10
-                kelenjar getah bening atau lebih di ketiak, atau sudah menyebar
-                ke kelenjar getah bening di dalam payudara dan leher.
-              </p>
-            </div>
-          </ParallaxLayer>
-          <ParallaxLayer offset={4} speed={0.6} style={{}}>
-            <div
-              style={{
-                marginLeft: "35%",
-                marginTop: "30%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Stadium 4</h2>
-              <p>
-                Pada stadium ini, ukuran tumor bisa bervariasi, dan telah
-                menyebar jauh ke organ lain, seperti tulang, paru-paru, hati,
-                atau otak.
-              </p>
+              <Chrono items={items} />
             </div>
           </ParallaxLayer>
 
@@ -745,7 +666,6 @@ export default class Dashboard extends React.Component {
                 padding: "20px",
                 borderRadius: "20px",
                 backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
               }}
             >
               <h2 style={{}}> Bedah Lumpektomi</h2>
@@ -769,7 +689,6 @@ export default class Dashboard extends React.Component {
                 padding: "20px",
                 borderRadius: "20px",
                 backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
               }}
             >
               <h2 style={{}}> Bedah Mastektomi</h2>
@@ -979,7 +898,7 @@ export default class Dashboard extends React.Component {
         </Parallax>
         <div
           className="float button2"
-          style={{ color: "#000", padding: "20px" }}
+          style={{ color: "#000", padding: "20px", borderRadius: "50%" }}
         >
           Cek kanker
         </div>
