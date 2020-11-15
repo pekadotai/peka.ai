@@ -128,7 +128,7 @@ export default class Dashboard extends React.Component {
         >
           <h1>Welcome to Peka.ai</h1>
         </div>
-        <Parallax ref={(ref) => (this.parallax = ref)} pages={6}>
+        <Parallax ref={(ref) => (this.parallax = ref)} pages={7}>
           <ParallaxLayer
             offset={0}
             speed={0}
@@ -177,7 +177,16 @@ export default class Dashboard extends React.Component {
             speed={0}
             style={{
               backgroundColor: "#ff1493",
-              backgroundImage: "linear-gradient(#059142, #0c71e0)",
+              backgroundImage: "linear-gradient(#059142, #FFB6C1)",
+            }}
+          />
+
+          <ParallaxLayer
+            offset={6}
+            speed={0}
+            style={{
+              backgroundColor: "#ff1493",
+              backgroundImage: "linear-gradient(#FFB6C1, #ff1493)",
             }}
           />
 
@@ -189,6 +198,7 @@ export default class Dashboard extends React.Component {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              flexDirection: "column",
             }}
           >
             <h1
@@ -196,12 +206,24 @@ export default class Dashboard extends React.Component {
                 backgroundColor: "rgba(255,255,255,0.3)",
                 padding: "20px",
                 borderRadius: "20px",
-                width: "50%",
+                width: "60%",
                 textAlign: "center",
               }}
             >
-              Yuk, Peka sedari dini akan pentingnya pengetahuan tentang kanker.
+              Peka.ai
             </h1>
+            <h3
+              style={{
+                backgroundColor: "rgba(255,255,255,0.3)",
+                padding: "20px",
+                borderRadius: "20px",
+                width: "50%",
+              }}
+            >
+              Peka.ai adalah sebuah web interaktif yang dapat membantu kamu
+              dalam mengetahui informasi tentang kanker payudara mulai dari
+              penyebab, gejala, diagnosa, hinggu mitos seputar kanker payudara.
+            </h3>
           </ParallaxLayer>
           <ParallaxLayer
             offset={0}
@@ -209,7 +231,6 @@ export default class Dashboard extends React.Component {
             factor={3}
             style={{
               backgroundImage: url("stars", true),
-              // backgroundImage: `url(${Background})`,
               backgroundSize: "cover",
             }}
           />
@@ -220,8 +241,9 @@ export default class Dashboard extends React.Component {
             speed={0.1}
             style={{
               display: "flex",
-              alignItems: "flex-start",
+              alignItems: "center",
               justifyContent: "center",
+              flexDirection: "column",
             }}
           >
             <h1
@@ -234,16 +256,8 @@ export default class Dashboard extends React.Component {
             >
               Seputar Kanker Payudara
             </h1>
-          </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={1} style={{ opacity: 1 }}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-                marginTop: "100px",
-              }}
-            >
-              <p
+            <div style={{ display: "flex", justifyContent: "space-around" }}>
+              <h4
                 style={{
                   backgroundColor: "rgba(255,255,255,0.5)",
                   padding: "20px",
@@ -257,8 +271,8 @@ export default class Dashboard extends React.Component {
                 membawa air susu dari kelenjar ke puting payudara. Kanker juga
                 bisa terbentuk di jaringan lemak atau jaringan ikat di dalam
                 payudara.
-              </p>
-              <p
+              </h4>
+              <h4
                 style={{
                   backgroundColor: "rgba(255,255,255,0.5)",
                   padding: "20px",
@@ -270,8 +284,8 @@ export default class Dashboard extends React.Component {
                 tidak normal dan tidak terkendali. Sel tersebut umumnya
                 membentuk tumor yang terasa seperti benjolan. Meski biasanya
                 terjadi pada wanita, kanker payudara juga bisa menyerang pria.
-              </p>
-              <p
+              </h4>
+              <h4
                 style={{
                   backgroundColor: "rgba(255,255,255,0.5)",
                   padding: "20px",
@@ -281,99 +295,7 @@ export default class Dashboard extends React.Component {
               >
                 Pada stadium yang lebih parah, sel-sel abnormal ini dapat
                 menyebar melalui kelenjar getah bening ke organ tubuh lainnya.
-              </p>
-            </div>
-          </ParallaxLayer>
-          <ParallaxLayer
-            offset={1}
-            speed={2}
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "center",
-            }}
-            className="title-jenis-kanker"
-          >
-            <h1
-              style={{
-                backgroundColor: "rgba(0,0,0,1)",
-                padding: "10px",
-                borderRadius: "20px",
-                color: "#fff",
-              }}
-            >
-              Jenis Breast Cancer
-            </h1>
-          </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={2} style={{}}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-around",
-              }}
-              className="desc-jenis-kanker"
-            >
-              <div
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.5)",
-                  padding: "20px",
-                  borderRadius: "20px",
-                  width: "20%",
-                }}
-              >
-                <h4>Ductal carcinoma in situ</h4>
-                <p>
-                  Kanker ini tumbuh di duktus, dan tidak menyebar ke jaringan
-                  sekitarnya. Jenis kanker ini termasuk kanker stadium awal dan
-                  mudah diobati. Namun demikian, kanker ini bisa menyebar ke
-                  jaringan sekitarnya jika tidak segera ditangani.
-                </p>
-              </div>
-              <div
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.5)",
-                  padding: "20px",
-                  borderRadius: "20px",
-                  width: "20%",
-                }}
-              >
-                <h4>Lobular carcinoma in situ</h4>
-                <p>
-                  Adalah kanker yang tumbuh di lobulus. Sama seperti ductal
-                  carcinoma in situ, kanker ini tidak menyebar ke jaringan
-                  sekitarnya.
-                </p>
-              </div>
-              <div
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.5)",
-                  padding: "20px",
-                  borderRadius: "20px",
-                  width: "20%",
-                }}
-              >
-                <h4>Invasive ductal carcinoma</h4>
-                <p>
-                  Kanker ini tumbuh di duktus dan bisa menyebar ke jaringan
-                  sekitarnya, bahkan bisa menyebar ke area tubuh yang lain.
-                  Jenis kanker ini terjadi pada 70-80% kasus kanker payudara.
-                </p>
-              </div>
-              <div
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.5)",
-                  padding: "20px",
-                  borderRadius: "20px",
-                  width: "20%",
-                }}
-              >
-                <h4>Invasive lobular carcinoma</h4>
-                <p>
-                  Adalah kanker yang tumbuh di lobulus dan bisa menyebar ke
-                  jaringan sekitarnya. Kanker ini terjadi pada 10% kasus kanker
-                  payudara.
-                </p>
-              </div>
+              </h4>
             </div>
           </ParallaxLayer>
 
@@ -396,7 +318,7 @@ export default class Dashboard extends React.Component {
                 color: "#fff",
               }}
             >
-              Facts Breast Cancer
+              Yuk kenali gelaja-gejala kanker payudara
             </h1>
           </ParallaxLayer>
           <ParallaxLayer
@@ -422,8 +344,8 @@ export default class Dashboard extends React.Component {
                   margin: "20px 0px",
                 }}
               >
-                Kanker payudara adalah kanker yang paling umum di kalangan
-                wanita.
+                Adanya benjolan di payudara atau penebalan jaringan yang terasa
+                berbeda dari jaringan di sekitarnya
               </h2>
               <h2
                 style={{
@@ -433,9 +355,17 @@ export default class Dashboard extends React.Component {
                   margin: "20px 0px",
                 }}
               >
-                Banyak benjolan payudara yang tidak bersifat kanker, tetapi
-                wanita mana pun yang menemukan benjolan atau perubahan pada
-                payudara harus mengunjungi dokter.
+                Perubahan pada bentuk dan ukuran payudara
+              </h2>
+              <h2
+                style={{
+                  padding: "20px",
+                  borderRadius: "20px",
+                  backgroundColor: "rgba(255,255,255,0.5)",
+                  margin: "20px 0px",
+                }}
+              >
+                Benjolan atau pembengkakan di bawah ketiak
               </h2>
             </div>
             <div
@@ -453,8 +383,7 @@ export default class Dashboard extends React.Component {
                   margin: "20px 0px",
                 }}
               >
-                Gejalanya meliputi benjolan atau penebalan payudara, dan
-                perubahan pada kulit atau puting.
+                Pengelupasan kulit areola dan kulit payudara
               </h2>
               <h2
                 style={{
@@ -464,9 +393,17 @@ export default class Dashboard extends React.Component {
                   margin: "20px 0px",
                 }}
               >
-                Faktor risiko dapat bersifat genetik, tetapi beberapa faktor
-                gaya hidup, seperti asupan alkohol, membuatnya lebih mungkin
-                terjadi.
+                Nyeri dan pembengkakan pada payudara
+              </h2>
+              <h2
+                style={{
+                  padding: "20px",
+                  borderRadius: "20px",
+                  backgroundColor: "rgba(255,255,255,0.5)",
+                  margin: "20px 0px",
+                }}
+              >
+                Darah ke luar dari puting payudara
               </h2>
             </div>
           </ParallaxLayer>
@@ -610,7 +547,7 @@ export default class Dashboard extends React.Component {
                 color: "#fff",
               }}
             >
-              Stadium Kanker
+              Kanker payudara ada tingkatannya loh
             </h1>
           </ParallaxLayer>
           <ParallaxLayer
@@ -635,7 +572,7 @@ export default class Dashboard extends React.Component {
             </div>
           </ParallaxLayer>
 
-          {/* Slide ke 4 */}
+          {/* Slide ke 5 */}
           <ParallaxLayer
             offset={5}
             speed={0}
@@ -654,253 +591,215 @@ export default class Dashboard extends React.Component {
                 color: "#fff",
               }}
             >
-              Pengobatan
+              Terus, ada tipe-tipenya juga!
             </h1>
           </ParallaxLayer>
-          <ParallaxLayer offset={5} speed={0.1} style={{}}>
-            <div
-              style={{
-                marginLeft: "3%",
-                marginTop: "10%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-              }}
-            >
-              <h2 style={{}}> Bedah Lumpektomi</h2>
-              <p>
-                Bedah lumpektomi dilakukan untuk mengangkat tumor yang tidak
-                terlalu besar beserta sebagian kecil jaringan sehat di
-                sekitarnya. Prosedur ini umumnya diikuti radioterapi untuk
-                mematikan sel kanker yang mungkin tertinggal di jaringan
-                payudara. Pasien dengan tumor yang besar bisa menjalani
-                kemoterapi terlebih dahulu untuk menyusutkan ukuran tumor,
-                sehingga tumor bisa dihilangkan dengan lumpektomi.
-              </p>
-            </div>
-          </ParallaxLayer>
-          <ParallaxLayer offset={5} speed={0.2} style={{}}>
-            <div
-              style={{
-                marginLeft: "35%",
-                marginTop: "10%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-              }}
-            >
-              <h2 style={{}}> Bedah Mastektomi</h2>
-              <p>
-                Pilihan prosedur bedah yang lain adalah mastektomi, yaitu bedah
-                yang dilakukan oleh dokter bedah onkologi untuk mengangkat
-                seluruh jaringan di payudara. Mastektomi dilakukan jika pasien
-                tidak bisa ditangani dengan lumpektomi. Ada beberapa tipe bedah
-                mastektomi, yaitu:
-              </p>
-            </div>
+
+          <ParallaxLayer offset={5} speed={2} style={{}}>
             <div
               style={{
                 display: "flex",
+                justifyContent: "space-around",
               }}
+              className="desc-jenis-kanker"
             >
               <div
                 style={{
-                  marginLeft: "35%",
-                  marginTop: "1%",
-                  width: "14%",
+                  backgroundColor: "rgba(255,255,255,0.5)",
                   padding: "20px",
                   borderRadius: "20px",
-                  backgroundColor: "rgba(255,255,255,1)",
-                  zIndex: 2,
-                  marginRight: "2%",
+                  width: "20%",
                 }}
               >
-                <h4 style={{}}>Simple/total mastectomy </h4>
+                <h4>Ductal carcinoma in situ</h4>
                 <p>
-                  Dokter mengangkat seluruh payudara, termasuk putting, areola,
-                  dan kulit yang menutupi Pada beberapa kondisi, beberapa
-                  kelenjar getah bening bisa ikut diangkat.
+                  Kanker ini tumbuh di duktus, dan tidak menyebar ke jaringan
+                  sekitarnya. Jenis kanker ini termasuk kanker stadium awal dan
+                  mudah diobati. Namun demikian, kanker ini bisa menyebar ke
+                  jaringan sekitarnya jika tidak segera ditangani.
                 </p>
               </div>
               <div
                 style={{
-                  marginTop: "1%",
-                  width: "14%",
+                  backgroundColor: "rgba(255,255,255,0.5)",
                   padding: "20px",
                   borderRadius: "20px",
-                  backgroundColor: "rgba(255,255,255,1)",
-                  zIndex: 2,
+                  width: "20%",
                 }}
               >
-                <h4 style={{}}>Skin-sparing mastectomy </h4>
+                <h4>Lobular carcinoma in situ</h4>
                 <p>
-                  Dokter hanya mengangkat kelenjar payudara, putting, dan
-                  areola. Jaringan dari bagian tubuh lain akan digunakan untuk
-                  merekonstruksi ulang payudara.
+                  Adalah kanker yang tumbuh di lobulus. Sama seperti ductal
+                  carcinoma in situ, kanker ini tidak menyebar ke jaringan
+                  sekitarnya.
+                </p>
+              </div>
+              <div
+                style={{
+                  backgroundColor: "rgba(255,255,255,0.5)",
+                  padding: "20px",
+                  borderRadius: "20px",
+                  width: "20%",
+                }}
+              >
+                <h4>Invasive ductal carcinoma</h4>
+                <p>
+                  Kanker ini tumbuh di duktus dan bisa menyebar ke jaringan
+                  sekitarnya, bahkan bisa menyebar ke area tubuh yang lain.
+                  Jenis kanker ini terjadi pada 70-80% kasus kanker payudara.
+                </p>
+              </div>
+              <div
+                style={{
+                  backgroundColor: "rgba(255,255,255,0.5)",
+                  padding: "20px",
+                  borderRadius: "20px",
+                  width: "20%",
+                }}
+              >
+                <h4>Invasive lobular carcinoma</h4>
+                <p>
+                  Adalah kanker yang tumbuh di lobulus dan bisa menyebar ke
+                  jaringan sekitarnya. Kanker ini terjadi pada 10% kasus kanker
+                  payudara.
                 </p>
               </div>
             </div>
+          </ParallaxLayer>
+
+          {/* Slide ke 6 */}
+          <ParallaxLayer
+            offset={6}
+            speed={0}
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+              justifyContent: "center",
+            }}
+          >
+            <h1
+              style={{
+                marginTop: "50px",
+                backgroundColor: "rgba(0,0,0,1)",
+                padding: "20px",
+                borderRadius: "20px",
+                color: "#fff",
+              }}
+            >
+              Awas, ada mitos tentang kanker payudara!
+            </h1>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={6} speed={2} style={{}}>
             <div
               style={{
                 display: "flex",
+                justifyContent: "space-around",
               }}
+              className="desc-jenis-kanker"
             >
-              <div
-                style={{
-                  marginLeft: "35%",
-                  marginTop: "1%",
-                  width: "14%",
-                  padding: "20px",
-                  borderRadius: "20px",
-                  backgroundColor: "rgba(255,255,255,1)",
-                  zIndex: 2,
-                  marginRight: "2%",
-                }}
-              >
-                <h4 style={{}}>Nipple-sparing mastectomy </h4>
-                <p>
-                  Jaringan payudara diangkat, tanpa menyertakan kulit payudara
-                  dan puting. Namun jika ditemukan kanker pada jaringan di bawah
-                  puting dan areola, maka puting payudara juga akan diangkat.
-                </p>
+              <div style={{}}>
+                <div
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.5)",
+                    padding: "20px",
+                    borderRadius: "20px",
+                    marginBottom: "20px",
+                    // width: "20%",
+                  }}
+                >
+                  <h4>Kanker payudara itu menyakitkan</h4>
+                </div>
+                <div
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.5)",
+                    padding: "20px",
+                    borderRadius: "20px",
+                    // width: "20%",
+                  }}
+                >
+                  <h4>Hanya wanita saja yang dapat terkena kanker payudara</h4>
+                </div>
               </div>
-              <div
-                style={{
-                  marginTop: "1%",
-                  width: "14%",
-                  padding: "20px",
-                  borderRadius: "20px",
-                  backgroundColor: "rgba(255,255,255,1)",
-                  zIndex: 2,
-                }}
-              >
-                <h4 style={{}}>Modified radical mastectomy </h4>
-                <p>
-                  Prosedur ini mengombinasikan simple mastectomy dan
-                  pengangkatan seluruh kelenjar getah bening di ketiak.
-                </p>
+              <div>
+                <div
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.5)",
+                    padding: "20px",
+                    borderRadius: "20px",
+                    // width: "20%",
+                    marginBottom: "20px",
+                  }}
+                >
+                  <h4>Kanker payudara selalu berupa benjolan</h4>
+                </div>
+                <div
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.5)",
+                    padding: "20px",
+                    borderRadius: "20px",
+                    // width: "20%",
+                    marginBottom: "20px",
+                  }}
+                >
+                  <h4>
+                    Pengobatan untuk kanker payudara adalah dengan mengambil
+                    seluruh bagian payudara
+                  </h4>
+                </div>
+                <div
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.5)",
+                    padding: "20px",
+                    borderRadius: "20px",
+                    // width: "20%",
+                    marginBottom: "20px",
+                  }}
+                >
+                  <h4>Menderita kanker payudara berarti “vonis mati”</h4>
+                </div>
               </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-              }}
-            >
-              <div
-                style={{
-                  marginLeft: "35%",
-                  marginTop: "1%",
-                  width: "14%",
-                  padding: "20px",
-                  borderRadius: "20px",
-                  backgroundColor: "rgba(255,255,255,1)",
-                  zIndex: 2,
-                  marginRight: "2%",
-                }}
-              >
-                <h4 style={{}}>Radical mastectomy</h4>
-                <p>
-                  Dokter mengangkat seluruh payudara, kelenjar getah bening di
-                  ketiak, dan otot dada (pectoral).
-                </p>
+              <div>
+                <div
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.5)",
+                    padding: "20px",
+                    borderRadius: "20px",
+                    // width: "20%",
+                    marginBottom: "20px",
+                  }}
+                >
+                  <h4>
+                    Kanker payudara dapat terjadi jika terlalu sering melakukan
+                    mammogram
+                  </h4>
+                </div>
+                <div
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.5)",
+                    padding: "20px",
+                    borderRadius: "20px",
+                    // width: "20%",
+                  }}
+                >
+                  <h4>
+                    Kanker payudara disebabkan oleh keturunan dari keluarga
+                  </h4>
+                </div>
               </div>
-              <div
-                style={{
-                  marginTop: "1%",
-                  width: "14%",
-                  padding: "20px",
-                  borderRadius: "20px",
-                  backgroundColor: "rgba(255,255,255,1)",
-                  zIndex: 2,
-                }}
-              >
-                <h4 style={{}}>Double mastectomy </h4>
-                <p>
-                  Prosedur ini dilakukan sebagai pencegahan pada wanita yang
-                  berisiko tinggi terserang kanker payudara dengan mengangkat
-                  kedua payudara.
-                </p>
-              </div>
-            </div>
-          </ParallaxLayer>
-          <ParallaxLayer offset={5} speed={0.3} style={{}}>
-            <div
-              style={{
-                marginLeft: "70%",
-                marginTop: "10%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Bedah Pengangkatan Kelenjar Getah Bening</h2>
-              <p>
-                Dokter akan melakukan pemeriksaan untuk mengetahui apakah kanker
-                sudah tersebar ke kelenjar getah bening di ketiak. Pemeriksaan
-                ini juga untuk menentukan stadium kanker yang dialami pasien.
-                Pengangkatan kelenjar getah bening dapat dilakukan bersamaan
-                dengan operasi pengangkatan tumor di payudara, atau dilakukan
-                secara terpisah.
-              </p>
-            </div>
-          </ParallaxLayer>
-          <ParallaxLayer offset={5} speed={0.4} style={{}}>
-            <div
-              style={{
-                marginLeft: "3%",
-                marginTop: "30%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Radioterapi</h2>
-              <p>
-                Pilihan pengobatan lain bagi pasien kanker payudara adalah
-                radioterapi atau terapi radiasi dengan menggunakan sinar
-                berkekuatan tinggi, seperti sinar-X dan proton. Radioterapi bisa
-                dilakukan dengan menembakkan sinar ke tubuh pasien menggunakan
-                mesin (radioterapi eksternal), atau dengan menempatkan material
-                radioaktif ke dalam tubuh pasien
-              </p>
-            </div>
-          </ParallaxLayer>
-          <ParallaxLayer offset={5} speed={0.6} style={{}}>
-            <div
-              style={{
-                marginLeft: "70%",
-                marginTop: "30%",
-                width: "30%",
-                padding: "20px",
-                borderRadius: "20px",
-                backgroundColor: "rgba(255,255,255,1)",
-                zIndex: 2,
-              }}
-            >
-              <h2 style={{}}>Terapi Hormon</h2>
-              <p>
-                Pada kasus kanker yang dipengaruhi hormon estrogen dan
-                progesteron, dokter bisa menyarankan pasien menggunakan
-                penghambat estrogen, seperti tamoxifen. Obat ini bisa diberikan
-                pada pasien selama 5 tahun. Sedangkan obat penghambat aromatase,
-                seperti anastrozole, letrozole, dan exemestane, diresepkan
-                dokter untuk menghambat produksi hormon estrogen pada wanita
-                yang telah melewati masa menopause.
-              </p>
             </div>
           </ParallaxLayer>
         </Parallax>
         <div
           className="float button2"
-          style={{ color: "#000", padding: "20px", borderRadius: "50%" }}
+          style={{
+            color: "#000",
+            padding: "20px",
+
+            width: "200px",
+          }}
         >
-          Cek kanker
+          Yuk klik disini buat cobain pendeteksi kanker Peka!
         </div>
       </div>
     );

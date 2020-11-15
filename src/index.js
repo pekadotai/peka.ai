@@ -1,12 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { AksaraProvider, GlobalStyles } from "@aksara-ui/core";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Dashboard />
+    <AksaraProvider>
+      <GlobalStyles />
+      <Home />
+    </AksaraProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
