@@ -84,13 +84,13 @@
 
   .icon-move {
     left: 45%;
-    bottom: 5%;
+    bottom: 0%;
     z-index: 99;
   }
 
   .icon-move-right {
     right: 45%;
-    bottom: 5%;
+    bottom: 0%;
     z-index: 99;
   }
 
@@ -107,7 +107,7 @@
   }
 
   .down {
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 10%);
   }
 
   .gejala {
@@ -235,11 +235,13 @@
     bottom: 0;
     position: fixed;
     opacity: 0;
+    z-index: -12;
   }
 
   .to-top3 {
     opacity: 1;
     bottom: 70%;
+    z-index: 12;
   }
 
   .from-bottom4 {
@@ -286,11 +288,13 @@
     bottom: 0;
     position: fixed;
     opacity: 0;
+    z-index: -12;
   }
 
   .to-top7 {
     opacity: 1;
     bottom: 50%;
+    z-index: 12;
   }
   .from-bottom8 {
     transition: 1s;
@@ -315,9 +319,42 @@
   }
 
   .fade-center-aktif {
-    top: 50%;
+    top: 40%;
     opacity: 1;
     z-index: 20;
+  }
+
+  .fade-center-aktif-faqs {
+    top: 30%;
+    opacity: 1;
+    z-index: 20;
+  }
+
+  .wanita {
+    opacity: 1;
+    transition: 1s;
+  }
+
+  .wanita-fade {
+    opacity: 0;
+  }
+  .hide-icon-gejala {
+    left: 3%;
+    bottom: 1%;
+    opacity: 0;
+    z-index: 0;
+  }
+
+  .hide-icon-gejala-right {
+    right: 77%;
+    bottom: 1%;
+    opacity: 0;
+    z-index: 0;
+  }
+  .icon-move-gejala {
+    left: 3%;
+    bottom: 1%;
+    z-index: 99;
   }
 }
 
@@ -367,6 +404,20 @@
     z-index: 0;
   }
 
+  .hide-icon-gejala {
+    left: 3%;
+    bottom: 1%;
+    opacity: 0;
+    z-index: 0;
+  }
+
+  .hide-icon-gejala-right {
+    right: 77%;
+    bottom: 1%;
+    opacity: 0;
+    z-index: 0;
+  }
+
   .hide-icon-right {
     right: 45%;
     bottom: 5%;
@@ -376,13 +427,19 @@
 
   .icon-move {
     left: 45%;
-    bottom: 5%;
+    bottom: 0%;
+    z-index: 99;
+  }
+
+  .icon-move-gejala {
+    left: 3%;
+    bottom: 1%;
     z-index: 99;
   }
 
   .icon-move-right {
     right: 45%;
-    bottom: 5%;
+    bottom: 0%;
     z-index: 99;
   }
 
@@ -399,27 +456,26 @@
   }
 
   .down {
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 10%);
   }
 
   .gejala {
-    transition: 1s;
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 10px;
-    position: fixed;
-    width: 800px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    /* transition: 1s; */
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    /* padding: 10px; */
+    /* width: 800px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
   }
 
   .left {
-    left: 50%;
-    transform: translate(-250%, 200%);
+    /* left: 50%;
+    transform: translate(-250%, 200%); */
   }
 
   .right {
-    transform: translate(-50%, 200%);
+    /* transform: translate(-50%, 200%); */
   }
 
   .from-right {
@@ -479,7 +535,7 @@
   }
 
   .fade-center-aktif {
-    top: 50%;
+    top: 40%;
     opacity: 1;
     z-index: 20;
   }
@@ -540,7 +596,7 @@
 
   .from-bottom3 {
     transition: 1s;
-    left: 86%;
+    left: 66%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -561,12 +617,12 @@
 
   .to-top4 {
     opacity: 1;
-    bottom: 50%;
+    bottom: 30%;
   }
 
   .from-bottom5 {
     transition: 1s;
-    left: 55%;
+    left: 45%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -574,7 +630,7 @@
 
   .to-top5 {
     opacity: 1;
-    bottom: 70%;
+    bottom: 55%;
   }
 
   .from-bottom6 {
@@ -587,7 +643,7 @@
 
   .to-top6 {
     opacity: 1;
-    bottom: 50%;
+    bottom: 30%;
   }
   .from-bottom7 {
     transition: 1s;
@@ -603,13 +659,26 @@
   }
   .from-bottom8 {
     transition: 1s;
-    left: 30%;
+    left: 10%;
     bottom: 0;
     position: fixed;
     opacity: 0;
   }
   .to-top8 {
     opacity: 1;
-    bottom: 70%;
+    bottom: 60%;
+  }
+  .wanita {
+    opacity: 1;
+    transition: 1s;
+  }
+
+  .wanita-fade {
+    opacity: 0;
+  }
+  .fade-center-aktif-faqs {
+    top: 30%;
+    opacity: 1;
+    z-index: 20;
   }
 }
