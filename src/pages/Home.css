@@ -35,6 +35,11 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .icon0 {
+    left: 1%;
+    bottom: 70%;
+    z-index: 1;
+  }
   .icon1 {
     left: 1%;
     bottom: 5%;
@@ -109,13 +114,16 @@
   .down {
     transform: translate(-50%, 10%);
   }
+  .down-down {
+    transform: translate(-50%, 90%);
+  }
 
   .gejala {
     transition: 1s;
     background-color: rgba(255, 255, 255, 0.3);
     padding: 5px;
     position: fixed;
-    width: 800px;
+    width: 900px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -213,7 +221,7 @@
 
   .to-top1 {
     opacity: 1;
-    bottom: 40%;
+    bottom: 35%;
   }
 
   .from-bottom2 {
@@ -231,7 +239,7 @@
 
   .from-bottom3 {
     transition: 1s;
-    left: 76%;
+    left: 70%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -259,7 +267,7 @@
 
   .from-bottom5 {
     transition: 1s;
-    left: 45%;
+    left: 35%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -272,7 +280,7 @@
 
   .from-bottom6 {
     transition: 1s;
-    left: 25%;
+    left: 15%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -284,7 +292,7 @@
   }
   .from-bottom7 {
     transition: 1s;
-    left: 80%;
+    left: 60%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -298,7 +306,7 @@
   }
   .from-bottom8 {
     transition: 1s;
-    left: 12%;
+    left: 1%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -360,6 +368,12 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .icon0 {
+    left: 1%;
+    bottom: 70%;
+    z-index: 1;
+  }
+
   .icon1 {
     left: 7%;
     bottom: 5%;
@@ -459,23 +473,27 @@
     transform: translate(-50%, 10%);
   }
 
+  .down-down {
+    transform: translate(-50%, 150%);
+  }
+
   .gejala {
     /* transition: 1s; */
     /* background-color: rgba(255, 255, 255, 0.3); */
     /* padding: 10px; */
-    /* width: 800px; */
+    width: 900px;
     /* justify-content: center; */
     /* align-items: center; */
     /* text-align: center; */
   }
 
   .left {
-    /* left: 50%;
-    transform: translate(-250%, 200%); */
+    left: 50%;
+    transform: translate(-250%, 200%);
   }
 
   .right {
-    /* transform: translate(-50%, 200%); */
+    transform: translate(-50%, 200%);
   }
 
   .from-right {
@@ -578,7 +596,7 @@
 
   .to-top1 {
     opacity: 1;
-    bottom: 40%;
+    bottom: 45%;
   }
 
   .from-bottom2 {
@@ -622,7 +640,7 @@
 
   .from-bottom5 {
     transition: 1s;
-    left: 45%;
+    left: 35%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -647,7 +665,7 @@
   }
   .from-bottom7 {
     transition: 1s;
-    left: 80%;
+    left: 66%;
     bottom: 0;
     position: fixed;
     opacity: 0;
