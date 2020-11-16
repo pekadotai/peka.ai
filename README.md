@@ -2,18 +2,11 @@
     <img src="https://aimeos.org/fileadmin/template/icons/logo.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
 </a>
 
-Aimeos TYPO3 extension
+Peka.ai Website and BOT
 ======================
-[![Total Downloads](https://poser.pugx.org/aimeos/aimeos-typo3/d/total.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
 [![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 
-:star: Star us on GitHub — it helps!
-
-[Aimeos](https://aimeos.org/TYPO3) is THE professional, full-featured and
-high performance e-commerce extension for TYPO3!  You can install it in your
-existing TYPO3 web site within 5 minutes and can adapt, extend, overwrite
-and customize anything to your needs.
+[Peka.ai](https://aimeos.org/TYPO3) adalah sebuah web interaktif yang dapat membantu kamu dalam mengetahui informasi tentang kanker payudara mulai dari penyebab, gejala, diagnosa, hinggu mitos seputar kanker payudara. Fitur utama Peka.AI adalah chatbot yang dapat mengukur tingkat risiko terkena kanker payudara dan memberikan rekomendasi sesuai hasil pemeriksaan melalui chatbot tersebut.
 
 [![Aimeos TYPO3 demo](https://aimeos.org/fileadmin/user_upload/typo3-demo.jpg)](http://typo3.demo.aimeos.org/)
 
@@ -25,11 +18,12 @@ and customize anything to your needs.
 - [TYPO3 setup](#typo3-setup)
     - [Extension](#extension)
     - [Database](#database)
-- [Page setup](#page-setup)
-    - [Upload the page tree file](#upload-the-page-tree-file)
-    - [Go to the import view](#go-to-the-import-view)
-    - [Import the page tree](#import-the-page-tree)
-    - [SEO-friendly URLs](#seo-friendly-urls)
+- [Peka Chatbot](#page-setup)
+    - [Flows](#upload-the-page-tree-file)
+    - [States](#go-to-the-import-view)
+    - [Intents](#import-the-page-tree)
+    - [NLU-s](#seo-friendly-urls)
+    - [Demo](#seo-friendly-urls)
 - [License](#license)
 - [Links](#links)
 
@@ -125,7 +119,7 @@ Afterwards, you have to execute the update script of the extension to create the
 
 ![Execute update script](https://aimeos.org/docs/images/Aimeos-typo3-extmngr-update-7.x.png)
 
-## Page setup
+## Peka Chatbot
 
 The page setup for an Aimeos web shop is easy if you import the example page tree for TYPO3 9/10:
 
