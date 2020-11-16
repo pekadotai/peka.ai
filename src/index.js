@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { AksaraProvider, GlobalStyles } from "@aksara-ui/core";
+import "./fonts/MeriendaOne-Regular.ttf";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./pages/Home";
-import "./fonts/MeriendaOne-Regular.ttf";
 
 ReactDOM.render(
   <React.StrictMode>
