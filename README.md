@@ -23,6 +23,7 @@ Peka.ai
     - [States](#go-to-the-import-view)
     - [Intents](#import-the-page-tree)
     - [NLU-s](#seo-friendly-urls)
+    - [Methods](#methods)
     - [Handlers](#handlers)
     - [Demo](#seo-friendly-urls)
 - [License](#license)
