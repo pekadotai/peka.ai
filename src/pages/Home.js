@@ -290,7 +290,9 @@ export default function Home() {
         } ${gejala && "hide-icon-right"}`}
         onClick={() => setFaqs(!faqs)}
       >
-        <h3 style={{ color: "#fff" }}>FAQs</h3>
+        <p style={{ color: "#fff" }}>
+          <b>FAQs</b>
+        </p>
       </div>
       <div
         style={{
