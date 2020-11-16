@@ -5,8 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Josefin Sans", cursive;
+  /* font-family: "Josefin Sans", cursive; */
   /* font-family: "Patrick Hand", cursive; */
+  font-family: "Merienda One", cursive;
 }
 
 code {
@@ -14,12 +15,9 @@ code {
     monospace;
 }
 
-@font-face {
-  font-family: "Patrick Hand";
-  src: local("PatrickHand"),
-    url(./assets/fonts/Patrick_Hand/PatrickHand-Regular.ttf) format("truetype");
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+p {
+  font-size: 16px;
+}

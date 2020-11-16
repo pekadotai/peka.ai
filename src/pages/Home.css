@@ -35,10 +35,15 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .line-height {
+    line-height: 150%;
+  }
+
   .icon0 {
-    left: 1%;
-    bottom: 70%;
+    left: 50%;
+    bottom: 20%;
     z-index: 1;
+    margin-left: -250px;
   }
   .icon1 {
     left: 1%;
@@ -112,7 +117,7 @@
   }
 
   .down {
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 1%);
   }
   .down-down {
     transform: translate(-50%, 90%);
@@ -213,7 +218,7 @@
 
   .from-bottom1 {
     transition: 0.5s;
-    left: 10%;
+    left: 50%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -221,12 +226,12 @@
 
   .to-top1 {
     opacity: 1;
-    bottom: 35%;
+    bottom: 75%;
   }
 
   .from-bottom2 {
     transition: 1s;
-    left: 29%;
+    left: 10%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -234,12 +239,12 @@
 
   .to-top2 {
     opacity: 1;
-    bottom: 50%;
+    bottom: 45%;
   }
 
   .from-bottom3 {
     transition: 1s;
-    left: 70%;
+    left: 10%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -248,7 +253,7 @@
 
   .to-top3 {
     opacity: 1;
-    bottom: 70%;
+    bottom: 60%;
     z-index: 12;
   }
 
@@ -262,12 +267,12 @@
 
   .to-top4 {
     opacity: 1;
-    bottom: 40%;
+    bottom: 45%;
   }
 
   .from-bottom5 {
     transition: 1s;
-    left: 35%;
+    left: 10%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -275,12 +280,12 @@
 
   .to-top5 {
     opacity: 1;
-    bottom: 65%;
+    bottom: 30%;
   }
 
   .from-bottom6 {
     transition: 1s;
-    left: 15%;
+    left: 50%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -288,11 +293,11 @@
 
   .to-top6 {
     opacity: 1;
-    bottom: 50%;
+    bottom: 60%;
   }
   .from-bottom7 {
     transition: 1s;
-    left: 60%;
+    left: 50%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -301,19 +306,21 @@
 
   .to-top7 {
     opacity: 1;
-    bottom: 50%;
+    bottom: 30%;
     z-index: 12;
   }
   .from-bottom8 {
     transition: 1s;
-    left: 1%;
+    left: 10%;
     bottom: 0;
     position: fixed;
-    opacity: 0;
+    opacity: 1;
+    z-index: -2;
   }
   .to-top8 {
     opacity: 1;
-    bottom: 70%;
+    bottom: 75%;
+    z-index: 1;
   }
   .fade-center {
     position: fixed;
@@ -364,14 +371,60 @@
     bottom: 1%;
     z-index: 99;
   }
+
+  button:hover {
+    cursor: pointer;
+  }
+  button {
+    background: #ff1493;
+    outline: none;
+    position: relative;
+    border: 5px solid #111;
+    padding: 15px 50px;
+    overflow: hidden;
+    color: #fff;
+  }
+
+  /*button:before (attr data-hover)*/
+  button:hover:before {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  button:before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 1.1em;
+    left: 0;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: 0.8em;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all 0.3s ease-in-out;
+  }
+  /*button div (button text before hover)*/
+  button:hover div {
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+  button div {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: 0.8em;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .icon0 {
-    left: 1%;
-    bottom: 70%;
+    left: 50%;
+    bottom: 20%;
     z-index: 1;
+    margin-left: -250px;
   }
 
   .icon1 {
@@ -470,11 +523,11 @@
   }
 
   .down {
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 1%);
   }
 
   .down-down {
-    transform: translate(-50%, 150%);
+    transform: translate(-50%, 100%);
   }
 
   .gejala {
@@ -558,6 +611,27 @@
     z-index: 20;
   }
 
+  .fade-center2 {
+    position: fixed;
+    left: 50%;
+    /* bottom: 20%; */
+    /* z-index: 1; */
+    margin-left: -250px;
+    /* left: 50%; */
+    /* top: 50%; */
+    /* transform: translate(-50%, -150%); */
+    /* opacity: 0; */
+    /* transition: 1s; */
+    /* width: 100%; */
+    /* z-index: -12; */
+  }
+
+  .fade-center-aktif2 {
+    top: 40%;
+    /* opacity: 1; */
+    z-index: 20;
+  }
+
   .awan1 {
     width: 200px;
   }
@@ -601,7 +675,7 @@
 
   .from-bottom2 {
     transition: 1s;
-    left: 29%;
+    left: 70%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -609,12 +683,12 @@
 
   .to-top2 {
     opacity: 1;
-    bottom: 50%;
+    bottom: 45%;
   }
 
   .from-bottom3 {
     transition: 1s;
-    left: 66%;
+    left: 10%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -622,12 +696,12 @@
 
   .to-top3 {
     opacity: 1;
-    bottom: 70%;
+    bottom: 25%;
   }
 
   .from-bottom4 {
     transition: 0.5s;
-    left: 60%;
+    left: 40%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -635,12 +709,12 @@
 
   .to-top4 {
     opacity: 1;
-    bottom: 30%;
+    bottom: 40%;
   }
 
   .from-bottom5 {
     transition: 1s;
-    left: 35%;
+    left: 40%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -648,12 +722,12 @@
 
   .to-top5 {
     opacity: 1;
-    bottom: 55%;
+    bottom: 60%;
   }
 
   .from-bottom6 {
     transition: 1s;
-    left: 25%;
+    left: 70%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -661,11 +735,11 @@
 
   .to-top6 {
     opacity: 1;
-    bottom: 30%;
+    bottom: 25%;
   }
   .from-bottom7 {
     transition: 1s;
-    left: 66%;
+    left: 70%;
     bottom: 0;
     position: fixed;
     opacity: 0;
@@ -673,7 +747,7 @@
 
   .to-top7 {
     opacity: 1;
-    bottom: 50%;
+    bottom: 60%;
   }
   .from-bottom8 {
     transition: 1s;
@@ -698,5 +772,53 @@
     top: 40%;
     opacity: 1;
     z-index: 20;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  button {
+    background: #ff1493;
+    outline: none;
+    position: relative;
+    border: 5px solid #111;
+    padding: 15px 50px;
+    overflow: hidden;
+    color: #fff;
+  }
+
+  /*button:before (attr data-hover)*/
+  button:hover:before {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  button:before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 1.1em;
+    left: 0;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: 0.8em;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all 0.3s ease-in-out;
+  }
+  /*button div (button text before hover)*/
+  button:hover div {
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+  button div {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-size: 0.8em;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .line-height {
+    line-height: 200%;
   }
 }
