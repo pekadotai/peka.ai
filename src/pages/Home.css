@@ -57,6 +57,7 @@
 }
 
 .right2-cegah {
+  z-index: 10;
   transform: translate(-50%, 400%);
 }
 
@@ -337,6 +338,7 @@
   }
 
   .right2-cegah {
+    z-index: 10;
     transform: translate(-50%, 700%);
   }
 
@@ -1340,6 +1342,7 @@
   }
 
   .to-left2 {
+    z-index: 99;
     transform: translate(50%, 500%);
   }
 
@@ -1349,6 +1352,7 @@
   }
 
   .right3 {
+    z-index: 99;
     transform: translate(-50%, 600%);
   }
 
@@ -1358,6 +1362,7 @@
   }
 
   .to-left3 {
+    z-index: 99;
     transform: translate(50%, 700%);
   }
 

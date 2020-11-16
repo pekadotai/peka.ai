@@ -6,19 +6,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* font-family: "Josefin Sans", cursive; */
-  /* font-family: "Patrick Hand", cursive; */
-  font-family: "Merienda One", cursive;
+  /* font-family: "Patrick Hand", serif; */
+  font-family: MeriendaOne;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-/* @font-face {
+@font-face {
   font-family: "MeriendaOne";
   src: local("MeriendaOne"),
-    url(./assets/fonts/MeriendaOne-Regular.ttf) format("ttf");
-} */
+    url(./assets//fonts/MeriendaOne-Regular.ttf) format("truetype");
+}
 /* @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css?family=Josefin+Sans"); */

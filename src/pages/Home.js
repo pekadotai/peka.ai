@@ -458,7 +458,7 @@ export default function Home() {
             borderRadius: "20px",
           }}
         >
-          <p>Darah ke luar dari puting payudara</p>
+          <p>Darah keluar dari puting payudara</p>
         </div>
       </div>
       <div
@@ -484,7 +484,7 @@ export default function Home() {
       <div className={`left gejala ${pencegahan && "right"}`}>
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,1)",
+            backgroundColor: "rgba(255,255,255,0.9)",
             padding: "20px",
             borderRadius: "20px",
           }}
@@ -495,7 +495,7 @@ export default function Home() {
       <div className={`from-right gejala ${pencegahan && "to-left"}`}>
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,1)",
+            backgroundColor: "rgba(255,255,255,0.9)",
             padding: "20px",
             borderRadius: "20px",
           }}
@@ -506,7 +506,7 @@ export default function Home() {
       <div className={`left2-cegah gejala ${pencegahan && "right2-cegah"}`}>
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,1)",
+            backgroundColor: "rgba(255,255,255,0.9)",
             padding: "20px",
             borderRadius: "20px",
           }}
@@ -517,7 +517,7 @@ export default function Home() {
       <div className={`from-right2 gejala ${pencegahan && "to-left2"}`}>
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,1)",
+            backgroundColor: "rgba(255,255,255,0.9)",
             padding: "20px",
             borderRadius: "20px",
           }}
@@ -528,7 +528,7 @@ export default function Home() {
       <div className={`left3 gejala ${pencegahan && "right3"}`}>
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,1)",
+            backgroundColor: "rgba(255,255,255,0.9)",
             padding: "20px",
             borderRadius: "20px",
           }}
