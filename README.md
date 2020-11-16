@@ -1,70 +1,243 @@
-# Getting Started with Create React App
+<a href="http://peka-ai.herokuapp.com/">
+    <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605545369/PEKA_AI_1_vxfhtp.png" alt="Aimeos logo" title="Aimeos" align="right" height="120" width="130"/>
+</a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Peka.ai
+======================
+[![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 
-## Available Scripts
+[Peka.ai](http://peka-ai.herokuapp.com/) adalah sebuah web interaktif yang dapat membantu kamu dalam mengetahui informasi tentang kanker payudara mulai dari penyebab, gejala, diagnosa, hingga mitos seputar kanker payudara. Fitur utama Peka.AI adalah chatbot yang dapat mengukur tingkat risiko terkena kanker payudara dan memberikan rekomendasi sesuai hasil pemeriksaan melalui chatbot tersebut.
 
-In the project directory, you can run:
+[![Aimeos TYPO3 demo](https://aimeos.org/fileadmin/user_upload/typo3-demo.jpg)](http://typo3.demo.aimeos.org/)
 
-### `yarn start`
+## Table of content
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Installation](#installation)
+    - [TER](#typo3-extension-repository)
+    - [Composer](#composer)
+- [TYPO3 setup](#typo3-setup)
+    - [Extension](#extension)
+    - [Database](#database)
+- [Peka Chatbot](#peka-chatbot)
+    - [Flows](#upload-the-page-tree-file)
+    - [States](#go-to-the-import-view)
+    - [Intents](#import-the-page-tree)
+    - [NLU-s](#seo-friendly-urls)
+    - [Methods](#methods)
+    - [Handlers](#handlers)
+    - [Demo](#seo-friendly-urls)
+- [License](#license)
+- [Links](#links)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `yarn test`
+This document is for the latest Aimeos TYPO3 **20.10 release and later**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- LTS release: 20.10 (TYPO3 9/10 LTS)
+- Old LTS release: 19.10 (TYPO3 7/8/9 LTS)
 
-### `yarn build`
+### TYPO3 extension repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you want to install Aimeos into your existing TYPO3 installation, the [Aimeos extension from the TER](https://typo3.org/extensions/repository/view/aimeos) is recommended. You can download and install it directly from the Extension Manager of your TYPO3 instance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For new TYPO3 installations, there's a 1-click [Aimeos distribution](https://typo3.org/extensions/repository/view/aimeos_dist) available too. Choose the Aimeos distribution from the list of available distributions in the Extension Manager and you will get a completely set up shop system including demo data for a quick start.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Composer
 
-### `yarn eject`
+The latest version can be installed via composer too. This is especially useful if you want to create new TYPO3 installations automatically or play with the latest code. You need to install the composer package first if it isn't already available:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`php -r "readfile('https://getcomposer.org/installer');" | php -- --filename=composer`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In order to tell install TYPO3, you have to execute
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`composer create-project typo3/cms-base-distribution myshop`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This will install TYPO3 into the ''./myshop/'' directory. Afterwards, you have to edit the composer.json file and add the ''post-install-cmd'' and ''post-update-cmd'' scripts:
 
-## Learn More
+```
+    "scripts": {
+        "post-install-cmd": [
+            "Aimeos\\Aimeos\\Custom\\Composer::install"
+        ],
+        "post-update-cmd": [
+            "Aimeos\\Aimeos\\Custom\\Composer::install"
+        ]
+    }
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Then, install the Aimeos extension for TYPO3 with:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`composer req aimeos/aimeos-typo3:~20.10`
 
-### Code Splitting
+This will install TYPO3 9.5 and the latest Aimeos TYPO3 extension. The Aimeos composer script will be executed automatically, which copies some required files and adds a link to the Aimeos extensions placed in the ./ext/ directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## TYPO3 setup
 
-### Analyzing the Bundle Size
+### Database setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you use MySQL < 5.7.8, you have to use `utf8` and `utf8_unicode_ci` instead because those MySQL versions can't handle the long indexes created by `utf8mb4` (up to four bytes per character) and you will get errors like
 
-### Making a Progressive Web App
+```
+1071 Specified key was too long; max key length is 767 bytes
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To avoid that, change your database settings in your `./typo3conf/LocalConfiguration.php` to:
 
-### Advanced Configuration
+```
+'DB' => [
+    'Connections' => [
+        'Default' => [
+            'tableoptions' => [
+                'charset' => 'utf8',
+                'collate' => 'utf8_unicode_ci',
+            ],
+            // ...
+        ],
+    ],
+],
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Security
 
-### Deployment
+Since **TYPO3 9.5.14+** implements **SameSite cookie handling** and restricts when browsers send cookies to your site. This is a problem when customers are redirected from external payment provider domain. Then, there's no session available on the confirmation page. To circumvent that problem, you need to set the configuration option `cookieSameSite` to `none` in your `./typo3conf/LocalConfiguration.php`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+    'FE' => [
+        'cookieSameSite' => 'none'
+    ]
+```
 
-### `yarn build` fails to minify
+### Extension
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Log into the TYPO3 back end
+* Click on ''Admin Tools::Extension Manager'' in the left navigation
+* Click the icon with the little plus sign left from the Aimeos list entry (looks like a lego brick)
+
+![Install Aimeos TYPO3 extension](https://aimeos.org/docs/images/Aimeos-typo3-extmngr-install.png)
+
+### Database
+
+Afterwards, you have to execute the update script of the extension to create the required database structure:
+
+![Execute update script](https://aimeos.org/docs/images/Aimeos-typo3-extmngr-update-7.x.png)
+
+## Peka Chatbot
+
+Penggunaan chatbot Peka untuk mendeteksi risiko terkena kanker payudara 
+dapat dilihat secara detil melalui infografis dibawah ini:
+
+* [20.10.x page tree](https://aimeos.org/fileadmin/download/Aimeos-pages_20.10.t3d)
+* [19.10.x page tree](https://aimeos.org/fileadmin/download/Aimeos-pages_two-columns_18.10__2.t3d)
+
+**Note:** The Aimeos layout expects [Bootstrap](https://getbootstrap.com) providing the grid layout!
+
+### Flows
+
+* Default
+* Risk Assessment
+
+
+![Upload the page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-upload.png)
+
+### States
+
+* Initial
+* Usia
+* Berat
+* Tinggi
+* Usia Menstruasi
+* Usia Pertama Melahirkan
+* Usia Menopause
+* Terapi Penggantian Hormon
+* Tes Genetik
+* Kanker Ovarium
+* Riwayat Keluarga
+* Personal Breast Disease
+* End
+
+
+![Upload the page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-upload.png)
+
+### Intents
+
+* Default (Fallback)
+* Cek Kanker (Initial)
+* Reenter (command)
+* Cancel (Float)
+* Usia Berat Tinggi
+* Iya
+* Tidak
+* Belum
+* Cancel
+* Keluarga Satu
+* Keluarga Dua
+* Keluarga Tiga
+* Biopsy Atypia
+* BiopsyNonAtypia
+* ADH
+* LCIS
+* DCIS
+* Breast Density
+
+![Import the uploaded page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-import.png)
+
+
+### NlUs
+
+* Cek Kanker
+* Usia Berat Tinggi
+* Tes Berat
+* Iya Tidak
+* Keluarga Satu
+* Keluarga Dua
+* Keluarga Tiga
+* Biopsy Atypia
+* Biopsy Non Atypia
+* ADH
+* LCIS
+* DCIS
+* Breast Density
+* Check NLU
+* Cancel
+
+![Import the uploaded page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-import.png)
+
+### Methods
+
+* gantiRR_usia
+* hitung_BMI
+* gantiRR_usia_menstruasi
+* gantiRR_BMI
+* gantiRR_usia_melahirkan
+* gantiRR_usia_menopause
+* gantiRR_penggantian_hormon
+* gantiRR_tes_genetik
+* gantiRR_kanker_ovarium
+* gantiRR_keluarga
+* gantiRR_personal_breast
+* DCIS
+* Breast Density
+* Check NLU
+* Cancel
+
+![Import the uploaded page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-import.png)
+
+Now you have a new page "Shop" in your page tree including all required sub-pages.
+
+### SEO-friendly URLs
+
+TYPO3 9.5 and later can create SEO friendly URLs if you add the rules to the site config:
+[https://aimeos.org/docs/latest/typo3/setup/#seo-urls](https://aimeos.org/docs/latest/typo3/setup/#seo-urls)
+
+## License
+
+The Aimeos TYPO3 extension is licensed under the terms of the GPL Open Source
+license and is available for free.
+
+## Links
+
+* [Web site](https://aimeos.org/integrations/typo3-shop-extension/)
+* [Documentation](https://aimeos.org/docs/TYPO3)
+* [Forum](https://aimeos.org/help/typo3-extension-f16/)
+* [Issue tracker](https://github.com/aimeos/aimeos-typo3/issues)
+* [Source code](https://github.com/aimeos/aimeos-typo3)

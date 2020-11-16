@@ -1,17 +1,7 @@
 import React, { useState } from "react";
 import Wanita from "../assets/icons/wanita.png";
-import Circle from "../assets/icons/circleee.png";
 import "./Home.css";
-import { CardGrid, Card } from "@kata-kit/card";
-import { Chrono } from "react-chrono";
-import Gejala from "../assets/icons/symptom.png";
-import Ask from "../assets/icons/ask.png";
-import Cegah from "../assets/icons/cegah.png";
-import Diagnosa from "../assets/icons/diagnosa.png";
-import Warning from "../assets/icons/warning.png";
-import Tipe from "../assets/icons/tipe.png";
-import Myth from "../assets/icons/myth.png";
-import FAQs from "../assets/icons/faqs.png";
+import { Card } from "@kata-kit/card";
 import Icon1 from "../assets/icons/icon1.png";
 import Icon2 from "../assets/icons/icon2.png";
 import Icon3 from "../assets/icons/icon3.png";
@@ -20,11 +10,6 @@ import Icon5 from "../assets/icons/icon5.png";
 import Icon6 from "../assets/icons/icon6.png";
 import Icon7 from "../assets/icons/icon7.png";
 import Icon8 from "../assets/icons/icon8.png";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 export default function Home() {
   const [tentangPeka, setTentangPeka] = useState(false);
