@@ -420,7 +420,7 @@ export default function Home() {
       <div style={{}} className={`left2 gejala ${gejala && "right2"}`}>
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,1)",
+            backgroundColor: "rgba(255,255,255,0.9)",
             padding: "20px",
             borderRadius: "20px",
           }}
@@ -431,7 +431,7 @@ export default function Home() {
       <div style={{}} className={`from-right2 gejala ${gejala && "to-left2"}`}>
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,1)",
+            backgroundColor: "rgba(255,255,255,0.9)",
             padding: "20px",
             borderRadius: "20px",
           }}
@@ -442,7 +442,7 @@ export default function Home() {
       <div style={{}} className={`left3 gejala ${gejala && "right3"}`}>
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,1)",
+            backgroundColor: "rgba(255,255,255,0.9)",
             padding: "20px",
             borderRadius: "20px",
           }}
@@ -453,7 +453,7 @@ export default function Home() {
       <div style={{}} className={`from-right3 gejala ${gejala && "to-left3"}`}>
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,1)",
+            backgroundColor: "rgba(255,255,255,0.9)",
             padding: "20px",
             borderRadius: "20px",
           }}
@@ -703,12 +703,12 @@ export default function Home() {
                 className="tipe-desc font-title tipe-padding"
               >
                 <p
-                  style={{ color: "#000", lineHeight: "150%" }}
+                  style={{ color: "#000", lineHeight: "130%" }}
                   // className="font-desc"
                 >
                   Jenis kanker ini termasuk kanker stadium awal dan mudah
-                  diobati. Namun demikian, kanker ini bisa menyebar ke jaringan
-                  sekitarnya jika tidak segera ditangani.
+                  diobati. Kanker ini bisa menyebar ke jaringan sekitarnya jika
+                  tidak segera ditangani.
                 </p>
               </Card>
             </div>
@@ -724,7 +724,7 @@ export default function Home() {
                 className="tipe-desc font-title tipe-padding"
               >
                 <p
-                  style={{ color: "#000", lineHeight: "150%" }}
+                  style={{ color: "#000", lineHeight: "130%" }}
                   // className="font-desc"
                 >
                   Adalah kanker yang tumbuh di lobulus. Sama seperti ductal
@@ -747,12 +747,12 @@ export default function Home() {
                 className="tipe-desc font-title tipe-padding"
               >
                 <p
-                  style={{ color: "#000", lineHeight: "150%" }}
+                  style={{ color: "#000", lineHeight: "130%" }}
                   // className="font-desc"
                 >
                   Kanker ini tumbuh di duktus dan bisa menyebar ke jaringan
-                  sekitarnya, bahkan bisa menyebar ke area tubuh yang lain.
-                  Jenis kanker ini terjadi pada 70-80% kasus kanker payudara.
+                  sekitarnya. Jenis kanker ini terjadi pada 70-80% kasus kanker
+                  payudara.
                 </p>
               </Card>
             </div>
@@ -768,7 +768,7 @@ export default function Home() {
                 className="tipe-desc font-title tipe-padding"
               >
                 <p
-                  style={{ color: "#000", lineHeight: "150%" }}
+                  style={{ color: "#000", lineHeight: "130%" }}
                   // className="font-desc"
                 >
                   Adalah kanker yang tumbuh di lobulus dan bisa menyebar ke
@@ -1016,22 +1016,17 @@ export default function Home() {
         </div>
       </div>
       <div className={`fade-center ${faqs && "fade-center-aktif-faqs"}`}>
-        <div style={{ flex: 1, padding: "50px" }}>
+        <div style={{ flex: 1 }} className="faqs-padding">
           <div
             style={{
               height: "400px",
               overflowY: "scroll",
               padding: "10px",
-              backgroundColor: "#fff",
+              backgroundColor: "rgba(255,255,255,0.9)",
               borderRadius: "10px",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                margin: "10px 0px",
-              }}
-            >
+            <div style={{ display: "flex", margin: "10px 0px" }}>
               <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>Apa saja faktor resikonya?</h3>
                 Usia. Mayoritas kasus kanker payudara terjadi pada perempuan di

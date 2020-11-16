@@ -90,8 +90,16 @@
   width: 500px;
 }
 
+.faqs-padding {
+  padding: 50px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .faqs-padding {
+    padding: 20px;
+  }
+
   .faq-title {
     width: 350px;
   }
@@ -99,6 +107,7 @@
   .mitos-padding {
     padding: 10px;
   }
+
   .mitos-title {
     width: 350px;
   }
@@ -114,7 +123,7 @@
 
   .tipe-desc {
     width: 400px;
-    height: 150px;
+    height: 130px;
   }
 
   .gejala-title {
@@ -293,6 +302,7 @@
   }
 
   .left {
+    z-index: 10;
     left: 50%;
     transform: translate(-250%, 200%);
   }
@@ -302,6 +312,7 @@
   }
 
   .from-right {
+    z-index: 10;
     right: 50%;
     transform: translate(250%, 300%);
   }
@@ -311,6 +322,7 @@
   }
 
   .left2 {
+    z-index: 10;
     left: 50%;
     transform: translate(-250%, 400%);
   }
@@ -329,6 +341,7 @@
   }
 
   .from-right2 {
+    z-index: 10;
     right: 50%;
     transform: translate(250%, 500%);
   }
@@ -338,6 +351,7 @@
   }
 
   .left3 {
+    z-index: 10;
     left: 50%;
     transform: translate(-250%, 600%);
   }
@@ -521,7 +535,7 @@
   }
 
   .fade-center-aktif {
-    top: 50%;
+    top: 45%;
     opacity: 1;
     z-index: 20;
   }
@@ -647,6 +661,21 @@
     right: 5%;
     opacity: 1;
     z-index: 1;
+  }
+
+  .icon:hover {
+    box-shadow: 0em 0em 0em 0em #000;
+    transform: translateY(0em);
+  }
+
+  .icon:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(0em);
+  }
+
+  .icon:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(0px);
   }
 }
 
