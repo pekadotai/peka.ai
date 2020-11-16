@@ -23,6 +23,7 @@ Peka.ai
     - [States](#go-to-the-import-view)
     - [Intents](#import-the-page-tree)
     - [NLU-s](#seo-friendly-urls)
+    - [Handlers](#handlers)
     - [Demo](#seo-friendly-urls)
 - [License](#license)
 - [Links](#links)
@@ -121,40 +122,102 @@ Afterwards, you have to execute the update script of the extension to create the
 
 ## Peka Chatbot
 
-The page setup for an Aimeos web shop is easy if you import the example page tree for TYPO3 9/10:
+Penggunaan chatbot Peka untuk mendeteksi risiko terkena kanker payudara 
+dapat dilihat secara detil melalui infografis dibawah ini:
 
 * [20.10.x page tree](https://aimeos.org/fileadmin/download/Aimeos-pages_20.10.t3d)
 * [19.10.x page tree](https://aimeos.org/fileadmin/download/Aimeos-pages_two-columns_18.10__2.t3d)
 
 **Note:** The Aimeos layout expects [Bootstrap](https://getbootstrap.com) providing the grid layout!
 
-### Go to the import view
+### Flows
 
-* In Web::Page, root page (the one with the globe)
-* Right click on the globe
-* Move the cursor to "Branch actions"
-* In the sub-menu, click on "Import from .t3d"
+* Default
+* Risk Assessment
 
-![Go to the import view](https://aimeos.org/docs/images/Aimeos-typo3-pages-menu.png)
-
-### Upload the page tree file
-
-* In the page import dialog
-* Select the "Upload" tab (2nd one)
-* Click on the "Select" dialog
-* Choose the file you've downloaded
-* Press the "Upload files" button
 
 ![Upload the page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-upload.png)
 
-### Import the page tree
+### States
 
-* In Import / Export view
-* Select the uploaded file from the drop-down menu
-* Click on the "Preview" button
-* The pages that will be imported are shown below
-* Click on the "Import" button that has appeared
-* Confirm to import the pages
+* Initial
+* Usia
+* Berat
+* Tinggi
+* Usia Menstruasi
+* Usia Pertama Melahirkan
+* Usia Menopause
+* Terapi Penggantian Hormon
+* Tes Genetik
+* Kanker Ovarium
+* Riwayat Keluarga
+* Personal Breast Disease
+* End
+
+
+![Upload the page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-upload.png)
+
+### Intents
+
+* Default (Fallback)
+* Cek Kanker (Initial)
+* Reenter (command)
+* Cancel (Float)
+* Usia Berat Tinggi
+* Iya
+* Tidak
+* Belum
+* Cancel
+* Keluarga Satu
+* Keluarga Dua
+* Keluarga Tiga
+* Biopsy Atypia
+* BiopsyNonAtypia
+* ADH
+* LCIS
+* DCIS
+* Breast Density
+
+![Import the uploaded page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-import.png)
+
+
+### NlUs
+
+* Cek Kanker
+* Usia Berat Tinggi
+* Tes Berat
+* Iya Tidak
+* Keluarga Satu
+* Keluarga Dua
+* Keluarga Tiga
+* Biopsy Atypia
+* Biopsy Non Atypia
+* ADH
+* LCIS
+* DCIS
+* Breast Density
+* Check NLU
+* Cancel
+
+![Import the uploaded page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-import.png)
+
+### Methods
+
+* gantiRR_usia
+* hitung_BMI
+* gantiRR_usia_menstruasi
+* gantiRR_BMI
+* gantiRR_usia_melahirkan
+* gantiRR_usia_menopause
+* gantiRR_penggantian_hormon
+* gantiRR_tes_genetik
+* gantiRR_kanker_ovarium
+* gantiRR_keluarga
+* gantiRR_personal_breast
+* DCIS
+* Breast Density
+* Check NLU
+* Cancel
 
 ![Import the uploaded page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-import.png)
 
