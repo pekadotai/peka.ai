@@ -28,59 +28,58 @@ export default function Home() {
     {
       title: "Stadium 0",
       cardTitle: "Stadium 0",
-      cardDetailedText:
+      cardSubtitle:
         "Kanker tidak berkembang lebih jauh dari tempat tumbuhnya di duktus atau lobulus, dan belum menyebar ke jaringan di sekitarnya. Kondisi ini disebut in situ.",
     },
     {
       title: "Stadium 1",
       cardTitle: "Stadium 1A",
-      cardDetailedText:
+      cardSubtitle:
         "Tumor berukuran hingga 20 mm dan belum menyebar ke kelenjar getah bening di ketiak.",
     },
     {
       title: "Stadium 1",
       cardTitle: "Stadium 1B",
-      cardDetailedText:
+      cardSubtitle:
         "Kanker sudah menyebar ke kelenjar getah bening di ketiak, dengan ukuran lebih besar dari 0,2 mm namun kurang dari 2 mm. Sedangkan pada payudara terdapat tumor dengan ukuran tidak lebih dari 20 mm atau bisa tidak nampak tumor.",
     },
     {
       title: "Stadium 2",
       cardTitle: "Stadium 2A",
-      cardDetailedText:
+      cardSubtitle:
         "Kanker sudah menyebar ke kelenjar getah bening di ketiak dengan ukuran 2 mm atau lebih, dengan tumor di payudara tidak lebih dari 20 mm atau tidak tampak tumor di payudara. Ukuran tumor lebih besar dari 20 mm, namun tidak lebih besar dari 50 mm, tetapi belum menyebar ke kelenjar getah bening di ketiak.",
     },
     {
       title: "Stadium 2",
       cardTitle: "Stadium 2B",
-      cardDetailedText:
+      cardSubtitle:
         " Ukuran tumor lebih besar dari 20 mm, namun tidak lebih besar dari 50 mm, dan sudah menyebar ke 1 hingga 3 kelenjar getah bening di ketiak. Ukuran tumor lebih besar dari 50 mm, namun tidak menyebar ke kelenjar getah bening.",
     },
     {
       title: "Stadium 3",
       cardTitle: "Stadium 3A",
-      cardDetailedText:
+      cardSubtitle:
         "Kanker sudah menyebar ke 4 hingga 9 kelenjar getah bening di ketiak atau kelenjar getah bening di dalam payudara, dengan ukuran tumor di payudara hingga 50 mm. Bisa juga tidak ada tumor di payudara. Ukuran tumor lebih besar dari 50 mm, dan sudah menyebar ke 1 hingga 3 kelenjar getah bening di ketiak.",
     },
     {
       title: "Stadium 3",
       cardTitle: "Stadium 3B",
-      cardDetailedText: "Tumor sudah menyebar ke kulit dinding payudara.",
+      cardSubtitle: "Tumor sudah menyebar ke kulit dinding payudara.",
     },
     {
       title: "Stadium 3",
       cardTitle: "Stadium 3C",
-      cardDetailedText:
+      cardSubtitle:
         "Ukuran tumor bisa bervariasi, dan telah menyebar hingga ke 10 kelenjar getah bening atau lebih di ketiak, atau sudah menyebar ke kelenjar getah bening di dalam payudara dan leher.",
     },
     {
       title: "Stadium 4",
       cardTitle: "Stadium 4",
-      cardDetailedText:
+      cardSubtitle:
         "Pada stadium ini, ukuran tumor bisa bervariasi, dan telah menyebar jauh ke organ lain, seperti tulang, paru-paru, hati, atau otak.",
     },
   ];
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -570,7 +569,11 @@ export default function Home() {
             <Chrono
               hideControls
               items={items}
-              theme={{ primary: "black", secondary: "#ff1493" }}
+              theme={{
+                primary: "black",
+                secondary: "#ff1493",
+                cardBgColor: "rgba(255,255,255,0.3)",
+              }}
             ></Chrono>
           </div>
         </div>
