@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "MeriendaOne";
+  src: local("MeriendaOne"),
+    url(./fonts/MeriendaOne-Regular.ttf) format("truetype");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* font-family: "Josefin Sans", cursive; */
@@ -14,14 +20,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-@font-face {
-  font-family: "MeriendaOne";
-  src: local("MeriendaOne"),
-    url(./fonts/MeriendaOne-Regular.ttf) format("truetype");
-}
-/* @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap"); */
-/* @import url("https://fonts.googleapis.com/css?family=Josefin+Sans"); */
+
 p {
   font-size: 18px;
 }
