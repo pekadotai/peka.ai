@@ -1,5 +1,5 @@
 <a href="https://aimeos.org/">
-    <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605545246/PEKA_AI_km4c5u.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
+    <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605545369/PEKA_AI_1_vxfhtp.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
 </a>
 
 Peka.ai
