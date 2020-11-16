@@ -12,6 +12,14 @@ import Warning from "../assets/icons/warning.png";
 import Tipe from "../assets/icons/tipe.png";
 import Myth from "../assets/icons/myth.png";
 import FAQs from "../assets/icons/faqs.png";
+import Icon1 from "../assets/icons/icon1.png";
+import Icon2 from "../assets/icons/icon2.png";
+import Icon3 from "../assets/icons/icon3.png";
+import Icon4 from "../assets/icons/icon4.png";
+import Icon5 from "../assets/icons/icon5.png";
+import Icon6 from "../assets/icons/icon6.png";
+import Icon7 from "../assets/icons/icon7.png";
+import Icon8 from "../assets/icons/icon8.png";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -92,21 +100,14 @@ export default function Home() {
   return (
     <div
       style={{
-        // backgroundImage: "linear-gradient(#FFB6C1, #ff1493)",
         backgroundColor: "#f4f4f4",
         height: "100vh",
         display: "flex",
       }}
-      className="font-lucida"
     >
       <div
-        style={{
-          position: "fixed",
-          bottom: "-1%",
-          left: "50%",
-          transform: "translate(-50%,0%)",
-        }}
-        className={`wanita ${
+        style={{}}
+        className={`icon-wanita wanita ${
           tentangPeka ||
           pencegahan ||
           gejala ||
@@ -129,6 +130,8 @@ export default function Home() {
           alignItems: "center",
           display: "flex",
           backgroundColor: "#ff1493",
+          border: "3px solid #000",
+          textAlign: "center",
         }}
         className={`icon ${tentangPeka ? "icon-move" : "icon1"} ${
           pencegahan || diagnosa || tingkatan || tipe || mitos || faqs
@@ -139,11 +142,9 @@ export default function Home() {
           setTentangPeka(!tentangPeka);
         }}
       >
-        <img
-          src={Circle}
-          style={{ position: "absolute", width: "200px", height: "200px" }}
-        />
-        <h3 style={{ color: "#fff" }}>Tentang Peka.ai</h3>
+        <p style={{ color: "#fff" }}>
+          <b>Tentang Peka.ai</b>
+        </p>
       </div>
       {/* 2 */}
       <div
@@ -153,6 +154,8 @@ export default function Home() {
           alignItems: "center",
           display: "flex",
           backgroundColor: "#ff1493",
+          border: "3px solid #000",
+          textAlign: "center",
         }}
         className={`icon ${gejala ? "icon-move" : "icon2"} ${
           tentangPeka ||
@@ -169,15 +172,9 @@ export default function Home() {
           setGejala(!gejala);
         }}
       >
-        <img
-          src={Circle}
-          style={{
-            position: "absolute",
-            width: "200px",
-            height: "200px",
-          }}
-        />
-        <h3 style={{ color: "#fff", textAlign: "center" }}>Gejala</h3>
+        <p style={{ color: "#fff" }}>
+          <b>Gejala</b>
+        </p>
       </div>
       {/* 3 */}
       <div
@@ -187,6 +184,8 @@ export default function Home() {
           alignItems: "center",
           display: "flex",
           backgroundColor: "#ff1493",
+          border: "3px solid #000",
+          textAlign: "center",
         }}
         className={`icon ${pencegahan ? "icon-move" : "icon3"} ${
           tentangPeka || diagnosa || tingkatan || tipe || mitos || faqs
@@ -195,11 +194,9 @@ export default function Home() {
         } ${gejala && "hide-icon"}`}
         onClick={() => setPencegahan(!pencegahan)}
       >
-        <img
-          src={Circle}
-          style={{ position: "absolute", width: "200px", height: "200px" }}
-        />
-        <h3 style={{ color: "#fff" }}>Pencegahan</h3>
+        <p style={{ color: "#fff" }}>
+          <b>Pencegahan</b>
+        </p>
       </div>
       {/* 4 */}
       <div
@@ -209,6 +206,8 @@ export default function Home() {
           alignItems: "center",
           display: "flex",
           backgroundColor: "#ff1493",
+          border: "3px solid #000",
+          textAlign: "center",
         }}
         className={`icon ${diagnosa ? "icon-move" : "icon4"} ${
           tentangPeka || pencegahan || tingkatan || tipe || mitos || faqs
@@ -217,11 +216,9 @@ export default function Home() {
         } ${gejala && "hide-icon"}`}
         onClick={() => setDiagnosa(!diagnosa)}
       >
-        <img
-          src={Circle}
-          style={{ position: "absolute", width: "200px", height: "200px" }}
-        />
-        <h3 style={{ color: "#fff" }}>Diagnosa</h3>
+        <p style={{ color: "#fff" }}>
+          <b>Diagnosa</b>
+        </p>
       </div>
       {/* 5 */}
       <div
@@ -231,6 +228,8 @@ export default function Home() {
           alignItems: "center",
           display: "flex",
           backgroundColor: "#ff1493",
+          border: "3px solid #000",
+          textAlign: "center",
         }}
         className={`icon ${tingkatan ? "icon-move-right" : "icon5"} ${
           tentangPeka || pencegahan || diagnosa || tipe || mitos || faqs
@@ -239,11 +238,9 @@ export default function Home() {
         } ${gejala && "hide-icon-right"}`}
         onClick={() => setTingkatan(!tingkatan)}
       >
-        <img
-          src={Circle}
-          style={{ position: "absolute", width: "200px", height: "200px" }}
-        />
-        <h3 style={{ color: "#fff" }}>Tingkatan</h3>
+        <p style={{ color: "#fff" }}>
+          <b>Tingkatan</b>
+        </p>
       </div>
       {/* 6 */}
       <div
@@ -253,6 +250,8 @@ export default function Home() {
           alignItems: "center",
           display: "flex",
           backgroundColor: "#ff1493",
+          border: "3px solid #000",
+          textAlign: "center",
         }}
         className={`icon ${tipe ? "icon-move-right" : "icon6"} ${
           tentangPeka || pencegahan || diagnosa || tingkatan || mitos || faqs
@@ -261,11 +260,9 @@ export default function Home() {
         } ${gejala && "hide-icon-right"}`}
         onClick={() => setTipe(!tipe)}
       >
-        <img
-          src={Circle}
-          style={{ position: "absolute", width: "200px", height: "200px" }}
-        />
-        <h3 style={{ color: "#fff" }}>Tipe-tipe</h3>
+        <p style={{ color: "#fff" }}>
+          <b>Tipe-tipe</b>
+        </p>
       </div>
       {/* 7 */}
       <div
@@ -275,6 +272,8 @@ export default function Home() {
           alignItems: "center",
           display: "flex",
           backgroundColor: "#ff1493",
+          border: "3px solid #000",
+          textAlign: "center",
         }}
         className={`icon ${mitos ? "icon-move-right" : "icon7"} ${
           tentangPeka || pencegahan || diagnosa || tingkatan || tipe || faqs
@@ -283,15 +282,10 @@ export default function Home() {
         } ${gejala && "hide-icon-right"}`}
         onClick={() => setMitos(!mitos)}
       >
-        <img
-          src={Circle}
-          style={{ position: "absolute", width: "200px", height: "200px" }}
-        />
         <div>
-          <h3 style={{ color: "#fff", textAlign: "center" }}>Mitos seputar</h3>
-          <h3 style={{ color: "#fff", textAlign: "center" }}>
-            kanker payudara
-          </h3>
+          <p style={{ color: "#fff", textAlign: "center" }}>
+            <b>Mitos</b>
+          </p>
         </div>
       </div>
       {/* 8 */}
@@ -302,6 +296,7 @@ export default function Home() {
           alignItems: "center",
           display: "flex",
           backgroundColor: "#ff1493",
+          border: "3px solid #000",
         }}
         className={`icon ${faqs ? "icon-move-right" : "icon8"} ${
           tentangPeka || pencegahan || diagnosa || tingkatan || tipe || mitos
@@ -310,10 +305,6 @@ export default function Home() {
         } ${gejala && "hide-icon-right"}`}
         onClick={() => setFaqs(!faqs)}
       >
-        <img
-          src={Circle}
-          style={{ position: "absolute", width: "200px", height: "200px" }}
-        />
         <h3 style={{ color: "#fff" }}>FAQs</h3>
       </div>
       <div
@@ -333,7 +324,10 @@ export default function Home() {
         } ${gejala && "hide-icon-gejala"}`}
         onClick={() => {}}
       >
-        <button data-hover="Peka Bot" style={{}}>
+        <button
+          data-hover="Peka Bot"
+          style={{ justifyContent: "center", alignItems: "center" }}
+        >
           <div>
             <b>Cek potensi kanker payudaramu disini!</b>
           </div>
@@ -342,15 +336,7 @@ export default function Home() {
 
       {/* Slide 1 */}
       <div style={{}} className={`center fade ${tentangPeka && "down"}`}>
-        <Card
-          title="Apa itu Peka.ai"
-          style={{
-            backgroundColor: "rgba(255,255,255,0.3)",
-            padding: "20px",
-            color: "#ff1493",
-            width: "700px",
-          }}
-        >
+        <Card title="Apa itu Peka.ai" style={{}} className="apa-itu-peka">
           <p
             style={{
               color: "#000",
@@ -365,12 +351,15 @@ export default function Home() {
         </Card>
         <Card
           title="Dan apa itu kanker payudara?"
-          style={{
-            backgroundColor: "rgba(255,255,255,0.3)",
-            padding: "20px",
-            color: "#ff1493",
-            width: "700px",
-          }}
+          style={
+            {
+              // backgroundColor: "rgba(255,255,255,0.3)",
+              // padding: "10px 0px",
+              // color: "#ff1493",
+              // width: "700px",
+            }
+          }
+          className="apa-itu-kanker"
         >
           <p
             style={{
@@ -383,24 +372,29 @@ export default function Home() {
             terbentuk di kelenjar yang menghasilkan susu (lobulus), atau di
             saluran (duktus) yang membawa air susu dari kelenjar ke puting
             payudara. Kanker juga bisa terbentuk di jaringan lemak atau jaringan
-            ikat di dalam payudara.(
-            <a
-              href="https://www.alodokter.com/kanker-payudara"
-              target="_blank"
-              style={{
-                textDecorationLine: "underline",
-                textDecorationColor: "#ff1493",
-                color: "#ff1493",
-              }}
-            >
-              https://www.alodokter.com/kanker-payudara
-            </a>
+            ikat di dalam payudara. <br />(
+            <i>
+              <a
+                href="https://www.alodokter.com/kanker-payudara"
+                target="_blank"
+                style={{
+                  textDecorationLine: "underline",
+                  textDecorationColor: "#ff1493",
+                  color: "#ff1493",
+                }}
+              >
+                https://www.alodokter.com/kanker-payudara
+              </a>
+            </i>
             )
           </p>
         </Card>
       </div>
-      <div style={{}} className={`center fade ${tentangPeka && "down-down"}`}>
-        <img src={Ask} width="200px" style={{ opacity: 0.1 }} />
+      <div
+        style={{}}
+        className={`bottom-right-hide ${tentangPeka && "bottom-right-bottom"}`}
+      >
+        <img src={Icon1} width="400px" style={{ opacity: 1 }} />
       </div>
 
       {/* Slide 2 */}
@@ -408,17 +402,14 @@ export default function Home() {
         <div style={{}}>
           <Card
             title="Apa aja sih gejala kanker payudara?"
-            style={{ backgroundColor: "rgba(255,255,255,1)", color: "#ff1493" }}
+            style={{
+              backgroundColor: "rgba(255,255,255,1)",
+              color: "#ff1493",
+            }}
+            className="gejala-title font-title"
           ></Card>
         </div>
       </div>
-      <div
-        style={{ zIndex: 99 }}
-        className={`center fade ${gejala && "down-down"}`}
-      >
-        <img src={Gejala} height="200px" style={{ opacity: 0.1 }} />
-      </div>
-
       <div style={{}} className={`left gejala ${gejala && "right"}`}>
         <div
           style={{
@@ -427,10 +418,7 @@ export default function Home() {
             borderRadius: "20px",
           }}
         >
-          <p>
-            Adanya benjolan di payudara atau penebalan jaringan yang terasa
-            berbeda dari jaringan di sekitarnya
-          </p>
+          <p>Adanya benjolan di sekitar payudara.</p>
         </div>
       </div>
       <div style={{}} className={`from-right gejala ${gejala && "to-left"}`}>
@@ -488,17 +476,23 @@ export default function Home() {
           <p>Darah ke luar dari puting payudara</p>
         </div>
       </div>
+      <div
+        style={{}}
+        className={`bottom-right-hide ${gejala && "bottom-right-bottom"}`}
+      >
+        <img src={Icon2} width="400px" style={{ opacity: 1 }} />
+      </div>
 
       {/* Slide 3 */}
       <div style={{}} className={`center fade ${pencegahan && "down"}`}>
         <div>
           <Card
-            title="Kanker payudara bisa dicegah melalui beberapa cara berikut!"
+            title="Ini cara mencegah kanker payudara!"
             style={{
-              backgroundColor: "rgba(255,255,255,0.3)",
-              width: "800px",
+              // width: "800px",
               color: "#ff1493",
             }}
+            className="gejala-title font-title"
           ></Card>
         </div>
       </div>
@@ -524,7 +518,7 @@ export default function Home() {
           <p>Rutin melakukan pemeriksaan payudara klinis (SADANIS)</p>
         </div>
       </div>
-      <div className={`left2 gejala ${pencegahan && "right2"}`}>
+      <div className={`left2-cegah gejala ${pencegahan && "right2-cegah"}`}>
         <div
           style={{
             backgroundColor: "rgba(255,255,255,1)",
@@ -558,22 +552,22 @@ export default function Home() {
         </div>
       </div>
       <div
-        style={{ zIndex: 99 }}
-        className={`center fade ${pencegahan && "down-down"}`}
+        style={{}}
+        className={`bottom-right-hide ${pencegahan && "bottom-right-bottom"}`}
       >
-        <img src={Cegah} height="200px" style={{ opacity: 0.1 }} />
+        <img src={Icon3} width="400px" style={{ opacity: 1 }} />
       </div>
+
       {/* Slide 4 */}
       <div style={{}} className={`center fade ${diagnosa && "down"}`}>
         <div style={{}}>
           <Card
-            title="Jangan lupa lakukan test diagnosa kanker payudara!"
+            title="Ayo diagnosa kanker payudara!"
             style={{
-              backgroundColor: "rgba(255,255,255,0.3)",
               textAlign: "justify",
-              width: "700px",
               color: "#ff1493",
             }}
+            className="pencegahan-title font-title"
           >
             <p style={{ color: "#000" }} className="line-height">
               <b style={{ color: "#ff1493" }}>Tes mammografi</b> adalah tes yang
@@ -599,23 +593,22 @@ export default function Home() {
         </div>
       </div>
       <div
-        style={{ zIndex: 99 }}
-        className={`center fade ${diagnosa && "down-down"}`}
+        style={{}}
+        className={`bottom-right-hide ${diagnosa && "bottom-right-bottom"}`}
       >
-        <img src={Diagnosa} height="250px" style={{ opacity: 0.1 }} />
+        <img src={Icon4} width="400px" style={{ opacity: 1 }} />
       </div>
 
       {/* Slide 5 */}
       <div style={{}} className={`center fade ${tingkatan && "down"}`}>
         <div style={{ overflowY: "scroll" }} className="tingkatan-height">
           <Card
-            title="Ini dia tingkatan kanker payudara yang harus kamu ketahui"
+            title="Ini dia tingkatan kanker payudara"
             style={{
-              backgroundColor: "rgba(255,255,255,0.3)",
               textAlign: "justify",
-              width: "1024px",
               color: "#ff1493",
             }}
+            className="pencegahan-title font-title"
           >
             <p style={{ color: "#000" }} className="line-height">
               <b style={{ color: "#ff1493" }}>Stadium 0 </b> <br /> Kanker tidak
@@ -685,10 +678,10 @@ export default function Home() {
         </div>
       </div>
       <div
-        style={{ zIndex: 99 }}
-        className={`center fade ${tingkatan && "down-down"}`}
+        style={{}}
+        className={`bottom-left-hide ${tingkatan && "bottom-left-bottom"}`}
       >
-        <img src={Warning} height="250px" style={{ opacity: 0.1 }} />
+        <img src={Icon5} width="400px" style={{ opacity: 1 }} />
       </div>
 
       {/* Slide 6 */}
@@ -697,9 +690,9 @@ export default function Home() {
           <Card
             title="Yuk kenali juga tipe-tipe kanker payudara"
             style={{
-              backgroundColor: "rgba(255,255,255,0.3)",
               color: "#ff1493",
             }}
+            className="font-title tipe-title"
           ></Card>
         </div>
       </div>
@@ -712,20 +705,22 @@ export default function Home() {
             flexDirection: "column",
           }}
         >
-          <div style={{ display: "flex" }}>
+          <div style={{}} className="tipe-desc-column">
             <div style={{}}>
               <Card
                 title="Ductal carcinoma in situ"
                 style={{
-                  width: "400px",
-                  height: "230px",
-                  backgroundColor: "rgba(255,255,255,0.5)",
+                  backgroundColor: "rgba(255,255,255,0.9)",
                   margin: "5px",
-                  padding: "10px 0px",
                   color: "#ff1493",
+                  textAlign: "justify",
                 }}
+                className="tipe-desc font-title tipe-padding"
               >
-                <p style={{ color: "#000", lineHeight: "150%" }}>
+                <p
+                  style={{ color: "#000", lineHeight: "150%" }}
+                  // className="font-desc"
+                >
                   Jenis kanker ini termasuk kanker stadium awal dan mudah
                   diobati. Namun demikian, kanker ini bisa menyebar ke jaringan
                   sekitarnya jika tidak segera ditangani.
@@ -736,15 +731,17 @@ export default function Home() {
               <Card
                 title="Lobular carcinoma in situ"
                 style={{
-                  width: "400px",
-                  height: "230px",
-                  backgroundColor: "rgba(255,255,255,0.5)",
+                  backgroundColor: "rgba(255,255,255,0.9)",
                   margin: "5px",
-                  padding: "10px 0px",
                   color: "#ff1493",
+                  textAlign: "justify",
                 }}
+                className="tipe-desc font-title tipe-padding"
               >
-                <p style={{ color: "#000", lineHeight: "150%" }}>
+                <p
+                  style={{ color: "#000", lineHeight: "150%" }}
+                  // className="font-desc"
+                >
                   Adalah kanker yang tumbuh di lobulus. Sama seperti ductal
                   carcinoma in situ, kanker ini tidak menyebar ke jaringan
                   sekitarnya.
@@ -752,20 +749,22 @@ export default function Home() {
               </Card>
             </div>
           </div>
-          <div style={{ display: "flex" }}>
+          <div style={{}} className="tipe-desc-column">
             <div>
               <Card
                 title="Invasive ductal carcinoma"
                 style={{
-                  width: "400px",
-                  height: "230px",
-                  backgroundColor: "rgba(255,255,255,0.5)",
+                  backgroundColor: "rgba(255,255,255,0.9)",
                   margin: "5px",
-                  padding: "10px 0px",
                   color: "#ff1493",
+                  textAlign: "justify",
                 }}
+                className="tipe-desc font-title tipe-padding"
               >
-                <p style={{ color: "#000", lineHeight: "150%" }}>
+                <p
+                  style={{ color: "#000", lineHeight: "150%" }}
+                  // className="font-desc"
+                >
                   Kanker ini tumbuh di duktus dan bisa menyebar ke jaringan
                   sekitarnya, bahkan bisa menyebar ke area tubuh yang lain.
                   Jenis kanker ini terjadi pada 70-80% kasus kanker payudara.
@@ -776,15 +775,17 @@ export default function Home() {
               <Card
                 title="Invasive lobular carcinoma"
                 style={{
-                  width: "400px",
-                  height: "230px",
-                  backgroundColor: "rgba(255,255,255,0.5)",
+                  backgroundColor: "rgba(255,255,255,0.9)",
                   margin: "5px",
-                  padding: "10px 0px",
                   color: "#ff1493",
+                  textAlign: "justify",
                 }}
+                className="tipe-desc font-title tipe-padding"
               >
-                <p style={{ color: "#000", lineHeight: "150%" }}>
+                <p
+                  style={{ color: "#000", lineHeight: "150%" }}
+                  // className="font-desc"
+                >
                   Adalah kanker yang tumbuh di lobulus dan bisa menyebar ke
                   jaringan sekitarnya. Kanker ini terjadi pada 10% kasus kanker
                   payudara.
@@ -795,22 +796,21 @@ export default function Home() {
         </div>
       </div>
       <div
-        style={{ zIndex: 99 }}
-        className={`center fade ${tipe && "down-down"}`}
+        style={{}}
+        className={`bottom-left-hide ${tipe && "bottom-left-bottom"}`}
       >
-        <img src={Tipe} height="250px" style={{ opacity: 0.1 }} />
+        <img src={Icon6} width="400px" style={{ opacity: 1 }} />
       </div>
 
       {/* Slide 7 */}
       <div style={{}} className={`center fade ${mitos && "down"}`}>
         <div style={{}}>
           <Card
-            title="Awas, ada mitos juga tentang kanker payudara!"
+            title="Hati-hati dengan mitos kanker payudara!"
             style={{
-              width: "620px",
-              backgroundColor: "rgba(255,255,255,0.3)",
               color: "#ff1493",
             }}
+            className="mitos-title font-title"
           ></Card>
         </div>
       </div>
@@ -822,23 +822,20 @@ export default function Home() {
         }}
         className={`from-bottom1 ${mitos && "to-top1"}`}
       >
-        {/* <img
-          src={Myth}
-          style={{ position: "fixed", opacity: 0.5, marginTop: "-20px" }}
-          className="awan1"
-        /> */}
         <div
           style={{
-            color: "#fff",
-            border: "5px solid rgba(0,0,0,0.5)",
-            padding: "20px",
-            backgroundColor: "#ff1493",
+            // color: "#ff1493",
+            backgroundColor: "#fff",
+            backgroundColor: "rgba(255,255,255,0.9)",
             borderRadius: "10px",
             textAlign: "center",
             width: "350px",
           }}
+          className="mitos-padding"
         >
-          <b>Kanker payudara itu menyakitkan?</b>
+          <p>
+            <b>Kanker payudara itu menyakitkan?</b>
+          </p>
         </div>
       </div>
       <div
@@ -851,16 +848,18 @@ export default function Home() {
       >
         <div
           style={{
-            color: "#fff",
-            border: "5px solid rgba(0,0,0,0.5)",
-            padding: "20px",
-            backgroundColor: "#ff1493",
+            // color: "#ff1493",
+            backgroundColor: "#fff",
             borderRadius: "10px",
+            backgroundColor: "rgba(255,255,255,0.9)",
             textAlign: "center",
             width: "350px",
           }}
+          className="mitos-padding"
         >
-          <b>Hanya wanita saja yang dapat terkena kanker payudara</b>
+          <p>
+            <b>Hanya wanita saja yang dapat terkena kanker payudara</b>
+          </p>
         </div>
       </div>
       <div
@@ -873,16 +872,18 @@ export default function Home() {
       >
         <div
           style={{
-            color: "#fff",
-            border: "5px solid rgba(0,0,0,0.5)",
-            padding: "20px",
-            backgroundColor: "#ff1493",
+            // color: "#ff1493",
+            backgroundColor: "#fff",
+            backgroundColor: "rgba(255,255,255,0.9)",
             borderRadius: "10px",
             textAlign: "center",
             width: "350px",
           }}
+          className="mitos-padding"
         >
-          <b>Memakai Bra Terus-Menerus Bisa Menyebabkan Kanker Payudara</b>
+          <p>
+            <b>Memakai Bra Terus-Menerus Bisa Menyebabkan Kanker Payudara</b>
+          </p>
         </div>
       </div>
       <div
@@ -895,19 +896,21 @@ export default function Home() {
       >
         <div
           style={{
-            color: "#fff",
-            border: "5px solid rgba(0,0,0,0.5)",
-            padding: "20px",
-            backgroundColor: "#ff1493",
+            // color: "#ff1493",
+            backgroundColor: "#fff",
+            backgroundColor: "rgba(255,255,255,0.9)",
             borderRadius: "10px",
             textAlign: "center",
             width: "350px",
           }}
+          className="mitos-padding"
         >
-          <b>
-            Pengobatan untuk kanker payudara adalah dengan mengambil seluruh
-            bagian payudara
-          </b>
+          <p>
+            <b>
+              Pengobatan untuk kanker payudara adalah dengan mengambil seluruh
+              bagian payudara
+            </b>
+          </p>
         </div>
       </div>
       <div
@@ -920,16 +923,18 @@ export default function Home() {
       >
         <div
           style={{
-            color: "#fff",
-            border: "5px solid rgba(0,0,0,0.5)",
-            padding: "20px",
-            backgroundColor: "#ff1493",
+            // color: "#ff1493",
+            backgroundColor: "#fff",
             borderRadius: "10px",
+            backgroundColor: "rgba(255,255,255,0.9)",
             textAlign: "center",
             width: "350px",
           }}
+          className="mitos-padding"
         >
-          <b>Menderita kanker payudara berarti “vonis mati”</b>
+          <p>
+            <b>Menderita kanker payudara berarti “vonis mati”</b>
+          </p>
         </div>
       </div>
       <div
@@ -942,19 +947,21 @@ export default function Home() {
       >
         <div
           style={{
-            color: "#fff",
-            border: "5px solid rgba(0,0,0,0.5)",
-            padding: "20px",
-            backgroundColor: "#ff1493",
+            // color: "#ff1493",
+            backgroundColor: "#fff",
             borderRadius: "10px",
             textAlign: "center",
+            backgroundColor: "rgba(255,255,255,0.9)",
             width: "350px",
           }}
+          className="mitos-padding"
         >
-          <b>
-            Kanker payudara dapat terjadi jika terlalu sering melakukan
-            mammogram
-          </b>
+          <p>
+            <b>
+              Kanker payudara dapat terjadi jika terlalu sering melakukan
+              mammogram
+            </b>
+          </p>
         </div>
       </div>
       <div
@@ -967,16 +974,18 @@ export default function Home() {
       >
         <div
           style={{
-            color: "#fff",
-            border: "5px solid rgba(0,0,0,0.5)",
-            padding: "20px",
-            backgroundColor: "#ff1493",
+            // color: "#ff1493",
+            backgroundColor: "#fff",
             borderRadius: "10px",
             textAlign: "center",
+            backgroundColor: "rgba(255,255,255,0.9)",
             width: "350px",
           }}
+          className="mitos-padding"
         >
-          <b>Kanker payudara disebabkan oleh keturunan dari keluarga</b>
+          <p>
+            <b>Kanker payudara disebabkan oleh keturunan dari keluarga</b>
+          </p>
         </div>
       </div>
       <div
@@ -989,42 +998,55 @@ export default function Home() {
       >
         <div
           style={{
-            color: "#fff",
-            border: "5px solid rgba(0,0,0,0.5)",
-            padding: "20px",
-            backgroundColor: "#ff1493",
+            // color: "#ff1493",
+            backgroundColor: "rgba(255,255,255,0.9)",
             borderRadius: "10px",
             textAlign: "center",
             width: "350px",
           }}
+          className="mitos-padding"
         >
-          <b>Kanker payudara selalu berupa benjolan</b>
+          <p>
+            <b>Kanker payudara selalu berupa benjolan</b>
+          </p>
         </div>
       </div>
-      <div style={{}} className={`myth ${mitos && "down-myth"}`}>
-        <img src={Myth} height="200px" style={{ opacity: 0.5 }} />
+      <div
+        style={{}}
+        className={`bottom-left-hide ${mitos && "bottom-left-bottom"}`}
+      >
+        <img src={Icon7} width="400px" style={{ opacity: 1 }} />
       </div>
 
       {/* Slide 8 */}
-      <div
-        style={{ width: "820px" }}
-        className={`center fade ${faqs && "down"}`}
-      >
+      <div style={{}} className={`center fade ${faqs && "down"}`}>
         <div style={{}}>
           <Card
-            title=" Nah, ini kumpulan pertanyaan-pertanyaan seputar kanker payudara"
+            title="Pertanyaan seputar kanker payudara"
             style={{
-              backgroundColor: "rgba(255,255,255,0.3)",
-              width: "870px",
               color: "#ff1493",
             }}
+            className="faq-title font-title"
           ></Card>
         </div>
       </div>
       <div className={`fade-center ${faqs && "fade-center-aktif-faqs"}`}>
         <div style={{ flex: 1, padding: "50px" }}>
-          <div style={{ height: "400px", overflowY: "scroll" }}>
-            <div style={{ display: "flex", margin: "10px 0px" }}>
+          <div
+            style={{
+              height: "400px",
+              overflowY: "scroll",
+              padding: "10px",
+              backgroundColor: "#fff",
+              borderRadius: "10px",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                margin: "10px 0px",
+              }}
+            >
               <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>Apa saja faktor resikonya?</h3>
                 Usia. Mayoritas kasus kanker payudara terjadi pada perempuan di
@@ -1087,18 +1109,6 @@ export default function Home() {
             </div>
             <div style={{ display: "flex", margin: "10px 0px" }}>
               <p className="line-height">
-                <h3 style={{ color: "#ff1493" }}>Pemeriksaan lainnya?</h3>
-                Sadanis atau pemeriksaan yang dilakukan tenaga medis. Perempuan
-                yang berisiko tinggi sebaiknya melakukan pemeriksaan ini setiap
-                dua tahun sekali ketika memasuki usia 20 tahun. Usg dan
-                mamografi. Ultrasonografi atau USG dilakukan pada perempuan yang
-                masih berusia di bawah 40 tahun, ketika jaringan payudara masih
-                padat. Pada usia di atas 40 tahun, dapat dilakukan pemeriksaan
-                mamografi.
-              </p>
-            </div>
-            <div style={{ display: "flex", margin: "10px 0px" }}>
-              <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>
                   Perlu biopsi untuk deteksi kanker?
                 </h3>
@@ -1146,8 +1156,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div style={{}} className={`center fade ${faqs && "down-down"}`}>
-        <img src={FAQs} height="250px" style={{ opacity: 0.1 }} />
+      <div
+        style={{}}
+        className={`bottom-left-hide ${faqs && "bottom-left-bottom"}`}
+      >
+        <img src={Icon8} width="400px" style={{ opacity: 1 }} />
       </div>
     </div>
   );
