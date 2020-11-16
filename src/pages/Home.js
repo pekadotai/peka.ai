@@ -4,13 +4,17 @@ import Circle from "../assets/icons/circleee.png";
 import "./Home.css";
 import { CardGrid, Card } from "@kata-kit/card";
 import { Chrono } from "react-chrono";
-import Awan from "../assets/icons/awan.png";
-import Kotak from "../assets/icons/kotak.png";
-import Slider from "react-slick";
+import Gejala from "../assets/icons/symptom.png";
+import Ask from "../assets/icons/ask.png";
+import Cegah from "../assets/icons/cegah.png";
+import Diagnosa from "../assets/icons/diagnosa.png";
+import Warning from "../assets/icons/warning.png";
+import Tipe from "../assets/icons/tipe.png";
+import Myth from "../assets/icons/myth.png";
+import FAQs from "../assets/icons/faqs.png";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Carousel } from "react-responsive-carousel";
-import Carousel2 from "nuka-carousel";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
@@ -53,7 +57,7 @@ export default function Home() {
       title: "Stadium 2",
       cardTitle: "Stadium 2B",
       cardSubtitle:
-        " Ukuran tumor lebih besar dari 20 mm, namun tidak lebih besar dari 50 mm, dan sudah menyebar ke 1 hingga 3 kelenjar getah bening di ketiak. Ukuran tumor lebih besar dari 50 mm, namun tidak menyebar ke kelenjar getah bening.",
+        "Ukuran tumor lebih besar dari 20 mm, namun tidak lebih besar dari 50 mm, dan sudah menyebar ke 1 hingga 3 kelenjar getah bening di ketiak. Ukuran tumor lebih besar dari 50 mm, namun tidak menyebar ke kelenjar getah bening.",
     },
     {
       title: "Stadium 3",
@@ -344,6 +348,7 @@ export default function Home() {
             backgroundColor: "rgba(255,255,255,0.3)",
             padding: "20px",
             color: "#ff1493",
+            width: "700px",
           }}
         >
           <p
@@ -364,6 +369,7 @@ export default function Home() {
             backgroundColor: "rgba(255,255,255,0.3)",
             padding: "20px",
             color: "#ff1493",
+            width: "700px",
           }}
         >
           <p
@@ -393,19 +399,26 @@ export default function Home() {
           </p>
         </Card>
       </div>
+      <div style={{}} className={`center fade ${tentangPeka && "down-down"}`}>
+        <img src={Ask} width="200px" style={{ opacity: 0.1 }} />
+      </div>
 
-      {/* <div style={{}} className={`center fade ${tentangPeka && "down-down"}`}>
-        <div></div>
-      </div> */}
       {/* Slide 2 */}
       <div style={{}} className={`center fade ${gejala && "down"}`}>
         <div style={{}}>
           <Card
             title="Apa aja sih gejala kanker payudara?"
-            style={{ backgroundColor: "rgba(255,255,255,1)" }}
+            style={{ backgroundColor: "rgba(255,255,255,1)", color: "#ff1493" }}
           ></Card>
         </div>
       </div>
+      <div
+        style={{ zIndex: 99 }}
+        className={`center fade ${gejala && "down-down"}`}
+      >
+        <img src={Gejala} height="200px" style={{ opacity: 0.1 }} />
+      </div>
+
       <div style={{}} className={`left gejala ${gejala && "right"}`}>
         <div
           style={{
@@ -481,80 +494,15 @@ export default function Home() {
         <div>
           <Card
             title="Kanker payudara bisa dicegah melalui beberapa cara berikut!"
-            style={{ backgroundColor: "rgba(255,255,255,0.3)", width: "800px" }}
+            style={{
+              backgroundColor: "rgba(255,255,255,0.3)",
+              width: "800px",
+              color: "#ff1493",
+            }}
           ></Card>
         </div>
       </div>
-      {/* <div className={`fade-center ${pencegahan && "fade-center-aktif-faqs"}`}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Carousel2 style={{ width: "900px" }}>
-            <Card
-              title="Rutin melakukan pemeriksaan payudara sendiri (SADARI)"
-              style={{
-                backgroundColor: "rgba(255,255,255,0.3)",
-                padding: "0px 50px",
-              }}
-            >
-              Dengan rutin melakukan SADARI, seorang wanita akan semakin
-              mengenali payudaranya sendiri, sehingga bila terdapat kelainan
-              seperti perubahan bentuk atau muncul benjolan, dapat segera
-              memeriksakan diri ke dokter. SADARI baik dilakukan setiap bulan di
-              hari ke 7-10 setelah haid pertama.
-            </Card>
-
-            <Card
-              title="Rutin melakukan pemeriksaan payudara klinis (SADANIS)"
-              style={{
-                backgroundColor: "rgba(255,255,255,0.3)",
-                padding: "0px 50px",
-              }}
-            >
-              SADANIS merupakan pemeriksaan payudara yang dilakukan oleh petugas
-              medis. Diskusikan dengan dokter mengenai kapan waktu yang tepat
-              memulai SADANIS dan pemeriksaan penyaring kanker payudara, yaitu
-              foto Rontgen payudara (mammografi), serta risiko dan manfaatnya.
-            </Card>
-            <Card
-              title="Olahraga rutin"
-              style={{
-                backgroundColor: "rgba(255,255,255,0.3)",
-                padding: "0px 50px",
-              }}
-            >
-              Lakukan olahraga 30 menit setiap hari.
-            </Card>
-            <Card
-              title="Berhati-hati dalam melakukan terapi pengganti hormon pasca menopause"
-              style={{
-                backgroundColor: "rgba(255,255,255,0.3)",
-                padding: "0px 50px",
-              }}
-            >
-              Kombinasi terapi hormon bisa meningkatkan risiko kanker payudara.
-              Konsultasikan dengan dokter manfaat dan risiko terapi pengganti
-              hormon.
-            </Card>
-            <Card
-              title="Pertahankan berat badan ideal. "
-              style={{
-                backgroundColor: "rgba(255,255,255,0.3)",
-                padding: "0px 50px",
-              }}
-            >
-              Bila memiliki berat badan berlebih, konsultasikan dengan dokter
-              mengenai strategi untuk menurunkan berat badan dan agar berat
-              badan tetap
-            </Card>
-          </Carousel2>
-        </div>
-      </div> */}
-      <div style={{}} className={`left gejala ${pencegahan && "right"}`}>
+      <div className={`left gejala ${pencegahan && "right"}`}>
         <div
           style={{
             backgroundColor: "rgba(255,255,255,1)",
@@ -565,10 +513,7 @@ export default function Home() {
           <p>Rutin melakukan pemeriksaan payudara sendiri (SADARI)</p>
         </div>
       </div>
-      <div
-        style={{}}
-        className={`from-right gejala ${pencegahan && "to-left"}`}
-      >
+      <div className={`from-right gejala ${pencegahan && "to-left"}`}>
         <div
           style={{
             backgroundColor: "rgba(255,255,255,1)",
@@ -579,7 +524,7 @@ export default function Home() {
           <p>Rutin melakukan pemeriksaan payudara klinis (SADANIS)</p>
         </div>
       </div>
-      <div style={{}} className={`left2 gejala ${pencegahan && "right2"}`}>
+      <div className={`left2 gejala ${pencegahan && "right2"}`}>
         <div
           style={{
             backgroundColor: "rgba(255,255,255,1)",
@@ -590,10 +535,7 @@ export default function Home() {
           <p>Pertahankan berat badan ideal</p>
         </div>
       </div>
-      <div
-        style={{}}
-        className={`from-right2 gejala ${pencegahan && "to-left2"}`}
-      >
+      <div className={`from-right2 gejala ${pencegahan && "to-left2"}`}>
         <div
           style={{
             backgroundColor: "rgba(255,255,255,1)",
@@ -604,7 +546,7 @@ export default function Home() {
           <p>Olahraga rutin</p>
         </div>
       </div>
-      <div style={{}} className={`left3 gejala ${pencegahan && "right3"}`}>
+      <div className={`left3 gejala ${pencegahan && "right3"}`}>
         <div
           style={{
             backgroundColor: "rgba(255,255,255,1)",
@@ -615,19 +557,25 @@ export default function Home() {
           <p>Hentikan konsumsi alkohol.</p>
         </div>
       </div>
-
+      <div
+        style={{ zIndex: 99 }}
+        className={`center fade ${pencegahan && "down-down"}`}
+      >
+        <img src={Cegah} height="200px" style={{ opacity: 0.1 }} />
+      </div>
       {/* Slide 4 */}
       <div style={{}} className={`center fade ${diagnosa && "down"}`}>
         <div style={{}}>
           <Card
-            title="Diagnosa kanker payudara"
+            title="Jangan lupa lakukan test diagnosa kanker payudara!"
             style={{
               backgroundColor: "rgba(255,255,255,0.3)",
               textAlign: "justify",
               width: "700px",
+              color: "#ff1493",
             }}
           >
-            <p style={{}} className="line-height">
+            <p style={{ color: "#000" }} className="line-height">
               <b style={{ color: "#ff1493" }}>Tes mammografi</b> adalah tes yang
               biasa dilakukan untuk mendiagnosis kanker payudara, khususnya pada
               stadium awal. Meski umumnya tes ini bisa mendeteksi benjolan pada
@@ -650,37 +598,108 @@ export default function Home() {
           </Card>
         </div>
       </div>
+      <div
+        style={{ zIndex: 99 }}
+        className={`center fade ${diagnosa && "down-down"}`}
+      >
+        <img src={Diagnosa} height="250px" style={{ opacity: 0.1 }} />
+      </div>
 
       {/* Slide 5 */}
-      {tingkatan && (
-        <div className={`fade-center ${tingkatan && "fade-center-aktif"}`}>
-          <Chrono
-            hideControls
-            mode="HORIZONTAL"
-            items={items}
-            theme={{
-              primary: "#000",
-              secondary: "#ff1493",
-              cardBgColor: "rgba(255,255,255,0.3)",
-              cardForeColor: "#ff1493",
-            }}
-          ></Chrono>
-        </div>
-      )}
       <div style={{}} className={`center fade ${tingkatan && "down"}`}>
-        <div style={{}}>
+        <div style={{ overflowY: "scroll" }} className="tingkatan-height">
           <Card
-            title="Kenali tingkatan kanker payudara"
-            style={{ backgroundColor: "rgba(255,255,255,0.3)" }}
-          ></Card>
+            title="Ini dia tingkatan kanker payudara yang harus kamu ketahui"
+            style={{
+              backgroundColor: "rgba(255,255,255,0.3)",
+              textAlign: "justify",
+              width: "1024px",
+              color: "#ff1493",
+            }}
+          >
+            <p style={{ color: "#000" }} className="line-height">
+              <b style={{ color: "#ff1493" }}>Stadium 0 </b> <br /> Kanker tidak
+              berkembang lebih jauh dari tempat tumbuhnya di duktus atau
+              lobulus, dan belum menyebar ke jaringan di sekitarnya. Kondisi ini
+              disebut in situ.
+            </p>
+            <br />
+            <p style={{ color: "#000" }} className="line-height">
+              <b style={{ color: "#ff1493" }}>Stadium 1A </b> <br /> Tumor
+              berukuran hingga 20 mm dan belum menyebar ke kelenjar getah bening
+              di ketiak.
+            </p>
+            <br />
+            <p style={{ color: "#000" }} className="line-height">
+              <b style={{ color: "#ff1493" }}>Stadium 1B</b> <br /> Tumor Kanker
+              sudah menyebar ke kelenjar getah bening di ketiak, dengan ukuran
+              lebih besar dari 0,2 mm namun kurang dari 2 mm. Sedangkan pada
+              payudara terdapat tumor dengan ukuran tidak lebih dari 20 mm atau
+              bisa tidak nampak tumor.
+            </p>
+            <br />
+            <p style={{ color: "#000" }} className="line-height">
+              <b style={{ color: "#ff1493" }}>Stadium 2A</b> <br /> Kanker sudah
+              menyebar ke kelenjar getah bening di ketiak dengan ukuran 2 mm
+              atau lebih, dengan tumor di payudara tidak lebih dari 20 mm atau
+              tidak tampak tumor di payudara. Ukuran tumor lebih besar dari 20
+              mm, namun tidak lebih besar dari 50 mm, tetapi belum menyebar ke
+              kelenjar getah bening di ketiak.
+            </p>
+            <br />
+            <p style={{ color: "#000" }} className="line-height">
+              <b style={{ color: "#ff1493" }}>Stadium 2B</b> <br />
+              Ukuran tumor lebih besar dari 20 mm, namun tidak lebih besar dari
+              50 mm, dan sudah menyebar ke 1 hingga 3 kelenjar getah bening di
+              ketiak. Ukuran tumor lebih besar dari 50 mm, namun tidak menyebar
+              ke kelenjar getah bening.
+            </p>
+            <br />
+            <p style={{ color: "#000" }} className="line-height">
+              <b style={{ color: "#ff1493" }}>Stadium 3A</b> <br /> Kanker sudah
+              menyebar ke 4 hingga 9 kelenjar getah bening di ketiak atau
+              kelenjar getah bening di dalam payudara, dengan ukuran tumor di
+              payudara hingga 50 mm. Bisa juga tidak ada tumor di payudara.
+              Ukuran tumor lebih besar dari 50 mm, dan sudah menyebar ke 1
+              hingga 3 kelenjar getah bening di ketiak.
+            </p>
+            <br />
+            <p style={{ color: "#000" }} className="line-height">
+              <b style={{ color: "#ff1493" }}>Stadium 3B</b> <br /> Tumor sudah
+              menyebar ke kulit dinding payudara.
+            </p>
+            <br />
+            <p style={{ color: "#000" }} className="line-height">
+              <b style={{ color: "#ff1493" }}>Stadium 3C</b> <br /> Ukuran tumor
+              bisa bervariasi, dan telah menyebar hingga ke 10 kelenjar getah
+              bening atau lebih di ketiak, atau sudah menyebar ke kelenjar getah
+              bening di dalam payudara dan leher.
+            </p>
+            <br />
+            <p style={{ color: "#000" }} className="line-height">
+              <b style={{ color: "#ff1493" }}>Stadium 4</b> <br /> Pada stadium
+              ini, ukuran tumor bisa bervariasi, dan telah menyebar jauh ke
+              organ lain, seperti tulang, paru-paru, hati, atau otak.
+            </p>
+          </Card>
         </div>
       </div>
+      <div
+        style={{ zIndex: 99 }}
+        className={`center fade ${tingkatan && "down-down"}`}
+      >
+        <img src={Warning} height="250px" style={{ opacity: 0.1 }} />
+      </div>
+
       {/* Slide 6 */}
       <div style={{}} className={`center fade ${tipe && "down"}`}>
         <div style={{}}>
           <Card
             title="Yuk kenali juga tipe-tipe kanker payudara"
-            style={{ backgroundColor: "rgba(255,255,255,0.3)" }}
+            style={{
+              backgroundColor: "rgba(255,255,255,0.3)",
+              color: "#ff1493",
+            }}
           ></Card>
         </div>
       </div>
@@ -699,14 +718,14 @@ export default function Home() {
                 title="Ductal carcinoma in situ"
                 style={{
                   width: "400px",
-                  height: "200px",
+                  height: "230px",
                   backgroundColor: "rgba(255,255,255,0.5)",
                   margin: "5px",
                   padding: "10px 0px",
                   color: "#ff1493",
                 }}
               >
-                <p style={{ color: "#000" }}>
+                <p style={{ color: "#000", lineHeight: "150%" }}>
                   Jenis kanker ini termasuk kanker stadium awal dan mudah
                   diobati. Namun demikian, kanker ini bisa menyebar ke jaringan
                   sekitarnya jika tidak segera ditangani.
@@ -718,14 +737,14 @@ export default function Home() {
                 title="Lobular carcinoma in situ"
                 style={{
                   width: "400px",
-                  height: "200px",
+                  height: "230px",
                   backgroundColor: "rgba(255,255,255,0.5)",
                   margin: "5px",
                   padding: "10px 0px",
                   color: "#ff1493",
                 }}
               >
-                <p style={{ color: "#000" }}>
+                <p style={{ color: "#000", lineHeight: "150%" }}>
                   Adalah kanker yang tumbuh di lobulus. Sama seperti ductal
                   carcinoma in situ, kanker ini tidak menyebar ke jaringan
                   sekitarnya.
@@ -739,14 +758,14 @@ export default function Home() {
                 title="Invasive ductal carcinoma"
                 style={{
                   width: "400px",
-                  height: "200px",
+                  height: "230px",
                   backgroundColor: "rgba(255,255,255,0.5)",
                   margin: "5px",
                   padding: "10px 0px",
                   color: "#ff1493",
                 }}
               >
-                <p style={{ color: "#000" }}>
+                <p style={{ color: "#000", lineHeight: "150%" }}>
                   Kanker ini tumbuh di duktus dan bisa menyebar ke jaringan
                   sekitarnya, bahkan bisa menyebar ke area tubuh yang lain.
                   Jenis kanker ini terjadi pada 70-80% kasus kanker payudara.
@@ -758,14 +777,14 @@ export default function Home() {
                 title="Invasive lobular carcinoma"
                 style={{
                   width: "400px",
-                  height: "200px",
+                  height: "230px",
                   backgroundColor: "rgba(255,255,255,0.5)",
                   margin: "5px",
                   padding: "10px 0px",
                   color: "#ff1493",
                 }}
               >
-                <p style={{ color: "#000" }}>
+                <p style={{ color: "#000", lineHeight: "150%" }}>
                   Adalah kanker yang tumbuh di lobulus dan bisa menyebar ke
                   jaringan sekitarnya. Kanker ini terjadi pada 10% kasus kanker
                   payudara.
@@ -775,13 +794,23 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div
+        style={{ zIndex: 99 }}
+        className={`center fade ${tipe && "down-down"}`}
+      >
+        <img src={Tipe} height="250px" style={{ opacity: 0.1 }} />
+      </div>
 
       {/* Slide 7 */}
       <div style={{}} className={`center fade ${mitos && "down"}`}>
         <div style={{}}>
           <Card
             title="Awas, ada mitos juga tentang kanker payudara!"
-            style={{ width: "570px", backgroundColor: "rgba(255,255,255,0.3)" }}
+            style={{
+              width: "620px",
+              backgroundColor: "rgba(255,255,255,0.3)",
+              color: "#ff1493",
+            }}
           ></Card>
         </div>
       </div>
@@ -793,7 +822,11 @@ export default function Home() {
         }}
         className={`from-bottom1 ${mitos && "to-top1"}`}
       >
-        {/* <img src={Awan} style={{ position: "fixed" }} className="awan1" /> */}
+        {/* <img
+          src={Myth}
+          style={{ position: "fixed", opacity: 0.5, marginTop: "-20px" }}
+          className="awan1"
+        /> */}
         <div
           style={{
             color: "#fff",
@@ -968,6 +1001,10 @@ export default function Home() {
           <b>Kanker payudara selalu berupa benjolan</b>
         </div>
       </div>
+      <div style={{}} className={`myth ${mitos && "down-myth"}`}>
+        <img src={Myth} height="200px" style={{ opacity: 0.5 }} />
+      </div>
+
       {/* Slide 8 */}
       <div
         style={{ width: "820px" }}
@@ -978,6 +1015,8 @@ export default function Home() {
             title=" Nah, ini kumpulan pertanyaan-pertanyaan seputar kanker payudara"
             style={{
               backgroundColor: "rgba(255,255,255,0.3)",
+              width: "870px",
+              color: "#ff1493",
             }}
           ></Card>
         </div>
@@ -986,7 +1025,7 @@ export default function Home() {
         <div style={{ flex: 1, padding: "50px" }}>
           <div style={{ height: "400px", overflowY: "scroll" }}>
             <div style={{ display: "flex", margin: "10px 0px" }}>
-              <div style={{}}>
+              <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>Apa saja faktor resikonya?</h3>
                 Usia. Mayoritas kasus kanker payudara terjadi pada perempuan di
                 atas 50 tahun. Tetapi ada juga pada usia 40-49 tahun dan bahkan
@@ -998,19 +1037,19 @@ export default function Home() {
                 pertama di atas usia 35 tahun, mengalami menopause di atas usia
                 52 tahun, pola hidup tak sehat yang menyebabkan kelebihan berat
                 badan, jarang berolahraga, merokok.
-              </div>
+              </p>
             </div>
             <div style={{ display: "flex", margin: "10px 0px" }}>
-              <div>
+              <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>
                   Mengapa berat badan berlebih beresiko kena kanker payudara?
                 </h3>
                 Jaringan lemak meningkatkan produksi estrogen. Estrogen yang
                 berlebihan sering dikaitakn dengan pemicu kanker payudara.
-              </div>
+              </p>
             </div>
             <div style={{ display: "flex", margin: "10px 0px" }}>
-              <div>
+              <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>
                   Menyusui bisa turunkan resiko?
                 </h3>
@@ -1020,19 +1059,19 @@ export default function Home() {
                 pemicu kanker payudara. Ibu-ibu muda yang belum berpengalaman,
                 yang ambang nyerinya rendah, sakit sedikit tidak mau menyusui,
                 lama-lama ASI nya berkurang.
-              </div>
+              </p>
             </div>
             <div style={{ display: "flex", margin: "10px 0px" }}>
-              <div>
+              <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>
                   Ukuran payudara berpengaruh pada risiko terkena kanker?
                 </h3>
                 Ukuran yang besar lebih tinggi risikonya, karena jaringan (di
                 payudaranya) lebih banyak.
-              </div>
+              </p>
             </div>
             <div style={{ display: "flex", margin: "10px 0px" }}>
-              <div>
+              <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>
                   Kondisi payudara yang perlu dicermati?
                 </h3>
@@ -1044,10 +1083,10 @@ export default function Home() {
                 mengeras, kulit mengelupas, berwarna kemerahan atau seperti
                 kulit jeruk. Terakhir, ada perubahan pada puting, misalnya
                 puting tertarik ke dalam atau keluar cairan dari puting.
-              </div>
+              </p>
             </div>
             <div style={{ display: "flex", margin: "10px 0px" }}>
-              <div>
+              <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>Pemeriksaan lainnya?</h3>
                 Sadanis atau pemeriksaan yang dilakukan tenaga medis. Perempuan
                 yang berisiko tinggi sebaiknya melakukan pemeriksaan ini setiap
@@ -1056,10 +1095,10 @@ export default function Home() {
                 masih berusia di bawah 40 tahun, ketika jaringan payudara masih
                 padat. Pada usia di atas 40 tahun, dapat dilakukan pemeriksaan
                 mamografi.
-              </div>
+              </p>
             </div>
             <div style={{ display: "flex", margin: "10px 0px" }}>
-              <div>
+              <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>
                   Perlu biopsi untuk deteksi kanker?
                 </h3>
@@ -1067,10 +1106,10 @@ export default function Home() {
                 biopsi dilakukan di kamar operasi dengan pembiusan umum, diambil
                 sampel. Sekarang, biopsi bisa dilakukan di poliklinik, namanya
                 core biopsy. Pasien tidak perlu dipuasakan.
-              </div>
+              </p>
             </div>
             <div style={{ display: "flex", margin: "10px 0px" }}>
-              <div>
+              <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>
                   Yang bisa dilakukan untuk cegah kena kanker?
                 </h3>
@@ -1081,10 +1120,10 @@ export default function Home() {
                 Pilih, makanan yang tergolong while grain atau produk makanan
                 yang menggunakan biji-bijian serelia utuh seperti gandum, jagung
                 dan quinoa. Selain itu, hindari konsumsi alkohol.
-              </div>
+              </p>
             </div>
             <div style={{ display: "flex", margin: "10px 0px" }}>
-              <div>
+              <p className="line-height">
                 <h3 style={{ color: "#ff1493" }}>
                   Bila terdeteksi kanker, payudara pasti diangkat? Lalu apa
                   pilihan terapinya?
@@ -1102,10 +1141,13 @@ export default function Home() {
                 Terapi ini biasanya dilakukan setelah pembedahan untuk
                 membersihkan sisa-sisa sel kanker atau sebelum pembedahan
                 disertai kemoterapi, untuk memperkecil ukuran sel kanker.
-              </div>
+              </p>
             </div>
           </div>
         </div>
+      </div>
+      <div style={{}} className={`center fade ${faqs && "down-down"}`}>
+        <img src={FAQs} height="250px" style={{ opacity: 0.1 }} />
       </div>
     </div>
   );
