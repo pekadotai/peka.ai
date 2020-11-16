@@ -13,12 +13,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* font-family: "Josefin Sans", cursive; */
   /* font-family: "Patrick Hand", serif; */
-  font-family: MeriendaOne;
+  /* font-family: MeriendaOne; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace; */
 }
 
 p {
