@@ -1453,7 +1453,7 @@
     opacity: 1;
   }
   .icon-false-wa {
-    left: 50%;
+    right: 50%;
     bottom: 10%;
     z-index: -99;
     margin-left: 250px;

@@ -335,7 +335,7 @@ export default function Home() {
               flexDirection: "column",
             }}
           >
-            <div style={{}}>PekaBot on Line Messenger!</div>
+            <div style={{}}>Peka Bot on Line Messenger!</div>
             <img src={Line} className="icon-line" />
             <div>@645rnofd</div>
           </div>
@@ -361,7 +361,8 @@ export default function Home() {
             className="cursor-pointer"
             onClick={() => window.open("https://t.me/PekaAI_Bot")}
           >
-            <div style={{}}>PekaBot on Telegram!</div>
+            <div style={{}}>Peka Bot on Telegram!</div>
+            <br />
             <div>https://t.me/PekaAI_Bot</div>
           </div>
         </div>
