@@ -30,14 +30,15 @@
 
 .text-peka {
   position: fixed;
-  left: -100%;
-  bottom: -100%;
-  opacity: 0;
+  opacity: 1;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 60%;
 }
 
 .apa-itu-peka {
   padding: 10px 0px;
-  color: #ff1493;
+  color: #f337ab;
   width: 700px;
   margin-bottom: 20px;
   font-size: 16px;
@@ -50,7 +51,7 @@
 
 .apa-itu-kanker {
   padding: 10px 0px;
-  color: #ff1493;
+  color: #f337ab;
   width: 700px;
   font-size: 16px;
 }
@@ -64,6 +65,7 @@
 }
 
 .left2-cegah {
+  z-index: -99;
   left: 50%;
   transform: translate(-250%, 400%);
 }
@@ -117,8 +119,138 @@
   z-index: -12;
 }
 
+.rectangle-oval {
+  border-radius: 150px;
+  height: 100px;
+  width: 500px;
+  background-color: #000;
+  color: #fff;
+}
+
+.rectangle-oval-line {
+  border-radius: 10px;
+  height: 330px;
+  width: 330px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle-oval-tele {
+  border-radius: 10px;
+  height: 330px;
+  width: 330px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-pointer:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #fff;
+}
+
+.icon-line {
+  margin: 10px 0px;
+  width: 250px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .icon-false {
+    left: 50%;
+    bottom: 35%;
+    z-index: -99;
+    margin-left: -150px;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  .icon-true {
+    left: 50%;
+    bottom: 35%;
+    z-index: 99;
+    margin-left: -150px;
+    transition: 1s;
+    opacity: 1;
+  }
+  .icon-false-wa {
+    right: 50%;
+    margin-right: -150px;
+    bottom: 20%;
+    z-index: -99;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  .icon-line {
+    margin: 10px 0px;
+    width: 150px;
+  }
+
+  .icon-true-wa {
+    right: 50%;
+    margin-right: -150px;
+    bottom: 20%;
+    z-index: 99;
+    transition: 1s;
+    opacity: 1;
+  }
+
+  .icon-peka-selected {
+    left: 50%;
+    bottom: 2%;
+    z-index: 1;
+    margin-left: -150px;
+    width: 300px;
+  }
+
+  .rectangle-oval {
+    border-radius: 150px;
+    height: 75px;
+    width: 300px;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .rectangle-oval-line {
+    border-radius: 10px;
+    height: 230px;
+    width: 300px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rectangle-oval-tele {
+    border-radius: 10px;
+    height: 100px;
+    width: 300px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .faqs-center {
     position: fixed;
     left: 50%;
@@ -155,8 +287,8 @@
   }
 
   .tipe-desc {
-    width: 400px;
-    height: 130px;
+    width: 350px;
+    height: 150px;
   }
 
   .gejala-title {
@@ -181,7 +313,7 @@
 
   .apa-itu-peka {
     padding: 10px 0px;
-    color: #ff1493;
+    color: #f337ab;
     width: 350px;
     margin-bottom: 20px;
     font-size: 14px;
@@ -189,7 +321,7 @@
 
   .apa-itu-kanker {
     padding: 10px 0px;
-    color: #ff1493;
+    color: #f337ab;
     width: 350px;
     font-size: 14px;
   }
@@ -210,13 +342,12 @@
     left: 50%;
     bottom: 81%;
     margin-left: -100px;
-    color: #ff1493;
   }
 
   .icon {
     cursor: pointer;
     transition: 1s;
-    width: 100px;
+    width: 130px;
     height: 50px;
     border-radius: 5%;
   }
@@ -232,35 +363,35 @@
     width: 300px;
   }
   .icon1 {
-    left: 5%;
+    left: 10%;
     bottom: 15%;
   }
   .icon2 {
-    left: 5%;
+    left: 10%;
     bottom: 25%;
   }
   .icon3 {
-    left: 5%;
+    left: 10%;
     bottom: 35%;
   }
   .icon4 {
-    left: 5%;
+    left: 10%;
     bottom: 45%;
   }
   .icon5 {
-    right: 5%;
+    right: 10%;
     bottom: 45%;
   }
   .icon6 {
-    right: 5%;
+    right: 10%;
     bottom: 35%;
   }
   .icon7 {
-    right: 5%;
+    right: 10%;
     bottom: 25%;
   }
   .icon8 {
-    right: 5%;
+    right: 10%;
     bottom: 15%;
   }
 
@@ -287,7 +418,7 @@
 
   .icon-move-right {
     right: 50%;
-    bottom: 0%;
+    bottom: 2%;
     z-index: 99;
     margin-right: -50px;
   }
@@ -317,7 +448,7 @@
     background-color: rgba(255, 255, 255, 0.3);
     padding: 5px;
     position: fixed;
-    width: 370px;
+    width: 340px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -365,7 +496,7 @@
   }
 
   .to-left {
-    transform: translate(50%, 250%);
+    transform: translate(50%, 200%);
   }
 
   .left2 {
@@ -375,7 +506,7 @@
   }
 
   .right2 {
-    transform: translate(-50%, 350%);
+    transform: translate(-50%, 300%);
   }
 
   .left2-cegah {
@@ -385,7 +516,7 @@
 
   .right2-cegah {
     z-index: 10;
-    transform: translate(-50%, 650%);
+    transform: translate(-50%, 640%);
   }
 
   .from-right2 {
@@ -395,7 +526,7 @@
   }
 
   .to-left2 {
-    transform: translate(50%, 450%);
+    transform: translate(50%, 400%);
   }
 
   .left3 {
@@ -405,7 +536,7 @@
   }
 
   .right3 {
-    transform: translate(-50%, 550%);
+    transform: translate(-50%, 620%);
   }
 
   .from-right3 {
@@ -415,7 +546,7 @@
   }
 
   .to-left3 {
-    transform: translate(50%, 650%);
+    transform: translate(50%, 720%);
   }
 
   .awan1 {
@@ -444,6 +575,22 @@
 
   .awan7 {
     width: 300px;
+  }
+
+  .pencegahan-right {
+    transform: translate(-50%, 150%);
+  }
+
+  .pencegahan-to-left {
+    transform: translate(50%, 250%);
+  }
+
+  .pencegahan-to-left2 {
+    transform: translate(50%, 440%);
+  }
+
+  .pencegahan-right3 {
+    transform: translate(-50%, 540%);
   }
 
   .from-bottom1 {
@@ -489,7 +636,7 @@
 
   .to-top3 {
     opacity: 1;
-    bottom: 63%;
+    bottom: 64%;
     z-index: 12;
     margin-left: -175px;
   }
@@ -506,7 +653,7 @@
   .to-top4 {
     opacity: 1;
     z-index: 10;
-    bottom: 53%;
+    bottom: 55%;
     margin-left: -175px;
   }
 
@@ -521,7 +668,7 @@
 
   .to-top5 {
     opacity: 1;
-    bottom: 43%;
+    bottom: 46%;
     z-index: 10;
     margin-left: -175px;
   }
@@ -537,7 +684,7 @@
 
   .to-top6 {
     opacity: 1;
-    bottom: 33%;
+    bottom: 39%;
     z-index: 10;
     margin-left: -175px;
   }
@@ -553,7 +700,7 @@
 
   .to-top7 {
     opacity: 1;
-    bottom: 22%;
+    bottom: 30%;
     z-index: 30;
     margin-left: -175px;
   }
@@ -567,7 +714,7 @@
   }
   .to-top8 {
     opacity: 1;
-    bottom: 13%;
+    bottom: 21%;
     z-index: 13;
     margin-left: -175px;
   }
@@ -583,7 +730,7 @@
   }
 
   .fade-center-aktif {
-    top: 45%;
+    top: 50%;
     opacity: 1;
     z-index: 20;
   }
@@ -632,9 +779,9 @@
     outline: none;
     position: relative;
     border: 3px solid #111;
-    padding: 15px 50px;
+    padding: 10px 50px;
     overflow: hidden;
-    color: #ff1493;
+    color: #f337ab;
     border-radius: 10px;
   }
 
@@ -642,7 +789,7 @@
   button:hover:before {
     opacity: 1;
     transform: translate(0, 0);
-    padding: 20px;
+    padding: 10px;
   }
   button:before {
     content: attr(data-hover);
@@ -736,6 +883,14 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 600px) {
+  .text-peka {
+    position: fixed;
+    opacity: 1;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 50%;
+  }
+
   .line-height {
     line-height: 150%;
   }
@@ -745,7 +900,52 @@
     bottom: 10%;
     z-index: 1;
     margin-left: -250px;
+    transition: 1s;
   }
+
+  .icon-false {
+    left: 50%;
+    bottom: 10%;
+    z-index: -99;
+    margin-left: -250px;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  .icon-true {
+    left: 40%;
+    bottom: 30%;
+    z-index: 99;
+    margin-left: 250px;
+    transition: 1s;
+    opacity: 1;
+  }
+  .icon-false-wa {
+    right: 50%;
+    bottom: 10%;
+    z-index: -99;
+    margin-left: 250px;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  .icon-true-wa {
+    right: 40%;
+    bottom: 30%;
+    z-index: 99;
+    margin-right: 250px;
+    transition: 1s;
+    opacity: 1;
+  }
+
+  .icon-peka-selected {
+    transition: 1s;
+    left: 50%;
+    bottom: 15%;
+    z-index: 1;
+    margin-left: -250px;
+  }
+
   .icon1 {
     left: 1%;
     bottom: 5%;
@@ -795,14 +995,14 @@
 
   .icon-move {
     left: 50%;
-    bottom: 0%;
+    bottom: 2%;
     z-index: 99;
     margin-left: -100px;
   }
 
   .icon-move-right {
     right: 50%;
-    bottom: 0%;
+    bottom: 2%;
     z-index: 99;
     margin-right: -100px;
   }
@@ -1119,7 +1319,7 @@
     border: 3px solid #111;
     padding: 15px 50px;
     overflow: hidden;
-    color: #ff1493;
+    color: #f337ab;
     border-radius: 10px;
   }
 
@@ -1127,7 +1327,7 @@
   button:hover:before {
     opacity: 1;
     transform: translate(0, 0);
-    padding: 10px;
+    padding: 25px;
   }
   button:before {
     content: attr(data-hover);
@@ -1197,10 +1397,31 @@
   }
 
   .bottom-left-bottom {
-    bottom: 1%;
+    bottom: 2%;
     right: 5%;
     opacity: 1;
     z-index: 10;
+  }
+
+  .right2-cegah {
+    z-index: 10;
+    transform: translate(-50%, 370%);
+  }
+
+  .pencegahan-right {
+    transform: translate(-50%, 150%);
+  }
+
+  .pencegahan-to-left {
+    transform: translate(50%, 260%);
+  }
+
+  .pencegahan-to-left2 {
+    transform: translate(50%, 480%);
+  }
+
+  .pencegahan-right3 {
+    transform: translate(-50%, 600%);
   }
 }
 
@@ -1211,7 +1432,58 @@
     bottom: 10%;
     z-index: 1;
     margin-left: -250px;
+    transition: 1s;
   }
+
+  .icon-false {
+    left: 50%;
+    bottom: 10%;
+    z-index: -99;
+    margin-left: -250px;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  .icon-true {
+    left: 50%;
+    bottom: 30%;
+    z-index: 99;
+    margin-left: 250px;
+    transition: 1s;
+    opacity: 1;
+  }
+  .icon-false-wa {
+    left: 50%;
+    bottom: 10%;
+    z-index: -99;
+    margin-left: 250px;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  .icon-true-wa {
+    right: 50%;
+    bottom: 30%;
+    z-index: 99;
+    margin-right: 250px;
+    transition: 1s;
+    opacity: 1;
+  }
+
+  .text-peka {
+    position: fixed;
+    opacity: 1;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 60%;
+  }
+
+  /* .icon0 {
+    left: 50%;
+    bottom: 10%;
+    z-index: 1;
+    margin-left: -250px;
+  } */
 
   .icon1 {
     left: 7%;
@@ -1280,7 +1552,7 @@
 
   .icon-move {
     left: 50%;
-    bottom: 0%;
+    bottom: 2%;
     z-index: 99;
     margin-left: -100px;
   }
@@ -1292,7 +1564,7 @@
   }
 
   .icon-move-right {
-    bottom: 0%;
+    bottom: 2%;
     z-index: 99;
     right: 50%;
     margin-right: -100px;
@@ -1375,34 +1647,41 @@
   }
 
   .left {
+    z-index: -99;
     left: 50%;
     transform: translate(-250%, 200%);
   }
 
   .right {
+    z-index: 99;
     transform: translate(-50%, 200%);
   }
 
   .from-right {
+    z-index: -99;
     right: 50%;
     transform: translate(250%, 300%);
   }
 
   .to-left {
+    z-index: 99;
     transform: translate(50%, 300%);
   }
 
   .left2 {
+    z-index: -99;
     left: 50%;
     transform: translate(-250%, 400%);
   }
 
   .right2 {
+    z-index: 99;
     transform: translate(-50%, 400%);
   }
 
   .from-right2 {
     right: 50%;
+    z-index: -99;
     transform: translate(250%, 500%);
   }
 
@@ -1413,6 +1692,7 @@
 
   .left3 {
     left: 50%;
+    z-index: -99;
     transform: translate(-250%, 600%);
   }
 
@@ -1422,6 +1702,7 @@
   }
 
   .from-right3 {
+    z-index: -99;
     right: 50%;
     transform: translate(250%, 700%);
   }
@@ -1621,7 +1902,7 @@
     border: 3px solid #111;
     padding: 15px 50px;
     overflow: hidden;
-    color: #ff1493;
+    color: #f337ab;
     border-radius: 10px;
   }
 
@@ -1629,7 +1910,7 @@
   button:hover:before {
     opacity: 1;
     transform: translate(0, 0);
-    padding: 10px;
+    padding: 25px;
   }
   button:before {
     content: attr(data-hover);
@@ -1668,5 +1949,30 @@
 
   .diagnosa-height {
     height: inherit;
+  }
+
+  .right2-cegah {
+    z-index: 10;
+    transform: translate(-50%, 370%);
+  }
+
+  .pencegahan-right {
+    z-index: 99;
+    transform: translate(-50%, 150%);
+  }
+
+  .pencegahan-to-left {
+    z-index: 99;
+    transform: translate(50%, 260%);
+  }
+
+  .pencegahan-to-left2 {
+    z-index: 99;
+    transform: translate(50%, 480%);
+  }
+
+  .pencegahan-right3 {
+    z-index: 99;
+    transform: translate(-50%, 590%);
   }
 }
