@@ -63,7 +63,7 @@ Konten-konten yang tersedia:
 * FAQs
 
 
-### Chatbot
+## Chatbot
 
 Selanjutnya, kamu bisa melakukan pengecekan risiko kanker payudara melalui Peka.Bot dengan mengklik Chatbot pada home page dan akan diarahkan ke channel yang tersedia (Telegram dan Line)
 
