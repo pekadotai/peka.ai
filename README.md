@@ -8,7 +8,8 @@ Peka.ai
 
 [Peka.ai](http://peka-ai.herokuapp.com/) adalah sebuah web interaktif yang dapat membantu kamu dalam mengetahui informasi tentang kanker payudara mulai dari penyebab, gejala, diagnosa, hingga mitos seputar kanker payudara. Fitur utama Peka.AI adalah chatbot yang dapat mengukur tingkat risiko terkena kanker payudara dan memberikan rekomendasi sesuai hasil pemeriksaan melalui chatbot tersebut.
 
-[![Peka.AI Website](https://res.cloudinary.com/di02ey9t7/image/upload/v1605644156/PEKA.AI_1_lqucii.png)](http://peka-ai.herokuapp.com/)
+[![Peka.AI Website](https://res.cloudinary.com/di02ey9t7/image/upload/v1605644394/landing-page_kbwib9.png)](http://peka-ai.herokuapp.com/)
+
 
 ## Table of content
 
