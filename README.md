@@ -17,14 +17,16 @@ Peka.ai
     - [Go to Chatbot](#go-to-chatbot)
 - [Peka Chatbot](#peka-chatbot)
     - [How to Use](#how-to-use)
+    - [Demo](#demo)
     - [BOT Materials](#bot-materials)
-        - [Flows](#upload-the-page-tree-file)
-        - [States](#go-to-the-import-view)
-        - [Intents](#import-the-page-tree)
-        - [NLU-s](#seo-friendly-urls)
+        - [Yaml](#yaml)
+        - [Flows](#flows)
+        - [States](#states)
+        - [Intents](#intents)
+        - [NLU-s](#nlu-s)
         - [Methods](#methods)
         - [Handlers](#handlers)
-        - [Demo](#seo-friendly-urls)
+        
 - [License](#license)
 - [Links](#links)
 
@@ -111,7 +113,7 @@ Since **TYPO3 9.5.14+** implements **SameSite cookie handling** and restricts wh
 * Click on ''Admin Tools::Extension Manager'' in the left navigation
 * Click the icon with the little plus sign left from the Aimeos list entry (looks like a lego brick)
 
-![Install Aimeos TYPO3 extension](https://aimeos.org/docs/images/Aimeos-typo3-extmngr-install.png)
+![Install Aimeos TYPO3 extension]()
 
 ### Database
 
@@ -121,13 +123,10 @@ Afterwards, you have to execute the update script of the extension to create the
 
 ## Peka Chatbot
 
-Penggunaan chatbot Peka untuk mendeteksi risiko terkena kanker payudara 
+Alur penggunaan chatbot Peka untuk mendeteksi risiko terkena kanker payudara 
 dapat dilihat secara detil melalui infografis dibawah ini:
 
-* [20.10.x page tree](https://aimeos.org/fileadmin/download/Aimeos-pages_20.10.t3d)
-* [19.10.x page tree](https://aimeos.org/fileadmin/download/Aimeos-pages_two-columns_18.10__2.t3d)
-
-**Note:** The Aimeos layout expects [Bootstrap](https://getbootstrap.com) providing the grid layout!
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605630719/Katahack__Bot_journey_hbpgo5.png" alt="Peka AI Journey" title="Peka.AI" margin="0 auto"/>
 
 
 ## BOT Materials
@@ -217,6 +216,12 @@ Ini adalah daftar material yang digunakan untuk Peka.ai Chatbot di Kata.ai platf
 * Breast Density
 * Check NLU
 * Cancel
+
+### Handlers
+
+* Cancel Cek Kanker
+* Re-check Kanker
+* Re-enter Command
 
 ## License
 
