@@ -77,7 +77,7 @@ export default function Home() {
         }`}
       >
         <h1>
-          Peka.<span style={{ color: "#f337ab" }}>Ai</span>
+          Peka.<span style={{ color: "#f337ab" }}>AI</span>
         </h1>
       </div>
       {/* 1 */}
@@ -100,7 +100,7 @@ export default function Home() {
         }}
       >
         <p style={{ color: "#fff" }}>
-          <b>Tentang Peka.Ai</b>
+          <b>Tentang Peka.AI</b>
         </p>
       </div>
       {/* 2 */}
@@ -396,7 +396,7 @@ export default function Home() {
       {/* Slide 1 */}
       <div style={{}} className={`center fade ${tentangPeka && "down"}`}>
         <Card
-          title="Apa itu Peka.Ai"
+          title="Apa itu Peka.AI"
           style={{
             backgroundColor: "rgba(255,255,255,0.9)",
           }}
@@ -408,10 +408,14 @@ export default function Home() {
             }}
             className="line-height"
           >
-            <b style={{ color: "#f337ab" }}>Peka.Ai</b> adalah sebuah web
-            interaktif yang dapat membantu kamu dalam mengetahui informasi
-            tentang kanker payudara mulai dari penyebab, gejala, diagnosa,
-            hinggu mitos seputar kanker payudara.
+            <b style={{ color: "#f337ab" }}>Peka.AI</b> adalah platform edukasi
+            kanker payudara yang memberikan informasi seputar kanker payudara,
+            asesmen risiko dan sistem rekomendasi. Berangkat dari permasalahan
+            kanker payudara yang merupakan kanker paling umum dan menjadi penyebab
+            utama kematian akibat kanker, Peka.AI hadir sebagai solusi untuk menjawab
+            permasalahan rendahnya pengetahuan dan kesadaran perempuan mengenai pentingnya
+            deteksi dini kanker payudara yang menyebabkan 80% kasus terdeteksi saat stadium
+            lanjut di mana pengobatan lebih sulit dan pembiayaan lebih mahal.
           </p>
         </Card>
         <Card
@@ -446,7 +450,6 @@ export default function Home() {
                   color: "#f337ab",
                 }}
               >
-                https://www.alodokter.com/kanker-payudara
               </a>
             </i>
             )
