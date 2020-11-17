@@ -48,7 +48,7 @@ Hal pertama yang harus kamu lakukan adalah mengakses website [Peka.ai](http://pe
 
 <gambar landing page>
 
-### Contents
+## Konten
 
 Pada website Peka, kamu juga dapat mengakses info-info penting seputar Kanker Payudara karena salah satu tujuan kami adalah mengedukasi masyarakat atau pengguna aplikasi akan pentingnya penyakit Kanker Payudara ini.
 
@@ -222,8 +222,11 @@ Setelah selesai, kamu akan mendapatkan laporan apakah kamu mempunyai risiko TING
 
 Ini adalah daftar material yang digunakan untuk Peka.ai Chatbot di Kata.ai platform
 
+
 ### Yaml
+
 Script yaml untuk PekaBot
+[BOT Yaml](https://github.com/pekadotai/peka.ai/blob/master/bot.yml)
 
 ### Flows
 
@@ -322,5 +325,5 @@ license and is available for free.
 
 ## Links
 
-* [Web site](https://aimeos.org/integrations/typo3-shop-extension/)
-* [BOT Yaml](https://aimeos.org/docs/TYPO3)
+* [Web site](http://peka-ai.herokuapp.com/)
+* [BOT Yaml](https://github.com/pekadotai/peka.ai/blob/master/bot.yml)
