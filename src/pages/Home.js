@@ -13,6 +13,7 @@ import Woman1 from "../assets/icons/woman1.svg";
 import Wa from "../assets/icons/wa.png";
 import Tele from "../assets/icons/telegram.png";
 import Line from "../assets/icons/line.jpg";
+import LogoLine from "../assets/icons/logo-line.png";
 
 export default function Home() {
   const [tentangPeka, setTentangPeka] = useState(false);
@@ -279,9 +280,7 @@ export default function Home() {
       </div>
 
       <div
-        style={{
-          position: "fixed",
-        }}
+        style={{ position: "fixed" }}
         className={`${cek ? "icon-peka-selected" : "icon0"}  ${
           pencegahan ||
           diagnosa ||
@@ -319,9 +318,7 @@ export default function Home() {
         </button>
       </div>
       <div
-        style={{
-          position: "fixed",
-        }}
+        style={{ position: "fixed" }}
         className={`${cek ? "icon-true" : "icon-false"}`}
       >
         <div
@@ -337,7 +334,16 @@ export default function Home() {
           >
             <div style={{}}>Peka Bot on Line Messenger!</div>
             <img src={Line} className="icon-line" />
-            <div>@645rnofd</div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img src={LogoLine} width="40px" />
+              &nbsp;@645rnofd
+            </div>
           </div>
         </div>
       </div>
@@ -358,12 +364,31 @@ export default function Home() {
               flexDirection: "column",
               justifyContent: "center",
             }}
-            className="cursor-pointer"
-            onClick={() => window.open("https://t.me/PekaAI_Bot")}
           >
             <div style={{}}>Peka Bot on Telegram!</div>
             <br />
-            <div>https://t.me/PekaAI_Bot</div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              className="cursor-pointer"
+              onClick={() => window.open("https://t.me/PekaAI_Bot")}
+            >
+              https://t.me/PekaAI_Bot
+            </div>
+            <br />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src={Tele} width="40px" />
+              &nbsp;@PekaAI_Bot
+            </div>
           </div>
         </div>
       </div>

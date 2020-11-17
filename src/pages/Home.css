@@ -129,8 +129,8 @@
 
 .rectangle-oval-line {
   border-radius: 10px;
-  height: 330px;
-  width: 330px;
+  height: 350px;
+  width: 350px;
   background-color: #000;
   color: #fff;
   font-weight: bold;
@@ -142,8 +142,8 @@
 
 .rectangle-oval-tele {
   border-radius: 10px;
-  height: 330px;
-  width: 330px;
+  height: 350px;
+  width: 350px;
   background-color: #000;
   color: #fff;
   font-weight: bold;
@@ -180,7 +180,7 @@
 
   .icon-true {
     left: 50%;
-    bottom: 35%;
+    bottom: 38%;
     z-index: 99;
     margin-left: -150px;
     transition: 1s;
@@ -203,7 +203,7 @@
   .icon-true-wa {
     right: 50%;
     margin-right: -150px;
-    bottom: 20%;
+    bottom: 15%;
     z-index: 99;
     transition: 1s;
     opacity: 1;
@@ -227,7 +227,7 @@
 
   .rectangle-oval-line {
     border-radius: 10px;
-    height: 230px;
+    height: 250px;
     width: 300px;
     background-color: #000;
     color: #fff;
@@ -240,7 +240,7 @@
 
   .rectangle-oval-tele {
     border-radius: 10px;
-    height: 100px;
+    height: 140px;
     width: 300px;
     background-color: #000;
     color: #fff;
@@ -329,7 +329,7 @@
   .icon-wanita {
     position: fixed;
     left: 50%;
-    bottom: 60%;
+    bottom: 65%;
   }
 
   .text-peka {
@@ -340,7 +340,7 @@
     display: flex;
     align-items: center;
     left: 50%;
-    bottom: 81%;
+    bottom: 91%;
     margin-left: -100px;
   }
 
