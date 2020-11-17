@@ -126,7 +126,13 @@ Afterwards, you have to execute the update script of the extension to create the
 Alur penggunaan chatbot Peka untuk mendeteksi risiko terkena kanker payudara 
 dapat dilihat secara detil melalui infografis dibawah ini:
 
-<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605630719/Katahack__Bot_journey_hbpgo5.png" alt="Peka AI Journey" title="Peka.AI" margin="0 auto"/>
+
+
+<div style="text-align:center">
+    <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605630719/Katahack__Bot_journey_hbpgo5.png" alt="Peka AI Journey" title="Peka.AI"/>
+</div>
+
+
 
 
 ## BOT Materials
