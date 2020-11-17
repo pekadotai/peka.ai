@@ -1,0 +1,773 @@
+name: PekaAI
+tag: latest
+deleted_at: null
+desc: PekaAI Bot
+timezone: 7
+flows:
+    default:
+        active: true
+        volatile: false
+        fallback: true
+        intents:
+            defaultIntent:
+                type: text
+                initial: false
+                fallback: true
+        states:
+            init:
+                transitions:
+                    init:
+                        fallback: true
+                action: sayDontUnderstand
+                initial: true
+                end: true
+        actions:
+            sayDontUnderstand:
+                type: text
+                options:
+                    text: 'Maaf saya belum mengerti :('
+        methods: {}
+    RiskAssesment:
+        active: true
+        volatile: false
+        intents:
+            cekKanker:
+                type: text
+                initial: true
+                fallback: false
+                classifier:
+                    -
+                        nlu: cekKanker
+                        match: cekText
+                    -
+                        nlu: checkNLU
+                        match: check
+            usiaBeratTinggi:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: usiaBeratTinggi
+                attributes:
+                    usiaBeratTinggi:
+                        nlu: usiaBeratTinggi
+            reenter:
+                type: command
+                initial: false
+                fallback: false
+                condition: content=="reenter"
+            iya:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: iyaTidak
+                    match: iya
+            tidak:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: iyaTidak
+                    match: tidak
+            keluargaSatu:
+                type: text
+                initial: false
+                fallback: false
+                priority: 2
+                classifier:
+                    nlu: keluargaSatu
+                    match: ibu
+            keluargaDua:
+                type: text
+                initial: false
+                fallback: false
+                priority: 1
+                classifier:
+                    nlu: keluargaDua
+                    match: bibi
+            keluargaTiga:
+                type: text
+                initial: false
+                fallback: false
+                priority: 3
+                classifier:
+                    nlu: keluargaTiga
+                    match: ayah
+            biopsyAtypia:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: biopsyAtypia
+                    match: biopsiAtypia
+            biopsyNonAtypia:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: biopsyNonAtypia
+                    match: biopsiNonAtypia
+            ADH:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: ADH
+                    match: ADH
+            LCIS:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: LCIS
+                    match: LCIS
+            DCIS:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: DCIS
+                    match: DCIS
+            breastDensity:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: breastDensity
+                    match: breastDensity
+            belum:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: iyaTidak
+                    match: belum
+            cancel:
+                type: text
+                initial: false
+                fallback: false
+                classifier:
+                    nlu: cancel
+                    match: cancel
+        states:
+            init:
+                transitions:
+                    usia:
+                        mapping:
+                            context.RR: '0'
+                            context.usia: '0'
+                            context.BMI: '0'
+                            context.tinggi: '0'
+                            context.berat: '0'
+                            context.usiaMenstruasi: '0'
+                            context.usiaMelahirkan: '0'
+                            context.usiaMenopause: '0'
+                            context.penggantianHormon: tidak
+                            context.tesGenetik: tidak
+                            context.kankerOvarium: tidak
+                            context.keluarga: 'false'
+                            context.answer: '0'
+                initial: true
+            usia:
+                transitions:
+                    berat:
+                        mapping: gantiRR_usia
+                action:
+                    -
+                        name: greeting
+                    -
+                        name: cekFirst
+                    -
+                        name: tanyaUsia
+            tinggi:
+                transitions:
+                    usiaMenstruasi:
+                        mapping:
+                            context.tinggi: attributes.usiaBeratTinggi
+                action: tanyaTinggi
+            berat:
+                transitions:
+                    tinggi:
+                        mapping:
+                            context.berat: attributes.usiaBeratTinggi
+                action: tanyaBerat
+            usiaMenstruasi:
+                transitions:
+                    usiaMelahirkan:
+                        mapping:
+                            context.usiaMenstruasi: attributes.usiaBeratTinggi
+                action: tanyaUsiaMenstruasi
+                enter: hitung_BMI
+                transit: gantiRR_BMI
+            usiaMelahirkan:
+                transitions:
+                    usiaMenopause:
+                        mapping:
+                            context.usiaMelahirkan: attributes.usiaBeratTinggi
+                action: usiaMelahirkan
+                enter: gantiRR_usia_menstruasi
+                transit:
+                    context.usiaMelahirkan: intent
+            usiaMenopause:
+                transitions:
+                    terapiPenggantianHormon:
+                        mapping:
+                            context.usiaMenopause: attributes.usiaBeratTinggi
+                action: tanyaUsiaMenopause
+                enter: gantiRR_usia_melahirkan
+            terapiPenggantianHormon:
+                transitions:
+                    tesGenetik: {}
+                action: tanyaTerapiPenggantianHormon
+                enter: gantiRR_usia_menopause
+                transit:
+                    context.penggantianHormon: intent
+            tesGenetik:
+                transitions:
+                    kankerOvarium: {}
+                action: tanyaTesGenetik
+                enter: gantiRR_penggantian_hormon
+                transit:
+                    context.tesGenetik: intent
+            kankerOvarium:
+                transitions:
+                    riwayatKeluarga: {}
+                action: tanyaKankerOvarium
+                enter: gantiRR_tes_genetik
+                transit:
+                    context.kankerOvarium: intent
+            riwayatKeluarga:
+                transitions:
+                    personalBreast: {}
+                action: tanyaRiwayatKeluarga
+                enter: gantiRR_kanker_ovarium
+                transit:
+                    context.keluarga: intent
+            End:
+                transitions: {}
+                action:
+                    -
+                        name: annualMRI
+                        condition: context.RR >= 20
+                    -
+                        name: onceEveryTwoYearMammogram
+                        condition: context.RR >= 10 && context.RR <= 20 && context.usia >= 55
+                    -
+                        name: annualMammogram
+                        condition: context.RR >= 10 && context.RR <= 20 && context.usia >= 40 && context.usia < 55
+                    -
+                        name: annualClinicalBreastExamination
+                        condition: context.RR >= 10 && context.RR <= 20 && context.usia < 40
+                    -
+                        name: lowMammogram
+                        condition: context.RR < 10 && context.usia >= 55
+                    -
+                        name: lowAnnualMRI
+                        condition: context.RR < 10 && context.usia >= 40 && context.usia < 55
+                    -
+                        name: lowCBE
+                        condition: context.RR < 10 && context.usia < 40
+                    -
+                        name: done
+                    -
+                        name: ceklagi
+                enter: gantiRR_personalBreast
+                end: true
+            personalBreast:
+                transitions:
+                    End: {}
+                action: tanyaPersonalBreast
+                enter: gantiRR_keluarga
+                transit:
+                    context.personalBreast: intent
+            Cancel:
+                transitions: {}
+                action:
+                    -
+                        name: cancel
+                    -
+                        name: ceklagi
+                float:
+                    condition: intent=="cancel"
+                end: true
+        actions:
+            tanyaUsia:
+                type: text
+                options:
+                    text: Berapakah usia kamu?
+            tanyaTinggi:
+                type: text
+                options:
+                    text: Berapa tinggi kamu dalam cm?
+            tanyaBerat:
+                type: text
+                options:
+                    text: Berapakah berat badan kamu?
+            tanyaUsiaMenstruasi:
+                type: text
+                options:
+                    text: 'Berapa usia kamu saat pertama menstruasi? Jika belum, ketik "belum"'
+            usiaMelahirkan:
+                type: text
+                options:
+                    text: 'Berapa usia kamu saat pertama melahirkan? Jika belum, ketik "belum"'
+            tanyaUsiaMenopause:
+                type: text
+                options:
+                    text: 'Berapa usia kamu saat menopause? Jika belum, ketik "belum"'
+            tanyaTerapiPenggantianHormon:
+                type: text
+                options:
+                    text: Apakah kamu pernah melakukan terapi penggantian hormon?
+            tanyaTesGenetik:
+                type: text
+                options:
+                    text: Apakah kamu pernah melakukan tes genetik BRCA dengan hasil positif?
+            tanyaKankerOvarium:
+                type: text
+                options:
+                    text: Apakah kamu atau keluargamu mengidap kanker ovarium?
+            tanyaPersonalBreastDisease:
+                type: text
+                options:
+                    text: |-
+                        Apakah kamu mempunyai riwayat penyakit kanker payudara? 
+                          1 : Biopsi tanpa atyphia 
+                         2 : Biopsi dengan atyphia 
+                         3: ADH, ALH, atypichal ductal hyperplasia, hiperplasia duktus atipikal 
+                         4 : Lobular carcinoma in situ, LCIS, neoplasia lobular 
+                         5 : Ductal carcinoma in situ, DCIS, duktus karsinoma 
+                         6 : Breast density, payudara padat
+            tanyaRiwayatKeluarga:
+                type: text
+                options:
+                    text: 'Apakah ada keluargamu yang terkena kanker payudara? Jika iya, siapakah orang tersebut?'
+            tanyaSiapaKeluarga:
+                type: text
+                options:
+                    text: Siapa?
+            done:
+                type: text
+                options:
+                    text: Terimakasih atas partisipasinya!
+            tanyaPersonalBreast:
+                type: text
+                options:
+                    text: >-
+                        Apakah kamu memiliki riwayat penyakit payudara seperti biopsi dengan atau tanpa atypia, ALH/ADH, DCIS, LCIS, atau payudara
+                        padat?
+            annualMRI:
+                type: text
+                options:
+                    text: >-
+                        Kamu memiliki risiko terkena kanker payudara yang TINGGI. Kami merekomendasikan untuk segera konsultasi ke dokter dan lakukan
+                        pemeriksaan MRI setiap tahun.
+            tidakMengerti:
+                type: text
+                options:
+                    text: Maaf saya tidak mengerti.
+            cancel:
+                type: text
+                options:
+                    text: Terimakasih atas partisipasinya!
+            onceEveryTwoYearMammogram:
+                type: text
+                options:
+                    text: >-
+                        Kamu memiliki risiko terkena kanker payudara yang SEDANG. Kami merekomendasikan untuk melakukan pemeriksaan mammogram sekali
+                        setiap 2 tahun.
+            annualClinicalBreastExamination:
+                type: text
+                options:
+                    text: >-
+                        Kamu memiliki risiko terkena kanker payudara yang SEDANG. Kami merekomendasikan untuk melakukan pemeriksaan payudara klinis 1
+                        tahun sekali.
+            rekomendasiLainnya:
+                type: text
+                options:
+                    text: >-
+                        Rekomendasi lainnya: menjaga berat badan, olahraga setiap hari, membatasi atau menghindari alkohol, konsumsi makanan yang
+                        rendah gula dan lemak, dan tidak merokok.
+            lowAnnualMRI:
+                type: text
+                options:
+                    text: >-
+                        Kamu memiliki risiko terkena kanker payudara yang RENDAH. Namun, kami merekomendasikan untuk melakukan pemeriksaan MRI setiap
+                        tahun sebagai upaya pencegahan kanker payudara di usia yang rentan. Rekomendasi lainnya: menjaga berat badan, olahraga setiap
+                        hari, membatasi atau menghindari alkohol, konsumsi makanan yang rendah gula dan lemak, dan tidak merokok.
+            lowMammogram:
+                type: text
+                options:
+                    text: >-
+                        Kamu memiliki risiko terkena kanker payudara yang RENDAH. Namun, kami merekomendasikan untuk melakukan pemeriksaan mammogram
+                        setiap tahun sebagai upaya pencegahan kanker payudara di usia yang cukup rentan. Rekomendasi lainnya: menjaga berat badan,
+                        olahraga setiap hari, membatasi atau menghindari alkohol, konsumsi makanan yang rendah gula dan lemak, dan tidak merokok.
+            lowCBE:
+                type: text
+                options:
+                    text: >-
+                        Kamu memiliki risiko terkena kanker payudara yang RENDAH. Namun, kami merekomendasikan untuk melakukan pemeriksaan payudara
+                        klinis (SADANIS) 3 tahun sekali dan pemeriksaan payudara sendiri (SADARI) setiap sebulan yaitu 2-3 hari setelah menstruasi
+                        sebagai upaya pencegahan kanker payudara di usia yang cukup rentan. Rekomendasi lainnya: menjaga berat badan, olahraga setiap
+                        hari, membatasi atau menghindari alkohol, konsumsi makanan yang rendah gula dan lemak, dan tidak merokok.
+            cekLagi:
+                type: text
+                options:
+                    text: Memulai Cek Kanker!
+            annualMammogram:
+                type: text
+                options:
+                    text: >-
+                        Kamu memiliki risiko terkena kanker payudara yang SEDANG. Kami merekomendasikan untuk melakukan pemeriksaan mammogram setiap
+                        tahun.
+            greeting:
+                type: text
+                options:
+                    text: 'Hi, selamat datang di Peka.AI!'
+            cekFirst:
+                type: text
+                options:
+                    text: Kami akan melakukan pengecekan risiko kanker payudara untuk kamu
+            ceklagi:
+                type: text
+                options:
+                    text: 'Jika ingin melakukan cek kanker kembali, ketik "Cek"'
+        methods: {}
+nlus:
+    cekKanker:
+        type: keyword
+        options:
+            keywords:
+                cekText:
+                    - cek
+                    - check
+                    - periksa
+                    - diagnosa
+                    - cek kanker
+                    - hi
+                    - halo
+                    - hello
+                    - hallo
+                    - hai
+                    - iya
+                    - pagi
+                    - siang
+                    - sore
+                    - malam
+                    - malem
+                    - permisi
+                    - misi
+                    - cek dong
+                    - cekdong
+                    - mau
+                    - apa
+                    - gimana
+                    - ini gimana
+                    - harus apa
+                    - mulai
+                    - start
+                    - asses
+                    - nilai
+                    - 'Halo, terima kasih telah menambahkan  Peka.AI sebagai teman!'
+                    - /start
+                    - \start
+    usiaBeratTinggi:
+        type: regex
+        options:
+            regex: '^([1-9]|[1-9][0-9]|[1][0-9][0-9]|20[0-0])$'
+            index: ''
+    iyaTidak:
+        type: keyword
+        options:
+            keywords:
+                iya:
+                    - iya
+                    - ya
+                    - bener
+                    - benar
+                    - oke
+                    - pernah
+                    - 'y'
+                    - ye
+                    - 'yes'
+                    - yo
+                    - yoi
+                    - sip
+                tidak:
+                    - tidak
+                    - ga
+                    - tida
+                    - tidak pernah
+                    - tdk
+                    - 'no'
+                    - nope
+                    - not
+                belum:
+                    - belum
+                    - belom
+                    - not yet
+                    - blm
+                    - blom
+            exact: true
+    keluargaSatu:
+        type: keyword
+        options:
+            keywords:
+                ibu:
+                    - kakak perempuan
+                    - kakak wanita
+                    - adik perempuan
+                    - adik wanita
+                    - ibu
+    keluargaDua:
+        type: keyword
+        options:
+            keywords:
+                bibi:
+                    - nenek
+                    - sepupu
+                    - keponakan
+                    - kemenakan
+                    - bibi
+    keluargaTiga:
+        type: keyword
+        options:
+            keywords:
+                ayah:
+                    - paman
+                    - kakak laki-laki
+                    - kakak laki
+                    - kakak laki laki
+                    - kakak pria
+                    - adik laki-laki
+                    - adik laki
+                    - adik laki laki
+                    - adik pria
+                    - ayah
+                    - adik
+                    - kakak
+                    - adk
+                    - kk
+                    - adek
+                    - kakaq
+                    - adeq
+    biopsyAtypia:
+        type: keyword
+        options:
+            keywords:
+                biopsiAtypia:
+                    - dengan atypia
+                    - biopsi dengan atypia
+                    - biopsi atypia
+                    - biopsiatypia
+    biopsyNonAtypia:
+        type: keyword
+        options:
+            keywords:
+                biopsiNonAtypia:
+                    - biopsi tanpa atypia
+                    - tanpa atypia
+                    - biopsi
+    ADH:
+        type: keyword
+        options:
+            keywords:
+                ADH:
+                    - ADH
+                    - ALH
+                    - atypichal ductal hyperplasia
+                    - 'hiperplasia duktus atipikal '
+    LCIS:
+        type: keyword
+        options:
+            keywords:
+                LCIS:
+                    - LCIS
+                    - Lobular carcinoma in situ
+                    - neoplasia lobular
+    DCIS:
+        type: keyword
+        options:
+            keywords:
+                DCIS:
+                    - DCIS
+                    - Ductal carcinoma in situ
+                    - ductus carcinoma
+    breastDensity:
+        type: keyword
+        options:
+            keywords:
+                breastDensity:
+                    - breast density
+                    - payudara padat
+                    - pydr pdt
+                    - pydr padat
+                    - payudara pdt
+                    - padat
+    checkNLU:
+        type: nl
+        options:
+            nluId: 'salamidrus:PekaAI'
+            output: raw
+            threshold: 0.4
+            asIntent: intent
+    cancel:
+        type: keyword
+        options:
+            keywords:
+                cancel:
+                    - cancel
+                    - batal
+                    - batalkan
+                    - tidakjadi
+                    - tidak ajdi
+                    - tidak jadi
+                    - tidak mau
+                    - jangan cek
+                    - tidak lanjut
+                    - clear
+                    - cancrl
+                    - cancwl
+                    - canxel
+                    - cacel
+                    - canel
+                    - cance
+methods:
+    gantiRR_usia(ctx): |-
+        let usia = Number(ctx.attributes.usiaBeratTinggi)
+        ctx.context.usia = usia
+        ctx.context.next = true
+
+        if (usia > 65) {
+            ctx.context.RR = 5.8
+        }
+        if (usia >= 20 && usia <= 65) {
+            ctx.context.RR = 3
+        }
+
+        return ctx
+    hitung_BMI(ctx): |-
+        let berat = Number(ctx.context.berat)
+        let tinggi = Number(ctx.context.tinggi)
+
+        ctx.context.BMI = Math.floor(berat * 10000 / (tinggi * tinggi))
+
+        return ctx
+    gantiRR_usia_menstruasi(ctx): |-
+        let usiaMens = ctx.context.usiaMenstruasi && ctx.attributes.usiaBeratTinggi ? Number(ctx.context.usiaMenstruasi) : 0
+
+        if (usiaMens < 12 && usiaMens > 0) {
+            ctx.context.RR += 1.3
+        }
+
+        if (usiaMens > 12 && usiaMens < 15) {
+            ctx.context.RR += 0.6
+        }
+
+        return ctx
+    gantiRR_BMI(ctx): |-
+        let BMI = Number(ctx.context.BMI)
+
+
+        if (BMI >= 25) {
+            ctx.context.RR += 2
+        }
+
+
+        return ctx
+    gantiRR_usia_melahirkan(ctx): |-
+        let usiaMelahirkan = ctx.context.usiaMelahirkan && ctx.attributes.usiaBeratTinggi ? Number(ctx.context.usiaMelahirkan) : 0
+
+        if (usiaMelahirkan > 30) {
+            ctx.context.RR += 1.9
+        }
+
+        if (usiaMelahirkan < 20 && usiaMelahirkan > 0) {
+            ctx.context.RR += 1
+        }
+
+        return ctx
+    gantiRR_usia_menopause(ctx): |-
+        let usiaMenopause = ctx.context.usiaMenopause && ctx.attributes.usiaBeratTinggi ? Number(ctx.context.usiaMenopause) : 0
+
+        if (usiaMenopause > 55) {
+            ctx.context.RR += 1.5
+        }
+
+        if (usiaMenopause > 45 && usiaMenopause <= 55) {
+            ctx.context.RR += 1.2
+        }
+
+        return ctx
+    gantiRR_penggantian_hormon(ctx): |-
+        let pernah = ctx.context.penggantianHormon == "iya" ? true : false
+
+        if (pernah) {
+            ctx.context.RR += 2
+        }
+
+        return ctx
+    gantiRR_tes_genetik(ctx): |-
+        let tesGen = ctx.context.tesGenetik == "iya" ? true : false
+
+        if (tesGen) {
+            ctx.context.RR += 15
+        }
+
+        return ctx
+    gantiRR_kanker_ovarium(ctx): |-
+        let kankerOvarium = ctx.context.kankerOvarium == "iya" ? true : false
+
+        if (kankerOvarium) {
+            ctx.context.RR += 3
+        }
+
+        return ctx
+    gantiRR_keluarga(ctx): |-
+        let keluarga = ctx.context.keluarga
+
+
+        if (keluarga == "keluargaSatu") {
+            ctx.context.RR += 3
+        }
+
+        if (keluarga == "keluargaDua") {
+            ctx.context.RR += 1.5
+        }
+
+        if (keluarga == "keluargaTiga") {
+            ctx.context.RR += 4
+        }
+
+        return ctx
+    gantiRR_personalBreast(ctx): |-
+        let personalBreast = ctx.context.personalBreast
+
+
+        if (personalBreast == "biopsiAtypia") {
+            ctx.context.RR += 5
+        }
+
+        if (personalBreast == "biopsiNonAtypia") {
+            ctx.context.RR += 2
+        }
+
+        if (personalBreast == "ALH") {
+            ctx.context.RR += 3
+        }
+
+        if (personalBreast == "LCIS") {
+            ctx.context.RR += 16.4
+        }
+
+        if (personalBreast == "DCIS") {
+            ctx.context.RR += 17.3
+        }
+
+        if (personalBreast == "breastDensity") {
+            ctx.context.RR += 6
+        }
+
+        return ctx
+config: {}
