@@ -17,6 +17,9 @@ Peka.ai
     - [Go to Chatbot](#go-to-chatbot)
 - [Peka Chatbot](#peka-chatbot)
     - [How to use](#demo)
+        - [1. Welcome](#1. welcome)
+        - [2. Usia](#2. usia)
+        - [2. Usia](#2. usia)
     - [BOT Materials](#bot-materials)
         - [Yaml](#yaml)
         - [Flows](#flows)
@@ -52,14 +55,12 @@ Konten-konten yang tersedia:
 
 ### Go to Chatbot
 
-Selanjutnya, kamu bisa melakukan pengecekan risiko kanker payudara melalui Peka.Bot dengan mengklik Chatbot pada home page dan akan diarahkan ke channel yang tersedia
+Selanjutnya, kamu bisa melakukan pengecekan risiko kanker payudara melalui Peka.Bot dengan mengklik Chatbot pada home page dan akan diarahkan ke channel yang tersedia (Telegram dan Line)
 
 
 ## Peka Chatbot
 
-Setelah berhasil masuk ke dalam chatbot, kamu bisa mulai dengan menyapa bot tersebut atau memulai proses pengecekan risiko kanker. 
-
-#### Ketik *"Hi" atau "Cek"*
+Setelah berhasil masuk ke dalam chatbot, kamu akan disapa Peka Chatbot dan memulai proses pengecekan risiko kanker. 
 
 Sekarang, kamu sudah bisa melakukan pengecekan dengan Peka Bot dan Alur penggunaan chatbot Peka bisa kamu lihat secara detil melalui infografis BOT Journey dibawah ini:
 
@@ -69,12 +70,150 @@ Sekarang, kamu sudah bisa melakukan pengecekan dengan Peka Bot dan Alur pengguna
 
 ## How to use
 
-Kamu juga bisa 
+Jika dirasa perlu, kamu juga bisa mengikuti *step-by-step* penggunaan Peka.ai Chat Bot seperti dibawah ini:
+
+
+
+### 1. Welcome
+
+Saat pertama kali mengakses chatbot kamu akan disapa dan secara otomatis memulai pengecekan kanker.
+Kamu juga bisa melakukan cancel/pembatalan pengecekan kanker dengan mengetik "cancel" dan tidak terbatas hanya pada fase pertanyaan tertentu saja
+
+
+
+### 2. Usia
+
+Pertanyaan pertama adalah mengenai berapa usia kamu saat ini, kamu bisa memasukkan nilai angka 1-200.
+
+
+
+[![usia-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639099/welcome_yglwal.png)]
+
+
+
+### 3. Berat
+
+Selanjutnya, kamu akan ditanya berapa berat badan kamu, kamu bisa memasukkan nilai angka 1-200.
+
+
+
+[![berat-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639594/berat_kmbqaz.png)]
+
+
+
+### 4. Tinggi
+
+Masukan tinggi badanmu dalam cm, kamu bisa memasukkan nilai angka 1-200.
+
+
+
+[![tinggi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639813/tinggi_pflbhk.png)]
+
+
+
+### 5. Usia Pertama Menstruasi
+
+Masukan usia saat pertama menstruasi. Untuk pria atau perempuan yang belum menstruasi dapat mengetik "belum/tidak"
+
+
+
+[![mens-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640987/menstruasi_adu4qv.png)]
+
+
+
+### 6. Usia Pertama Melahirkan
+
+Lalu, usia saat pertama melahirkan. Untuk pria atau perempuan yang belum menstruasi dapat mengetik "belum/tidak"
+
+
+
+[![melahirkan-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640993/melahirkan_mtlap4.png)]
+
+
+
+
+### 7. Usia Pertama Menopause
+
+Untuk pengguna yang sudah menopause dapat memasukkan usia saat menopause. Untuk pria atau perempuan yang belum menstruasi dapat mengetik "belum/tidak"
+
+
+
+[![menopause-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640999/menopause_ersrxy.png)]
+
+
+
+
+### 8. Terapi Penggantian Hormon
+
+Selanjutnya, pengecekan apakah pernah melakukan terapi penggantian hormon? Kamu dapat menjawab "iya/pernah" atau "tidak/tidak pernah"
+
+
+
+[![terapi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641006/terapihormon_xh9pwm.png)]
+
+
+
+
+### 9. Tes Genetik
+
+Fase ini mengecek apakah pernah melakukan tes genetik BRCA dan hasilnya positif. Kamu bisa menjawab "iya" atau "tidak" 
+
+
+
+[![tes-genetik-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641012/tesgenetik_owkow8.png)]
+
+
+
+
+### 10. Kanker Ovarium
+
+Lalu, pengecekan apakah pengguna mengidap penyakit kanker ovarium. Kamu bisa menjawab "iya" atau "tidak"
+
+
+
+[![kanker-ovarium-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641020/kankerovarium_yelyus.png)]
+
+
+
+
+### 11. Riwayat Keluarga
+
+Perlu dilakukan juga pengecekan riwayat keluarga yang mengidap kanker payudara. Kamu bisa menjawab "ayah/ibu/kakak/adik/paman/bibi"
+
+
+
+[![keluarga-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641024/keluarga_eckb6l.png)]
+
+
+
+
+### 12. Personal Breast Disease
+
+Dan yang terakhir adalah pengecekan untuk *personal breast disease* dalam empat kategori sesuai yang ada di chat. Jika tidak terjangkit, kamu bisa menjawab "tidak" atau jika mengidap penyakit tersebut, kamu dapat menjawab "biopsi atypia/biopsi/alh/adh/dcis/lcis/payudara padat"
+
+
+
+[![pbd-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641030/pbd_jyyab7.png)]
+
+
+
+
+### 13. Hasil Asesmen dan Rekomendasi
+
+Setelah selesai, kamu akan mendapatkan laporan apakah kamu mempunyai risiko TINGGI, SEDANG, atau RENDAH untuk terjangkit Kanker Payudara beserta rekomendasi yang sesuai dengan tingkat risiko dan usia kamu. Kamu juga bisa melakukan pengecekan kembali dengan mengetik "cek" sesuai instruksi di chatbot.
+
+
+
+[![hasil-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641035/hasil_uj0zmc.png)]
+[![rekomendasi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641040/rekomendasi_akvo5o.png)]
 
 
 ## BOT Materials
 
 Ini adalah daftar material yang digunakan untuk Peka.ai Chatbot di Kata.ai platform
+
+### Yaml
+Script yaml untuk PekaBot
 
 ### Flows
 
@@ -118,7 +257,7 @@ Ini adalah daftar material yang digunakan untuk Peka.ai Chatbot di Kata.ai platf
 * DCIS
 * Breast Density
 
-### NlUs
+### NlU-s
 
 * Cek Kanker
 * Usia Berat Tinggi
