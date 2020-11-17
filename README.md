@@ -1,5 +1,5 @@
 <a href="http://peka-ai.herokuapp.com/">
-    <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605545369/PEKA_AI_1_vxfhtp.png" alt="Aimeos logo" title="Aimeos" align="right" height="120" width="130"/>
+    <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605545369/PEKA_AI_1_vxfhtp.png" alt="Aimeos logo" title="Aimeos" align="right" height="80" width="100"/>
 </a>
 
 Peka.ai
@@ -12,132 +12,74 @@ Peka.ai
 
 ## Table of content
 
-- [Installation](#installation)
-    - [TER](#typo3-extension-repository)
-    - [Composer](#composer)
-- [TYPO3 setup](#typo3-setup)
-    - [Extension](#extension)
-    - [Database](#database)
+- [Website](#website)
+    - [Pages](#pages)
+    - [Go to Chatbot](#go-to-chatbot)
 - [Peka Chatbot](#peka-chatbot)
-    - [Flows](#upload-the-page-tree-file)
-    - [States](#go-to-the-import-view)
-    - [Intents](#import-the-page-tree)
-    - [NLU-s](#seo-friendly-urls)
-    - [Methods](#methods)
-    - [Handlers](#handlers)
-    - [Demo](#seo-friendly-urls)
+    - [How to use](#demo)
+    - [BOT Materials](#bot-materials)
+        - [Yaml](#yaml)
+        - [Flows](#flows)
+        - [States](#states)
+        - [Intents](#intents)
+        - [NLU-s](#nlu-s)
+        - [Methods](#methods)
+        - [Handlers](#handlers)
+        
 - [License](#license)
 - [Links](#links)
 
-## Installation
+## Website
 
-This document is for the latest Aimeos TYPO3 **20.10 release and later**.
+Hal pertama yang harus kamu lakukan adalah mengakses website [Peka.ai](http://peka-ai.herokuapp.com/) dan selanjutnya kamu akan diarahkan ke home page.
 
-- LTS release: 20.10 (TYPO3 9/10 LTS)
-- Old LTS release: 19.10 (TYPO3 7/8/9 LTS)
+<gambar landing page>
 
-### TYPO3 extension repository
+### Contents
 
-If you want to install Aimeos into your existing TYPO3 installation, the [Aimeos extension from the TER](https://typo3.org/extensions/repository/view/aimeos) is recommended. You can download and install it directly from the Extension Manager of your TYPO3 instance.
+Pada website Peka, kamu juga dapat mengakses info-info penting seputar Kanker Payudara karena salah satu tujuan kami adalah mengedukasi masyarakat atau pengguna aplikasi akan pentingnya penyakit Kanker Payudara ini.
 
-For new TYPO3 installations, there's a 1-click [Aimeos distribution](https://typo3.org/extensions/repository/view/aimeos_dist) available too. Choose the Aimeos distribution from the list of available distributions in the Extension Manager and you will get a completely set up shop system including demo data for a quick start.
+Konten-konten yang tersedia:
+* Tentang Peka.AI
+* Gejala-gejala Kanker Payudara
+* Tips Pencegahan  
+* Diagnosa
+* Tingkatan
+* Tipe-tipe
+* Mitos
+* FAQs
 
-### Composer
 
-The latest version can be installed via composer too. This is especially useful if you want to create new TYPO3 installations automatically or play with the latest code. You need to install the composer package first if it isn't already available:
+### Go to Chatbot
 
-`php -r "readfile('https://getcomposer.org/installer');" | php -- --filename=composer`
+Selanjutnya, kamu bisa melakukan pengecekan risiko kanker payudara melalui Peka.Bot dengan mengklik Chatbot pada home page dan akan diarahkan ke channel yang tersedia
 
-In order to tell install TYPO3, you have to execute
-
-`composer create-project typo3/cms-base-distribution myshop`
-
-This will install TYPO3 into the ''./myshop/'' directory. Afterwards, you have to edit the composer.json file and add the ''post-install-cmd'' and ''post-update-cmd'' scripts:
-
-```
-    "scripts": {
-        "post-install-cmd": [
-            "Aimeos\\Aimeos\\Custom\\Composer::install"
-        ],
-        "post-update-cmd": [
-            "Aimeos\\Aimeos\\Custom\\Composer::install"
-        ]
-    }
-```
-
-Then, install the Aimeos extension for TYPO3 with:
-
-`composer req aimeos/aimeos-typo3:~20.10`
-
-This will install TYPO3 9.5 and the latest Aimeos TYPO3 extension. The Aimeos composer script will be executed automatically, which copies some required files and adds a link to the Aimeos extensions placed in the ./ext/ directory.
-
-## TYPO3 setup
-
-### Database setup
-
-If you use MySQL < 5.7.8, you have to use `utf8` and `utf8_unicode_ci` instead because those MySQL versions can't handle the long indexes created by `utf8mb4` (up to four bytes per character) and you will get errors like
-
-```
-1071 Specified key was too long; max key length is 767 bytes
-```
-
-To avoid that, change your database settings in your `./typo3conf/LocalConfiguration.php` to:
-
-```
-'DB' => [
-    'Connections' => [
-        'Default' => [
-            'tableoptions' => [
-                'charset' => 'utf8',
-                'collate' => 'utf8_unicode_ci',
-            ],
-            // ...
-        ],
-    ],
-],
-```
-
-### Security
-
-Since **TYPO3 9.5.14+** implements **SameSite cookie handling** and restricts when browsers send cookies to your site. This is a problem when customers are redirected from external payment provider domain. Then, there's no session available on the confirmation page. To circumvent that problem, you need to set the configuration option `cookieSameSite` to `none` in your `./typo3conf/LocalConfiguration.php`:
-
-```
-    'FE' => [
-        'cookieSameSite' => 'none'
-    ]
-```
-
-### Extension
-
-* Log into the TYPO3 back end
-* Click on ''Admin Tools::Extension Manager'' in the left navigation
-* Click the icon with the little plus sign left from the Aimeos list entry (looks like a lego brick)
-
-![Install Aimeos TYPO3 extension](https://aimeos.org/docs/images/Aimeos-typo3-extmngr-install.png)
-
-### Database
-
-Afterwards, you have to execute the update script of the extension to create the required database structure:
-
-![Execute update script](https://aimeos.org/docs/images/Aimeos-typo3-extmngr-update-7.x.png)
 
 ## Peka Chatbot
 
-Penggunaan chatbot Peka untuk mendeteksi risiko terkena kanker payudara 
-dapat dilihat secara detil melalui infografis dibawah ini:
+Setelah berhasil masuk ke dalam chatbot, kamu bisa mulai dengan menyapa bot tersebut atau memulai proses pengecekan risiko kanker. 
 
-* [20.10.x page tree](https://aimeos.org/fileadmin/download/Aimeos-pages_20.10.t3d)
-* [19.10.x page tree](https://aimeos.org/fileadmin/download/Aimeos-pages_two-columns_18.10__2.t3d)
+#### Ketik *"Hi" atau "Cek"*
 
-**Note:** The Aimeos layout expects [Bootstrap](https://getbootstrap.com) providing the grid layout!
+Sekarang, kamu sudah bisa melakukan pengecekan dengan Peka Bot dan Alur penggunaan chatbot Peka bisa kamu lihat secara detil melalui infografis BOT Journey dibawah ini:
+
+<div style="text-align:center">
+    <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605630719/Katahack__Bot_journey_hbpgo5.png" alt="Peka AI Journey" title="Peka.AI"/>
+</div>
+
+## How to use
+
+Kamu juga bisa 
+
+
+## BOT Materials
+
+Ini adalah daftar material yang digunakan untuk Peka.ai Chatbot di Kata.ai platform
 
 ### Flows
 
 * Default
 * Risk Assessment
-
-
-![Upload the page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-upload.png)
 
 ### States
 
@@ -154,9 +96,6 @@ dapat dilihat secara detil melalui infografis dibawah ini:
 * Riwayat Keluarga
 * Personal Breast Disease
 * End
-
-
-![Upload the page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-upload.png)
 
 ### Intents
 
@@ -179,9 +118,6 @@ dapat dilihat secara detil melalui infografis dibawah ini:
 * DCIS
 * Breast Density
 
-![Import the uploaded page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-import.png)
-
-
 ### NlUs
 
 * Cek Kanker
@@ -200,44 +136,42 @@ dapat dilihat secara detil melalui infografis dibawah ini:
 * Check NLU
 * Cancel
 
-![Import the uploaded page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-import.png)
+### NL Studio
+
+* Check
+* Intent
+* Personal Breast
 
 ### Methods
 
-* gantiRR_usia
-* hitung_BMI
-* gantiRR_usia_menstruasi
-* gantiRR_BMI
-* gantiRR_usia_melahirkan
-* gantiRR_usia_menopause
-* gantiRR_penggantian_hormon
-* gantiRR_tes_genetik
-* gantiRR_kanker_ovarium
-* gantiRR_keluarga
-* gantiRR_personal_breast
+* GantiRR Usia
+* Hitung BMI
+* GantiRR Usia Menstruasi
+* GantiRR BMI
+* GantiRR Usia Melahirkan
+* GantiRR Usia Menopause
+* GantiRR Penggantian Hormon
+* GantiRR Tes Genetik
+* GantiRR Kanker Ovarium
+* GantiRR Keluarga
+* GantiRR Personal Breast
 * DCIS
 * Breast Density
 * Check NLU
 * Cancel
 
-![Import the uploaded page tree file](https://aimeos.org/docs/images/Aimeos-typo3-pages-import.png)
+### Handlers
 
-Now you have a new page "Shop" in your page tree including all required sub-pages.
-
-### SEO-friendly URLs
-
-TYPO3 9.5 and later can create SEO friendly URLs if you add the rules to the site config:
-[https://aimeos.org/docs/latest/typo3/setup/#seo-urls](https://aimeos.org/docs/latest/typo3/setup/#seo-urls)
+* Cancel Cek Kanker
+* Re-check Kanker
+* Re-enter Command
 
 ## License
 
-The Aimeos TYPO3 extension is licensed under the terms of the GPL Open Source
+The template is licensed under the terms of the GPL Open Source
 license and is available for free.
 
 ## Links
 
 * [Web site](https://aimeos.org/integrations/typo3-shop-extension/)
-* [Documentation](https://aimeos.org/docs/TYPO3)
-* [Forum](https://aimeos.org/help/typo3-extension-f16/)
-* [Issue tracker](https://github.com/aimeos/aimeos-typo3/issues)
-* [Source code](https://github.com/aimeos/aimeos-typo3)
+* [BOT Yaml](https://aimeos.org/docs/TYPO3)
