@@ -1482,7 +1482,7 @@
   }
 
   .diagnosa-height {
-    height: 600px;
+    height: inherit;
   }
 
   .bottom-right-hide {
@@ -2185,7 +2185,7 @@
   }
 
   .diagnosa-height {
-    height: 600px;
+    height: inherit;
   }
 
   .right2-cegah {
@@ -2240,7 +2240,7 @@
   .beratbadan {
     position: fixed;
     width: 700px;
-    height: 100px;
+    height: 80px;
     left: 50%;
     margin-left: -350px;
     bottom: 65%;
@@ -2255,7 +2255,7 @@
   .olahraga {
     position: fixed;
     width: 700px;
-    height: 100px;
+    height: 90px;
     left: 50%;
     margin-left: -350px;
     bottom: 65%;

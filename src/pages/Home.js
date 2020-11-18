@@ -84,7 +84,7 @@ export default function Home() {
         }`}
       >
         <h1>
-          Peka.<span style={{ color: "#f337ab" }}>AI</span>
+          Peka.<span style={{ color: "#f337ab" }}>Ai</span>
         </h1>
       </div>
       {/* 1 */}
@@ -107,7 +107,7 @@ export default function Home() {
         }}
       >
         <p style={{ color: "#fff" }}>
-          <b>Tentang Peka.AI</b>
+          <b>Tentang Peka.Ai</b>
         </p>
       </div>
       {/* 2 */}
@@ -163,6 +163,7 @@ export default function Home() {
           setMakanan(false);
           setBeratbadan(false);
           setRokok(false);
+          setOlahraga(false);
         }}
       >
         <p style={{ color: "#fff" }}>
@@ -411,7 +412,7 @@ export default function Home() {
       {/* Slide 1 */}
       <div style={{}} className={`center fade ${tentangPeka && "down"}`}>
         <Card
-          title="Apa itu Peka.AI"
+          title="Apa itu Peka.Ai"
           style={{
             backgroundColor: "rgba(255,255,255,0.9)",
           }}
@@ -424,14 +425,10 @@ export default function Home() {
             }}
             className="line-height"
           >
-            <b style={{ color: "#f337ab" }}>Peka.AI</b> adalah platform edukasi
-            kanker payudara yang memberikan informasi seputar kanker payudara,
-            asesmen risiko dan sistem rekomendasi. Berangkat dari permasalahan
-            kanker payudara yang merupakan kanker paling umum dan menjadi penyebab
-            utama kematian akibat kanker, Peka.AI hadir sebagai solusi untuk menjawab
-            permasalahan rendahnya pengetahuan dan kesadaran perempuan mengenai pentingnya
-            deteksi dini kanker payudara yang menyebabkan 80% kasus terdeteksi saat stadium
-            lanjut di mana pengobatan lebih sulit dan pembiayaan lebih mahal.
+            <b style={{ color: "#f337ab" }}>Peka.Ai</b> adalah sebuah web
+            interaktif yang dapat membantu kamu dalam mengetahui informasi
+            tentang kanker payudara mulai dari penyebab, gejala, diagnosa,
+            hinggu mitos seputar kanker payudara.
           </p>
         </Card>
         <Card
@@ -467,6 +464,7 @@ export default function Home() {
                   color: "#f337ab",
                 }}
               >
+                https://www.alodokter.com/kanker-payudara
               </a>
             </i>
             )
@@ -869,9 +867,9 @@ export default function Home() {
 
       {olahraga && (
         <div className="olahraga">
-          Bila memiliki berat badan berlebih, konsultasikan dengan dokter
-          mengenai strategi untuk menurunkan berat badan dan agar berat badan
-          tetap ideal.
+          Dengan rutin berolahraga, banyak manfaat olahraga yang bisa langsung
+          Anda dapatkan. Selain itu, banyak juga manfaat olahraga yang bisa Anda
+          dapatkan di kemudian hari dalam jangka panjang.
         </div>
       )}
 
@@ -918,9 +916,11 @@ export default function Home() {
               className="pencegahan-title font-title disable-hover"
             >
               <p>
-                <b style={{ color: "#f337ab" }}>Mammogram</b>
+                <b style={{ color: "#f337ab" }} className="line-height">
+                  Mammogram
+                </b>
               </p>
-              <p style={{ color: "#000" }} className="line-height">
+              <p style={{ color: "#000" }}>
                 Mammografi atau mammogram adalah tes pemindaian yang dilakukan
                 untuk memeriksa dan mendeteksi berbagai bentuk kelainan pada
                 payudara, seperti kanker payudara, tumor, kista payudara, atau
@@ -931,9 +931,12 @@ export default function Home() {
               </p>
               <br />
               <p>
-                <b style={{ color: "#f337ab" }}> Ultrasound</b>
+                <b style={{ color: "#f337ab" }} className="line-height">
+                  {" "}
+                  Ultrasound
+                </b>
               </p>
-              <p style={{ color: "#000" }} className="line-height">
+              <p style={{ color: "#000" }}>
                 USG payudara adalah salah satu pemeriksaan radiologi pada
                 payudara yang menggunakan teknologi gelombang suara. Jenis
                 pemeriksaan ini berfungsi untuk mendeteksi gangguan dan berbagai
@@ -941,9 +944,11 @@ export default function Home() {
               </p>{" "}
               <br />
               <p>
-                <b style={{ color: "#f337ab" }}>Magnetic Resonance Imaging </b>
+                <b style={{ color: "#f337ab" }} className="line-height">
+                  Magnetic Resonance Imaging
+                </b>
               </p>
-              <p style={{ color: "#000" }} className="line-height">
+              <p style={{ color: "#000" }}>
                 Magnetic Resonance Imaging (MRI) payudara adalah tes yang
                 menggunakan magnet, gelombang radio, dan komputer untuk
                 menghasilkan gambar struktur payudara secara detil. Melalui
@@ -953,9 +958,11 @@ export default function Home() {
               </p>
               <br />
               <p>
-                <b style={{ color: "#f337ab" }}>Biopsi</b>
+                <b style={{ color: "#f337ab" }} className="line-height">
+                  Biopsi
+                </b>
               </p>
-              <p style={{ color: "#000" }} className="line-height">
+              <p style={{ color: "#000" }}>
                 Biopsi payudara adalah prosedur pengambilan sampel jaringan dari
                 payudara untuk mendeteksi adanya kelainan. Prosedur ini juga
                 dilakukan untuk mengevaluasi apakah benjolan pada payudara
@@ -1219,9 +1226,7 @@ export default function Home() {
           }}
           className="mitos-padding"
         >
-          <p>
-            <b>Kanker payudara itu menyakitkan?</b>
-          </p>
+          <p>Kanker payudara itu menyakitkan?</p>
         </div>
       </div>
       <div
@@ -1242,9 +1247,7 @@ export default function Home() {
           }}
           className="mitos-padding"
         >
-          <p>
-            <b>Hanya wanita saja yang dapat terkena kanker payudara</b>
-          </p>
+          <p>Hanya wanita saja yang dapat terkena kanker payudara</p>
         </div>
       </div>
       <div
@@ -1266,9 +1269,7 @@ export default function Home() {
           }}
           className="mitos-padding"
         >
-          <p>
-            <b>Memakai Bra Terus-Menerus Bisa Menyebabkan Kanker Payudara</b>
-          </p>
+          <p>Memakai Bra Terus-Menerus Bisa Menyebabkan Kanker Payudara</p>
         </div>
       </div>
       <div
@@ -1291,10 +1292,8 @@ export default function Home() {
           className="mitos-padding"
         >
           <p>
-            <b>
-              Pengobatan untuk kanker payudara adalah dengan mengambil seluruh
-              bagian payudara
-            </b>
+            Pengobatan untuk kanker payudara adalah dengan mengambil seluruh
+            bagian payudara
           </p>
         </div>
       </div>
@@ -1317,9 +1316,7 @@ export default function Home() {
           }}
           className="mitos-padding"
         >
-          <p>
-            <b>Menderita kanker payudara berarti “vonis mati”</b>
-          </p>
+          <p>Menderita kanker payudara berarti “vonis mati”</p>
         </div>
       </div>
       <div
@@ -1342,10 +1339,8 @@ export default function Home() {
           className="mitos-padding"
         >
           <p>
-            <b>
-              Kanker payudara dapat terjadi jika terlalu sering melakukan
-              mammogram
-            </b>
+            Kanker payudara dapat terjadi jika terlalu sering melakukan
+            mammogram
           </p>
         </div>
       </div>
@@ -1368,9 +1363,7 @@ export default function Home() {
           }}
           className="mitos-padding"
         >
-          <p>
-            <b>Kanker payudara disebabkan oleh keturunan dari keluarga</b>
-          </p>
+          <p>Kanker payudara disebabkan oleh keturunan dari keluarga</p>
         </div>
       </div>
       <div
@@ -1391,9 +1384,7 @@ export default function Home() {
           }}
           className="mitos-padding"
         >
-          <p>
-            <b>Kanker payudara selalu berupa benjolan</b>
-          </p>
+          <p>Kanker payudara selalu berupa benjolan</p>
         </div>
       </div>
       <div
