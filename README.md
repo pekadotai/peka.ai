@@ -122,7 +122,7 @@ Masukan tinggi badanmu dalam cm, kamu bisa memasukkan nilai angka 1-200.
 
 
 
-[![tinggi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639813/tinggi_pflbhk.png)]
+![tinggi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639813/tinggi_pflbhk.png)
 
 
 
@@ -132,7 +132,7 @@ Masukan usia saat pertama menstruasi. Untuk pria atau perempuan yang belum menst
 
 
 
-[![mens-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640987/menstruasi_adu4qv.png)]
+![mens-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640987/menstruasi_adu4qv.png)
 
 
 
