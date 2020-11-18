@@ -57,7 +57,7 @@
 }
 
 .pencegahan-title {
-  width: 850px;
+  width: 1024px;
 }
 
 .tipe-title {
@@ -879,6 +879,148 @@
     box-shadow: 0 5px #666;
     transform: translateY(0px);
   }
+
+  .sadari {
+    position: fixed;
+    width: 350px;
+    height: 400px;
+    left: 50%;
+    margin-left: -175px;
+    bottom: 35%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 10px;
+    z-index: 99;
+  }
+
+  .sadanis {
+    position: fixed;
+    width: 350px;
+    height: 190px;
+    left: 50%;
+    margin-left: -175px;
+    bottom: 55%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .beratbadan {
+    position: fixed;
+    width: 350px;
+    height: 110px;
+    left: 50%;
+    margin-left: -175px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .olahraga {
+    position: fixed;
+    width: 350px;
+    height: 110px;
+    left: 50%;
+    margin-left: -175px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .alkohol {
+    position: fixed;
+    width: 350px;
+    height: 170px;
+    left: 50%;
+    margin-left: -175px;
+    bottom: 58%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .rokok {
+    position: fixed;
+    width: 350px;
+    height: 180px;
+    left: 50%;
+    margin-left: -175px;
+    bottom: 57%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .pencegahan2 {
+    z-index: -99;
+    right: 50%;
+    opacity: 0;
+    margin-right: -170px;
+  }
+
+  .pencegahan-to-left-0 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 82%;
+  }
+
+  .pencegahan-to-left-1 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 73%;
+  }
+
+  .pencegahan-to-left-2 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 66%;
+  }
+
+  .pencegahan-to-left-3 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 58.5%;
+  }
+
+  .pencegahan-to-left-4 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 51%;
+  }
+
+  .pencegahan-to-left-5 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 43.5%;
+  }
+
+  .left2-cegah-hide {
+    z-index: -99;
+    opacity: 0;
+  }
+
+  .pencegahan2-to-top {
+    bottom: 80%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1077,6 +1219,13 @@
     transform: translate(250%, 300%);
   }
 
+  .pencegahan2 {
+    z-index: -99;
+    right: 50%;
+    margin-right: -300px;
+    opacity: 0;
+  }
+
   .to-left {
     z-index: 99;
     transform: translate(50%, 300%);
@@ -1123,34 +1272,6 @@
 
   .to-left3 {
     transform: translate(50%, 700%);
-  }
-
-  .awan1 {
-    width: 200px;
-  }
-
-  .awan2 {
-    width: 300px;
-  }
-
-  .awan3 {
-    width: 300px;
-  }
-
-  .awan4 {
-    width: 400px;
-  }
-
-  .awan5 {
-    width: 300px;
-  }
-
-  .awan6 {
-    width: 400px;
-  }
-
-  .awan7 {
-    width: 300px;
   }
 
   .from-bottom1 {
@@ -1361,7 +1482,7 @@
   }
 
   .diagnosa-height {
-    height: inherit;
+    height: 600px;
   }
 
   .bottom-right-hide {
@@ -1413,7 +1534,10 @@
   }
 
   .pencegahan-to-left {
-    transform: translate(50%, 260%);
+    z-index: 99;
+    opacity: 1;
+    margin-right: -300px;
+    bottom: 80%;
   }
 
   .pencegahan-to-left2 {
@@ -1422,6 +1546,149 @@
 
   .pencegahan-right3 {
     transform: translate(-50%, 600%);
+  }
+
+  .sadari {
+    position: fixed;
+    width: 700px;
+    height: 500px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 27%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 10px;
+    z-index: 99;
+  }
+
+  .sadanis {
+    position: fixed;
+    width: 700px;
+    height: 120px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .beratbadan {
+    position: fixed;
+    width: 700px;
+    height: 100px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .olahraga {
+    position: fixed;
+    width: 700px;
+    height: 100px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .alkohol {
+    position: fixed;
+    width: 700px;
+    height: 120px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .rokok {
+    position: fixed;
+    width: 700px;
+    height: 120px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .pencegahan-to-left-0 {
+    z-index: 99;
+    opacity: 1;
+    margin-right: -300px;
+    bottom: 82%;
+  }
+
+  .pencegahan-to-left {
+    z-index: 99;
+    opacity: 1;
+    margin-right: -300px;
+    bottom: 75%;
+  }
+
+  .pencegahan-to-left-1 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 75%;
+  }
+
+  .pencegahan-to-left-2 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 67.5%;
+  }
+
+  .pencegahan-to-left-3 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 60%;
+  }
+
+  .pencegahan-to-left-4 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 52.5%;
+  }
+
+  .pencegahan-to-left-5 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 45%;
+  }
+
+  .left2-cegah-hide {
+    z-index: -99;
+    opacity: 0;
+  }
+
+  .pencegahan2-to-top {
+    bottom: 80%;
   }
 }
 
@@ -1663,6 +1930,13 @@
     transform: translate(250%, 300%);
   }
 
+  .pencegahan2 {
+    z-index: -99;
+    right: 50%;
+    margin-right: -300px;
+    opacity: 0;
+  }
+
   .to-left {
     z-index: 99;
     transform: translate(50%, 300%);
@@ -1732,50 +2006,13 @@
   .fade-center2 {
     position: fixed;
     left: 50%;
-    /* bottom: 20%; */
-    /* z-index: 1; */
     margin-left: -250px;
-    /* left: 50%; */
-    /* top: 50%; */
-    /* transform: translate(-50%, -150%); */
-    /* opacity: 0; */
-    /* transition: 1s; */
-    /* width: 100%; */
-    /* z-index: -12; */
   }
 
   .fade-center-aktif2 {
     top: 40%;
     /* opacity: 1; */
     z-index: 20;
-  }
-
-  .awan1 {
-    width: 200px;
-  }
-
-  .awan2 {
-    width: 300px;
-  }
-
-  .awan3 {
-    width: 300px;
-  }
-
-  .awan4 {
-    width: 400px;
-  }
-
-  .awan5 {
-    width: 300px;
-  }
-
-  .awan6 {
-    width: 400px;
-  }
-
-  .awan7 {
-    width: 300px;
   }
 
   .from-bottom1 {
@@ -1948,7 +2185,7 @@
   }
 
   .diagnosa-height {
-    height: inherit;
+    height: 600px;
   }
 
   .right2-cegah {
@@ -1961,11 +2198,6 @@
     transform: translate(-50%, 150%);
   }
 
-  .pencegahan-to-left {
-    z-index: 99;
-    transform: translate(50%, 260%);
-  }
-
   .pencegahan-to-left2 {
     z-index: 99;
     transform: translate(50%, 480%);
@@ -1974,5 +2206,147 @@
   .pencegahan-right3 {
     z-index: 99;
     transform: translate(-50%, 590%);
+  }
+
+  .sadari {
+    position: fixed;
+    width: 700px;
+    height: 500px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 27%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 10px;
+  }
+
+  .sadanis {
+    position: fixed;
+    width: 700px;
+    height: 120px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .beratbadan {
+    position: fixed;
+    width: 700px;
+    height: 100px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .olahraga {
+    position: fixed;
+    width: 700px;
+    height: 100px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .alkohol {
+    position: fixed;
+    width: 700px;
+    height: 120px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .rokok {
+    position: fixed;
+    width: 700px;
+    height: 120px;
+    left: 50%;
+    margin-left: -350px;
+    bottom: 65%;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  .pencegahan-to-left-0 {
+    z-index: 99;
+    opacity: 1;
+    margin-right: -300px;
+    bottom: 82%;
+  }
+
+  .pencegahan-to-left {
+    z-index: 99;
+    opacity: 1;
+    margin-right: -300px;
+    bottom: 75%;
+  }
+
+  .pencegahan-to-left-1 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 75%;
+  }
+
+  .pencegahan-to-left-2 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 67.5%;
+  }
+
+  .pencegahan-to-left-3 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 60%;
+  }
+
+  .pencegahan-to-left-4 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 52.5%;
+  }
+
+  .pencegahan-to-left-5 {
+    z-index: 99;
+    opacity: 1;
+    bottom: 45%;
+  }
+
+  .left2-cegah-hide {
+    z-index: -99;
+    opacity: 0;
+  }
+
+  .pencegahan2-to-top {
+    bottom: 80%;
   }
 }

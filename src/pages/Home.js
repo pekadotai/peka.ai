@@ -10,7 +10,14 @@ import Icon6 from "../assets/icons/woman7.svg";
 import Icon7 from "../assets/icons/woman3.svg";
 import Icon8 from "../assets/icons/woman9.svg";
 import Woman1 from "../assets/icons/woman1.svg";
-import Wa from "../assets/icons/wa.png";
+import Langkah1 from "../assets/icons/langkah1.png";
+import Langkah2 from "../assets/icons/langkah2.png";
+import Langkah3 from "../assets/icons/langkah3.png";
+import Langkah4 from "../assets/icons/langkah4.png";
+import Langkah5 from "../assets/icons/langkah5.png";
+import Langkah6 from "../assets/icons/langkah6.png";
+import Langkah7 from "../assets/icons/langkah7.png";
+
 import Tele from "../assets/icons/telegram.png";
 import Line from "../assets/icons/line.jpg";
 import LogoLine from "../assets/icons/logo-line.png";
@@ -28,13 +35,13 @@ export default function Home() {
   const [pekabot, setPekabot] = useState(
     "Cek potensi kanker payudaramu disini!"
   );
-
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  const [sadari, setSadari] = useState(false);
+  const [sadanis, setSadanis] = useState(false);
+  const [beratbadan, setBeratbadan] = useState(false);
+  const [olahraga, setOlahraga] = useState(false);
+  const [alkohol, setAlkohol] = useState(false);
+  const [rokok, setRokok] = useState(false);
+  const [makanan, setMakanan] = useState(false);
 
   return (
     <div
@@ -148,7 +155,15 @@ export default function Home() {
             ? "hide-icon"
             : ""
         } ${gejala && "hide-icon"}`}
-        onClick={() => setPencegahan(!pencegahan)}
+        onClick={() => {
+          setPencegahan(!pencegahan);
+          setSadari(false);
+          setSadanis(false);
+          setAlkohol(false);
+          setMakanan(false);
+          setBeratbadan(false);
+          setRokok(false);
+        }}
       >
         <p style={{ color: "#fff" }}>
           <b>Pencegahan</b>
@@ -172,7 +187,7 @@ export default function Home() {
         onClick={() => setDiagnosa(!diagnosa)}
       >
         <p style={{ color: "#fff" }}>
-          <b>Diagnosa</b>
+          <b>Diagnosis</b>
         </p>
       </div>
       {/* 5 */}
@@ -405,6 +420,7 @@ export default function Home() {
           <p
             style={{
               color: "#000",
+              textAlign: "justify",
             }}
             className="line-height"
           >
@@ -427,6 +443,7 @@ export default function Home() {
           <p
             style={{
               color: "#000",
+              textAlign: "justify",
             }}
             className="line-height"
           >
@@ -556,7 +573,17 @@ export default function Home() {
           ></Card>
         </div>
       </div>
-      <div className={`left gejala ${pencegahan && "pencegahan-right"}`}>
+      <div
+        className={`pencegahan2 gejala cursor-pointer ${
+          pencegahan && "pencegahan-to-left-0"
+        } ${
+          sadanis || beratbadan || olahraga || alkohol || rokok
+            ? "left2-cegah-hide"
+            : ""
+        }
+        `}
+        onClick={() => setSadari(!sadari)}
+      >
         <div
           style={{
             backgroundColor: "rgba(255,255,255,0.9)",
@@ -568,7 +595,16 @@ export default function Home() {
         </div>
       </div>
       <div
-        className={`from-right gejala ${pencegahan && "pencegahan-to-left"}`}
+        className={`pencegahan2 gejala cursor-pointer ${
+          pencegahan && "pencegahan-to-left-1"
+        } ${sadanis && "pencegahan2-to-top"}
+        ${
+          sadari || beratbadan || olahraga || alkohol || rokok
+            ? "left2-cegah-hide"
+            : ""
+        }
+        `}
+        onClick={() => setSadanis(!sadanis)}
       >
         <div
           style={{
@@ -580,7 +616,17 @@ export default function Home() {
           <p>Rutin melakukan pemeriksaan payudara klinis (SADANIS)</p>
         </div>
       </div>
-      <div className={`left2-cegah gejala ${pencegahan && "right2-cegah"}`}>
+      <div
+        className={`pencegahan2 gejala cursor-pointer ${
+          pencegahan && "pencegahan-to-left-2"
+        } ${
+          sadanis || sadari || olahraga || alkohol || rokok
+            ? "left2-cegah-hide"
+            : ""
+        }
+      ${beratbadan && "pencegahan2-to-top"}`}
+        onClick={() => setBeratbadan(!beratbadan)}
+      >
         <div
           style={{
             backgroundColor: "rgba(255,255,255,0.9)",
@@ -592,7 +638,15 @@ export default function Home() {
         </div>
       </div>
       <div
-        className={`from-right2 gejala ${pencegahan && "pencegahan-to-left2"}`}
+        className={`pencegahan2 gejala cursor-pointer ${
+          pencegahan && "pencegahan-to-left-3"
+        } ${
+          sadanis || sadari || beratbadan || alkohol || rokok
+            ? "left2-cegah-hide"
+            : ""
+        }
+        ${olahraga && "pencegahan2-to-top"}`}
+        onClick={() => setOlahraga(!olahraga)}
       >
         <div
           style={{
@@ -604,7 +658,16 @@ export default function Home() {
           <p>Olahraga rutin</p>
         </div>
       </div>
-      <div className={`left3 gejala ${pencegahan && "pencegahan-right3"}`}>
+      <div
+        className={`pencegahan2 cursor-pointer gejala ${
+          pencegahan && "pencegahan-to-left-4"
+        } ${
+          sadanis || sadari || beratbadan || olahraga || rokok
+            ? "left2-cegah-hide"
+            : ""
+        } ${alkohol && "pencegahan2-to-top"}`}
+        onClick={() => setAlkohol(!alkohol)}
+      >
         <div
           style={{
             backgroundColor: "rgba(255,255,255,0.9)",
@@ -615,12 +678,218 @@ export default function Home() {
           <p>Hentikan konsumsi alkohol.</p>
         </div>
       </div>
+
+      <div
+        className={`pencegahan2 cursor-pointer gejala ${
+          pencegahan && "pencegahan-to-left-5"
+        } ${
+          sadanis || sadari || beratbadan || olahraga || alkohol
+            ? "left2-cegah-hide"
+            : ""
+        } ${rokok && "pencegahan2-to-top"}`}
+        onClick={() => setRokok(!rokok)}
+      >
+        <div
+          style={{
+            backgroundColor: "rgba(255,255,255,0.9)",
+            padding: "20px",
+            borderRadius: "20px",
+          }}
+        >
+          <p>Tidak merokok.</p>
+        </div>
+      </div>
+
       <div
         style={{}}
         className={`bottom-right-hide ${pencegahan && "bottom-right-bottom"}`}
       >
         <img src={Icon3} width="400px" style={{ opacity: 1 }} />
       </div>
+      {sadari && (
+        <div className="sadari">
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textAlign: "justify",
+              justifyContent: "center",
+              margin: "10px 0px",
+            }}
+          >
+            <div style={{ width: "100px" }}>
+              <img src={Langkah1} style={{}} />
+            </div>
+            <div style={{ width: "550px" }}>
+              <p>
+                Berdirilah di depan cermin dan perhatikan apakah ada kejanggalan
+                bentuk ataupun warna pada payudara. Selain sisi depan,
+                perhatikan juga sisi samping kanan dan kiri dari payudaramu.
+              </p>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textAlign: "justify",
+              justifyContent: "center",
+              margin: "10px 0px",
+            }}
+          >
+            <div style={{ width: "100px" }}>
+              <img src={Langkah2} style={{}} />
+            </div>
+            <div style={{ width: "550px" }}>
+              <p>
+                Perhatikan kedua puting payudaramu. Letak puting yang tidak
+                sejajar dapat menjadi salah satu gejala dari kanker payudara.
+                Penggunaan penggaris sebagai alat bantu sangatlah dianjurkan.
+              </p>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textAlign: "justify",
+              justifyContent: "center",
+              margin: "10px 0px",
+            }}
+          >
+            <div style={{ width: "100px" }}>
+              <img src={Langkah3} style={{}} />
+            </div>
+            <div style={{ width: "550px" }}>
+              <p>
+                Untuk memulai pemeriksaan lebih lanjut terhadap payudara bagian
+                kiri, angkat tangan kirimu.
+              </p>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textAlign: "justify",
+              justifyContent: "center",
+              margin: "10px 0px",
+            }}
+          >
+            <div style={{ width: "100px" }}>
+              <img src={Langkah4} style={{}} />
+            </div>
+            <div style={{ width: "550px" }}>
+              <p>
+                Gerakkan ketiga jari kananmu untuk menekan secara bergantian
+                seperti gambar di atas.
+              </p>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textAlign: "justify",
+              justifyContent: "center",
+              margin: "10px 0px",
+            }}
+          >
+            <div style={{ width: "100px" }}>
+              <img src={Langkah5} style={{}} />
+            </div>
+            <div style={{ width: "550px" }}>
+              <p>
+                Lakukan gerakan penekanan tersebut mengelilingi payudara,
+                sekitar tulang selangka, dan area ketiak. Gerakan ini berfungsi
+                untuk merasakan apakah ada benjolan yang tidak terlihat oleh
+                mata.
+              </p>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textAlign: "justify",
+              margin: "10px 0px",
+            }}
+          >
+            <div style={{ width: "100px" }}>
+              <img src={Langkah6} style={{}} />
+            </div>
+            <div style={{ width: "550px" }}>
+              <p>
+                Tekan putingmu untuk memeriksa apakah ada cairan tidak lazim
+                yang keluar. Cairan yang dimaksud adalah cairan yang dikeluarkan
+                selain cairan ASI.
+              </p>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "justify",
+              margin: "10px 0px",
+            }}
+          >
+            <div style={{ width: "100px" }}>
+              <img src={Langkah7} style={{}} />
+            </div>
+            <div style={{ width: "550px" }}>
+              <p>
+                Periksa juga payudara bagian kananmu dengan mengulangi dari
+                langkah 3 untuk payudara kanan.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {sadanis && (
+        <div className="sadanis">
+          SADANIS merupakan pemeriksaan payudara yang dilakukan oleh petugas
+          medis. Diskusikan dengan dokter mengenai kapan waktu yang tepat
+          memulai SADANIS dan pemeriksaan penyaring kanker payudara, yaitu foto
+          Rontgen payudara (mammografi), serta risiko dan manfaatnya.
+        </div>
+      )}
+      {beratbadan && (
+        <div className="beratbadan">
+          Bila memiliki berat badan berlebih, konsultasikan dengan dokter
+          mengenai strategi untuk menurunkan berat badan dan agar berat badan
+          tetap ideal.
+        </div>
+      )}
+
+      {olahraga && (
+        <div className="olahraga">
+          Bila memiliki berat badan berlebih, konsultasikan dengan dokter
+          mengenai strategi untuk menurunkan berat badan dan agar berat badan
+          tetap ideal.
+        </div>
+      )}
+
+      {alkohol && (
+        <div className="alkohol">
+          Sebuah penelitian mengungkapkan, kebiasaan mengonsumsi alkohol dapat
+          meningkatkan risiko terkena berbagai jenis kanker. Ini dikarenakan
+          alkohol diketahui memiliki sifat karsinogen yang bisa merusak sel-sel
+          di tubuh dan memicu munculnya penyakit kanker.
+        </div>
+      )}
+
+      {rokok && (
+        <div className="rokok">
+          Berbagai penelitian telah membuktikan ada banyak bahaya merokok bagi
+          kesehatan. Karena okok memiliki berbagai racun dari bahan kimia yang
+          dikandungnya. Bahaya merokok bagi kesehatan yang paling utama datang
+          dari racun karsinogen (penyebab kanker) dan karbon monoksida pada asap
+          rokok.
+        </div>
+      )}
 
       {/* Slide 4 */}
       <div style={{}} className={`center fade ${diagnosa && "down"}`}>
@@ -637,7 +906,7 @@ export default function Home() {
             className="diagnosa-height"
           >
             <Card
-              title="Ayo diagnosa kanker payudara!"
+              title="Diagnosis kanker payudara!"
               style={{
                 textAlign: "justify",
                 color: "#f337ab",
@@ -645,26 +914,49 @@ export default function Home() {
               }}
               className="pencegahan-title font-title disable-hover"
             >
+              <p>
+                <b style={{ color: "#f337ab" }}>Mammogram</b>
+              </p>
               <p style={{ color: "#000" }} className="line-height">
-                <b style={{ color: "#f337ab" }}>Tes mammografi</b> adalah tes
-                yang biasa dilakukan untuk mendiagnosis kanker payudara,
-                khususnya pada stadium awal. Meski umumnya tes ini bisa
-                mendeteksi benjolan pada payudara ganas atau tidak, namun tetap
-                bisa terjadi kesalahan 10 hingga 15 persen, karena mammografi
-                bukan merupakan tes untuk memastikan kanker payudara. Tes lain
-                yang umum dijalankan untuk kanker payudara adalah USG mammae.
-                Pada tes ini, gelombang suara akan menghasilkan gambaran di
-                dalam payudara, sehingga diketahui apakah benjolan yang muncul
-                berupa struktur padat atau kista yang berisi cairan. Jika
-                diperlukan, tes MRI bisa dilakukan untuk memberi gambaran yang
-                lebih jelas daripada hasil yang didapatkan dari tes mammografi
-                atau USG. Untuk mengetahui secara pasti apakah pasien menderita
-                kanker payudara, dokter akan melakukan biopsi yaitu, yaitu
-                dengan memeriksa sampel jaringan di laboratorium. Sampel akan
-                diteliti untuk mengetahui jenis sel yang menyebabkan benjolan
-                atau kanker, tingkat agresifitas kanker, dan apakah sel tersebut
-                mengandung reseptor hormon atau protein (<i>ER</i>, <i>PR</i>,
-                dan <i>HER2</i>).
+                Mammografi atau mammogram adalah tes pemindaian yang dilakukan
+                untuk memeriksa dan mendeteksi berbagai bentuk kelainan pada
+                payudara, seperti kanker payudara, tumor, kista payudara, atau
+                penumpukan kalsium (kalsifikasi) pada jaringan payudara. Bagi
+                wanita berusia 40 tahun ke atas atau secara genetik berisiko
+                mengalami kanker payudara, disarankan untuk melakukan mammografi
+                secara berkala.
+              </p>
+              <br />
+              <p>
+                <b style={{ color: "#f337ab" }}> Ultrasound</b>
+              </p>
+              <p style={{ color: "#000" }} className="line-height">
+                USG payudara adalah salah satu pemeriksaan radiologi pada
+                payudara yang menggunakan teknologi gelombang suara. Jenis
+                pemeriksaan ini berfungsi untuk mendeteksi gangguan dan berbagai
+                bentuk kelainan pada payudara, seperti kista dan tumor.
+              </p>{" "}
+              <br />
+              <p>
+                <b style={{ color: "#f337ab" }}>Magnetic Resonance Imaging </b>
+              </p>
+              <p style={{ color: "#000" }} className="line-height">
+                Magnetic Resonance Imaging (MRI) payudara adalah tes yang
+                menggunakan magnet, gelombang radio, dan komputer untuk
+                menghasilkan gambar struktur payudara secara detil. Melalui
+                gambar ini, dokter dapat melihat bila ada kelainan pada payudara
+                Anda. Tes MRI bisa menunjukkan informasi mengenai kondisi
+                payudara Anda yang tidak didapat oleh mammogram ataupun USG.
+              </p>
+              <br />
+              <p>
+                <b style={{ color: "#f337ab" }}>Biopsi</b>
+              </p>
+              <p style={{ color: "#000" }} className="line-height">
+                Biopsi payudara adalah prosedur pengambilan sampel jaringan dari
+                payudara untuk mendeteksi adanya kelainan. Prosedur ini juga
+                dilakukan untuk mengevaluasi apakah benjolan pada payudara
+                bersifat ganas atau kanker.
               </p>
             </Card>
           </div>
