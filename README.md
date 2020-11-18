@@ -95,7 +95,7 @@ Pertanyaan pertama adalah mengenai berapa usia kamu saat ini, kamu bisa memasukk
 
 
 
-[![usia-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639099/welcome_yglwal.png)]
+![usia-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639099/welcome_yglwal.png)
 
 
 
@@ -105,7 +105,7 @@ Selanjutnya, kamu akan ditanya berapa berat badan kamu, kamu bisa memasukkan nil
 
 
 
-[![berat-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639594/berat_kmbqaz.png)]
+![berat-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639594/berat_kmbqaz.png)
 
 
 
@@ -135,7 +135,7 @@ Lalu, usia saat pertama melahirkan. Untuk pria atau perempuan yang belum menstru
 
 
 
-[![melahirkan-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640993/melahirkan_mtlap4.png)]
+![melahirkan-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640993/melahirkan_mtlap4.png)
 
 
 
@@ -146,7 +146,7 @@ Untuk pengguna yang sudah menopause dapat memasukkan usia saat menopause. Untuk 
 
 
 
-[![menopause-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640999/menopause_ersrxy.png)]
+![menopause-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640999/menopause_ersrxy.png)
 
 
 
@@ -157,7 +157,7 @@ Selanjutnya, pengecekan apakah pernah melakukan terapi penggantian hormon? Kamu 
 
 
 
-[![terapi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641006/terapihormon_xh9pwm.png)]
+![terapi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641006/terapihormon_xh9pwm.png)
 
 
 
@@ -168,7 +168,7 @@ Fase ini mengecek apakah pernah melakukan tes genetik BRCA dan hasilnya positif.
 
 
 
-[![tes-genetik-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641012/tesgenetik_owkow8.png)]
+![tes-genetik-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641012/tesgenetik_owkow8.png)
 
 
 
@@ -179,7 +179,7 @@ Lalu, pengecekan apakah pengguna mengidap penyakit kanker ovarium. Kamu bisa men
 
 
 
-[![kanker-ovarium-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641020/kankerovarium_yelyus.png)]
+![kanker-ovarium-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641020/kankerovarium_yelyus.png)
 
 
 
@@ -190,7 +190,7 @@ Perlu dilakukan juga pengecekan riwayat keluarga yang mengidap kanker payudara. 
 
 
 
-[![keluarga-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641024/keluarga_eckb6l.png)]
+![keluarga-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641024/keluarga_eckb6l.png)
 
 
 
@@ -201,7 +201,7 @@ Dan yang terakhir adalah pengecekan untuk *personal breast disease* dalam empat 
 
 
 
-[![pbd-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641030/pbd_jyyab7.png)]
+![pbd-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641030/pbd_jyyab7.png)
 
 
 
@@ -212,8 +212,9 @@ Setelah selesai, kamu akan mendapatkan laporan apakah kamu mempunyai risiko TING
 
 
 
-[![hasil-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641035/hasil_uj0zmc.png)]
-[![rekomendasi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641040/rekomendasi_akvo5o.png)]
+![hasil-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641035/hasil_uj0zmc.png)
+
+![rekomendasi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641040/rekomendasi_akvo5o.png)
 
 
 ## BOT Materials
