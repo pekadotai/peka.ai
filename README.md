@@ -1,14 +1,10 @@
-<a href="http://peka-ai.herokuapp.com/">
-    <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605545369/PEKA_AI_1_vxfhtp.png" alt="Aimeos logo" title="Aimeos" align="right" height="80" width="100"/>
-</a>
-
 Peka.ai
 ======================
 [![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 
 [Peka.ai](http://peka-ai.herokuapp.com/) aadalah platform edukasi kanker payudara yang memberikan informasi seputar kanker payudara, asesmen risiko dan sistem rekomendasi. Berangkat dari permasalahan kanker payudara yang merupakan kanker paling umum dan menjadi penyebab utama kematian akibat kanker, Peka.AI hadir sebagai solusi untuk menjawab permasalahan rendahnya pengetahuan dan kesadaran perempuan mengenai pentingnya deteksi dini kanker payudara yang menyebabkan 80% kasus terdeteksi saat stadium lanjut di mana pengobatan lebih sulit dan pembiayaan lebih mahal.
 
-[![Peka.AI Website](https://res.cloudinary.com/di02ey9t7/image/upload/v1605644394/landing-page_kbwib9.png)](http://peka-ai.herokuapp.com/)
+[![Peka.AI Logo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605545369/PEKA_AI_1_vxfhtp.png)](http://peka-ai.herokuapp.com/)
 
 
 ## Table of content
@@ -47,7 +43,7 @@ Peka.ai
 
 Hal pertama yang harus kamu lakukan adalah mengakses website [Peka.ai](http://peka-ai.herokuapp.com/) dan selanjutnya kamu akan diarahkan ke home page.
 
-<gambar landing page>
+[![Peka.AI Website](https://res.cloudinary.com/di02ey9t7/image/upload/v1605644394/landing-page_kbwib9.png)](http://peka-ai.herokuapp.com/)
 
 ## Konten
 
