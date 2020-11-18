@@ -43,6 +43,8 @@ Peka.ai
 
 Hal pertama yang harus kamu lakukan adalah mengakses website [Peka.ai](http://peka-ai.herokuapp.com/) dan selanjutnya kamu akan diarahkan ke home page.
 
+<a href="ttp://peka-ai.herokuapp.com/" _target="blank"> Peka.ai </a>
+
 [![Peka.AI Website](https://res.cloudinary.com/di02ey9t7/image/upload/v1605644394/landing-page_kbwib9.png)](http://peka-ai.herokuapp.com/)
 
 ## Konten
