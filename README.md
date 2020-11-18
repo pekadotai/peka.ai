@@ -4,7 +4,9 @@ Peka.ai
 
 [Peka.ai](http://peka-ai.herokuapp.com/) aadalah platform edukasi kanker payudara yang memberikan informasi seputar kanker payudara, asesmen risiko dan sistem rekomendasi. Berangkat dari permasalahan kanker payudara yang merupakan kanker paling umum dan menjadi penyebab utama kematian akibat kanker, Peka.AI hadir sebagai solusi untuk menjawab permasalahan rendahnya pengetahuan dan kesadaran perempuan mengenai pentingnya deteksi dini kanker payudara yang menyebabkan 80% kasus terdeteksi saat stadium lanjut di mana pengobatan lebih sulit dan pembiayaan lebih mahal.
 
-[![Peka.AI Logo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605545369/PEKA_AI_1_vxfhtp.png)](http://peka-ai.herokuapp.com/)
+<a href="http://peka-ai.herokuapp.com/" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605545369/PEKA_AI_1_vxfhtp.png" alt="peka web">
+</a>
 
 
 ## Table of content
@@ -41,11 +43,11 @@ Peka.ai
 
 ## Website
 
-Hal pertama yang harus kamu lakukan adalah mengakses website [Peka.ai](http://peka-ai.herokuapp.com/) dan selanjutnya kamu akan diarahkan ke home page.
+Hal pertama yang harus kamu lakukan adalah mengakses website <a href="http://peka-ai.herokuapp.com/" target="_blank"> Peka.ai </a> dan selanjutnya kamu akan diarahkan ke home page.
 
-<a href="ttp://peka-ai.herokuapp.com/" _target="blank"> Peka.ai </a>
-
-[![Peka.AI Website](https://res.cloudinary.com/di02ey9t7/image/upload/v1605644394/landing-page_kbwib9.png)](http://peka-ai.herokuapp.com/)
+<a href="http://peka-ai.herokuapp.com/" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605644394/landing-page_kbwib9.png" alt="peka web">
+</a>
 
 ## Konten
 
@@ -66,7 +68,9 @@ Konten-konten yang tersedia:
 
 Selanjutnya, kamu bisa melakukan pengecekan risiko kanker payudara melalui Peka.Bot dengan mengklik **"Cek Potensi Kanker Payudaramu Disini!"** pada home page dan akan diarahkan ke channel yang tersedia (Telegram dan Line)
 
-[![Peka.AI Chatbot](https://res.cloudinary.com/di02ey9t7/image/upload/v1605666944/chatbot_g7ehx4.png)](http://peka-ai.herokuapp.com/)
+<a href="http://peka-ai.herokuapp.com/" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605666944/chatbot_g7ehx4.png" alt="peka web">
+</a>
 
 ## Peka Chatbot
 
@@ -228,7 +232,7 @@ Ini adalah daftar material yang digunakan untuk Peka.ai Chatbot di Kata.ai platf
 
 Script yaml untuk PekaBot
 
-[BOT Yaml](https://github.com/pekadotai/peka.ai/blob/master/bot.yml)
+<a href="https://github.com/pekadotai/peka.ai/blob/master/bot.yml" target="_blank"> BOT Yaml </a>
 
 ### Flows
 
@@ -327,5 +331,5 @@ license and is available for free.
 
 ## Links
 
-* [Web site](http://peka-ai.herokuapp.com/)
-* [BOT Yaml](https://github.com/pekadotai/peka.ai/blob/master/bot.yml)
+* <a href="http://peka-ai.herokuapp.com/" target="_blank"> Website </a>
+* <a href="https://github.com/pekadotai/peka.ai/blob/master/bot.yml" target="_blank"> BOT Yaml </a>
