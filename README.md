@@ -62,8 +62,9 @@ Konten-konten yang tersedia:
 
 ## Chatbot
 
-Selanjutnya, kamu bisa melakukan pengecekan risiko kanker payudara melalui Peka.Bot dengan mengklik Chatbot pada home page dan akan diarahkan ke channel yang tersedia (Telegram dan Line)
+Selanjutnya, kamu bisa melakukan pengecekan risiko kanker payudara melalui Peka.Bot dengan mengklik **"Cek Potensi Kanker Payudaramu Disini!"** pada home page dan akan diarahkan ke channel yang tersedia (Telegram dan Line)
 
+[![Peka.AI Chatbot](https://res.cloudinary.com/di02ey9t7/image/upload/v1605666944/chatbot_g7ehx4.png)](http://peka-ai.herokuapp.com/)
 
 ## Peka Chatbot
 
