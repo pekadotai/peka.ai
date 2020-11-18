@@ -1,14 +1,13 @@
-<a href="http://peka-ai.herokuapp.com/">
-    <img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605545369/PEKA_AI_1_vxfhtp.png" alt="Aimeos logo" title="Aimeos" align="right" height="80" width="100"/>
-</a>
-
-Peka.ai
+Peka.AI
 ======================
 [![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 
-[Peka.ai](http://peka-ai.herokuapp.com/) adalah sebuah web interaktif yang dapat membantu kamu dalam mengetahui informasi tentang kanker payudara mulai dari penyebab, gejala, diagnosa, hingga mitos seputar kanker payudara. Fitur utama Peka.AI adalah chatbot yang dapat mengukur tingkat risiko terkena kanker payudara dan memberikan rekomendasi sesuai hasil pemeriksaan melalui chatbot tersebut.
+<a href="http://peka-ai.herokuapp.com/" target="_blank"> Peka.AI </a> adalah platform edukasi kanker payudara yang memberikan informasi seputar kanker payudara, asesmen risiko dan sistem rekomendasi. Berangkat dari permasalahan kanker payudara yang merupakan kanker paling umum dan menjadi penyebab utama kematian akibat kanker, <a href="http://peka-ai.herokuapp.com/" target="_blank"> Peka.AI </a> hadir sebagai solusi untuk menjawab permasalahan rendahnya pengetahuan dan kesadaran perempuan mengenai pentingnya deteksi dini kanker payudara yang menyebabkan 80% kasus terdeteksi saat stadium lanjut di mana pengobatan lebih sulit dan pembiayaan lebih mahal.
 
-[![Peka.AI Website](https://res.cloudinary.com/di02ey9t7/image/upload/v1605644394/landing-page_kbwib9.png)](http://peka-ai.herokuapp.com/)
+
+<a href="http://peka-ai.herokuapp.com/" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605545369/PEKA_AI_1_vxfhtp.png" alt="peka web">
+</a>
 
 
 ## Table of content
@@ -45,9 +44,11 @@ Peka.ai
 
 ## Website
 
-Hal pertama yang harus kamu lakukan adalah mengakses website [Peka.ai](http://peka-ai.herokuapp.com/) dan selanjutnya kamu akan diarahkan ke home page.
+Hal pertama yang harus kamu lakukan adalah mengakses website <a href="http://peka-ai.herokuapp.com/" target="_blank"> Peka.ai </a> dan selanjutnya kamu akan diarahkan ke home page.
 
-<gambar landing page>
+<a href="http://peka-ai.herokuapp.com/" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605644394/landing-page_kbwib9.png" alt="peka web">
+</a>
 
 ## Konten
 
@@ -66,8 +67,11 @@ Konten-konten yang tersedia:
 
 ## Chatbot
 
-Selanjutnya, kamu bisa melakukan pengecekan risiko kanker payudara melalui Peka.Bot dengan mengklik Chatbot pada home page dan akan diarahkan ke channel yang tersedia (Telegram dan Line)
+Selanjutnya, kamu bisa melakukan pengecekan risiko kanker payudara melalui Peka.Bot dengan mengklik **"Cek Potensi Kanker Payudaramu Disini!"** pada home page dan akan diarahkan ke channel yang tersedia (Telegram dan Line)
 
+<a href="http://peka-ai.herokuapp.com/" target="_blank"> 
+<img src="https://res.cloudinary.com/di02ey9t7/image/upload/v1605666944/chatbot_g7ehx4.png" alt="peka web">
+</a>
 
 ## Peka Chatbot
 
@@ -98,7 +102,7 @@ Pertanyaan pertama adalah mengenai berapa usia kamu saat ini, kamu bisa memasukk
 
 
 
-[![usia-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639099/welcome_yglwal.png)]
+![usia-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639099/welcome_yglwal.png)
 
 
 
@@ -108,7 +112,7 @@ Selanjutnya, kamu akan ditanya berapa berat badan kamu, kamu bisa memasukkan nil
 
 
 
-[![berat-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639594/berat_kmbqaz.png)]
+![berat-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639594/berat_kmbqaz.png)
 
 
 
@@ -118,7 +122,7 @@ Masukan tinggi badanmu dalam cm, kamu bisa memasukkan nilai angka 1-200.
 
 
 
-[![tinggi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639813/tinggi_pflbhk.png)]
+![tinggi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605639813/tinggi_pflbhk.png)
 
 
 
@@ -128,28 +132,28 @@ Masukan usia saat pertama menstruasi. Untuk pria atau perempuan yang belum menst
 
 
 
-[![mens-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640987/menstruasi_adu4qv.png)]
+![mens-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640987/menstruasi_adu4qv.png)
 
 
 
 ### 6. Usia Pertama Melahirkan
 
-Lalu, usia saat pertama melahirkan. Untuk pria atau perempuan yang belum menstruasi dapat mengetik "belum/tidak"
+Lalu, usia saat pertama melahirkan. Untuk pria atau perempuan yang belum melahirkan dapat mengetik "belum/tidak"
 
 
 
-[![melahirkan-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640993/melahirkan_mtlap4.png)]
+![melahirkan-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640993/melahirkan_mtlap4.png)
 
 
 
 
 ### 7. Usia Pertama Menopause
 
-Untuk pengguna yang sudah menopause dapat memasukkan usia saat menopause. Untuk pria atau perempuan yang belum menstruasi dapat mengetik "belum/tidak"
+Untuk pengguna yang sudah menopause dapat memasukkan usia saat menopause. Untuk pria atau perempuan yang belum menopause dapat mengetik "belum/tidak"
 
 
 
-[![menopause-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640999/menopause_ersrxy.png)]
+![menopause-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605640999/menopause_ersrxy.png)
 
 
 
@@ -160,7 +164,7 @@ Selanjutnya, pengecekan apakah pernah melakukan terapi penggantian hormon? Kamu 
 
 
 
-[![terapi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641006/terapihormon_xh9pwm.png)]
+![terapi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641006/terapihormon_xh9pwm.png)
 
 
 
@@ -171,7 +175,7 @@ Fase ini mengecek apakah pernah melakukan tes genetik BRCA dan hasilnya positif.
 
 
 
-[![tes-genetik-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641012/tesgenetik_owkow8.png)]
+![tes-genetik-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641012/tesgenetik_owkow8.png)
 
 
 
@@ -182,7 +186,7 @@ Lalu, pengecekan apakah pengguna mengidap penyakit kanker ovarium. Kamu bisa men
 
 
 
-[![kanker-ovarium-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641020/kankerovarium_yelyus.png)]
+![kanker-ovarium-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641020/kankerovarium_yelyus.png)
 
 
 
@@ -193,7 +197,7 @@ Perlu dilakukan juga pengecekan riwayat keluarga yang mengidap kanker payudara. 
 
 
 
-[![keluarga-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641024/keluarga_eckb6l.png)]
+![keluarga-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641024/keluarga_eckb6l.png)
 
 
 
@@ -204,7 +208,7 @@ Dan yang terakhir adalah pengecekan untuk *personal breast disease* dalam empat 
 
 
 
-[![pbd-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641030/pbd_jyyab7.png)]
+![pbd-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641030/pbd_jyyab7.png)
 
 
 
@@ -215,8 +219,9 @@ Setelah selesai, kamu akan mendapatkan laporan apakah kamu mempunyai risiko TING
 
 
 
-[![hasil-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641035/hasil_uj0zmc.png)]
-[![rekomendasi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641040/rekomendasi_akvo5o.png)]
+![hasil-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641035/hasil_uj0zmc.png)
+
+![rekomendasi-demo](https://res.cloudinary.com/di02ey9t7/image/upload/v1605641040/rekomendasi_akvo5o.png)
 
 
 ## BOT Materials
@@ -227,7 +232,8 @@ Ini adalah daftar material yang digunakan untuk Peka.ai Chatbot di Kata.ai platf
 ### Yaml
 
 Script yaml untuk PekaBot
-[BOT Yaml](https://github.com/pekadotai/peka.ai/blob/master/bot.yml)
+
+<a href="https://github.com/pekadotai/peka.ai/blob/master/bot.yml" target="_blank"> BOT Yaml </a>
 
 ### Flows
 
@@ -326,5 +332,5 @@ license and is available for free.
 
 ## Links
 
-* [Web site](http://peka-ai.herokuapp.com/)
-* [BOT Yaml](https://github.com/pekadotai/peka.ai/blob/master/bot.yml)
+* <a href="http://peka-ai.herokuapp.com/" target="_blank"> Website </a>
+* <a href="https://github.com/pekadotai/peka.ai/blob/master/bot.yml" target="_blank"> BOT Yaml </a>
